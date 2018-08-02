@@ -1,7 +1,6 @@
 pipeline {
         agent none
         stages {
-
                 stage("Environment setup") {
                         agent { label "master" }
                         steps {
@@ -10,5 +9,5 @@ pipeline {
                                 echo %BUCKET_ID%
                         }
                 }
-                }
+        }
 }
