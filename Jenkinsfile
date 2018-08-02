@@ -5,8 +5,8 @@ pipeline {
 			agent { label "master" }
 			steps {
 				bat "env.sh"
-				echo $PROJECT_ID
-				echo $BUCKET_ID
+				bat "echo %PROJECT_ID%"
+				bat "echo %BUCKET_ID%"
 			}
 		}
         }
