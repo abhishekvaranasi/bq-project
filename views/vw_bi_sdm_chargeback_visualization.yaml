@@ -1,0 +1,97 @@
+resources:
+ - name: vw_bi_sdm_chargeback_visualization
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_sdm_chargeback_visualization
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_sdm_chargeback_visualization
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: select 
+              merchant_number
+              ,pega_case_id
+              ,record_type
+              ,card_number_hash
+              ,card_number_rk
+              ,case_status_code
+              ,case_status_desc
+              ,case_type_code
+              ,merchant_pay_currency_code
+              ,dispute_reason_desc
+              ,language_code
+              ,case_resolved_to_code
+              ,transaction_type_code
+              ,tran_transaction_code
+              ,transaction_date
+              ,dba_address1
+              ,dba_address2
+              ,null as dba_address3
+              ,dba_city
+              ,dba_contact
+              ,dba_fax
+              ,dba_name
+              ,dba_phone1
+              ,dba_state
+              ,null as dba_usstcd
+              ,dba_zip
+              ,hierarchy
+              ,account_status
+              ,null as bank_id
+              ,card_type
+              ,null as chargeback_transaction_code
+              ,null as message_line1
+              ,null as message_line2
+              ,null as message_line3
+              ,null as operator_id
+              ,dispute_sequence_key
+              ,transaction_arn
+              ,case_amount
+              ,associate
+              ,auth_code
+              ,null as bank_adjustment
+              ,case_number
+              ,resolved_date
+              ,chain
+              ,chargeback_date
+              ,corporate
+              ,null as merchant_comment_1
+              ,null merchant_comment_2
+              ,null merchant_comment_3
+              ,merchant_pay_amount
+              ,principal
+              ,case_reason_code
+              ,received_date_time
+              ,region
+              ,case_resolved_by_name
+              ,etlbatchid
+              ,refute_by_date_time
+              ,chargeback_amount
+              ,null as adjustment_amount
+              from `PROJECT_ID.consumption_layer.wwmaster_dispute`
+       useLegacySql: false
+

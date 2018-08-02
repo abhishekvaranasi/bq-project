@@ -1,0 +1,1317 @@
+resources:
+- name: us-exchange
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: us_exchange
+   labels:
+     apigateway: not-applicable
+     build_date:  2192018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: us_tds_tran_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: hierarchy
+        type: string
+      - mode: NULLABLE
+        name: corporate
+        type: string
+      - mode: NULLABLE
+        name: region
+        type: string
+      - mode: NULLABLE
+        name: principle
+        type: string
+      - mode: NULLABLE
+        name: associate
+        type: string
+      - mode: NULLABLE
+        name: chain
+        type: string
+      - mode: NULLABLE
+        name: merchant
+        type: float
+      - mode: NULLABLE
+        name: schlog_msgtype
+        type: integer
+      - mode: NULLABLE
+        name: schlog_pan
+        type: string
+      - mode: NULLABLE
+        name: schlog_pcode
+        type: integer
+      - mode: NULLABLE
+        name: schlog_txntype
+        type: integer
+      - mode: NULLABLE
+        name: schlog_amount
+        type: float
+      - mode: NULLABLE
+        name: schlog_aval_balance
+        type: float
+      - mode: NULLABLE
+        name: schlog_amount_equiv
+        type: float
+      - mode: NULLABLE
+        name: schlog_cash_back
+        type: float
+      - mode: NULLABLE
+        name: schlog_settlement_amount
+        type: float
+      - mode: NULLABLE
+        name: schlog_trandate
+        type: timestamp
+      - mode: NULLABLE
+        name: schlog_trantime
+        type: integer
+      - mode: NULLABLE
+        name: schlog_trace
+        type: integer
+      - mode: NULLABLE
+        name: schlog_local_time
+        type: integer
+      - mode: NULLABLE
+        name: schlog_local_date
+        type: timestamp
+      - mode: NULLABLE
+        name: schlog_settlement_date
+        type: timestamp
+      - mode: NULLABLE
+        name: schlog_cap_date
+        type: timestamp
+      - mode: NULLABLE
+        name: schlog_pos_entry_code
+        type: integer
+      - mode: NULLABLE
+        name: schlog_pos_condition_code
+        type: integer
+      - mode: NULLABLE
+        name: schlog_pos_pin_cap_code
+        type: string
+      - mode: NULLABLE
+        name: schlog_pos_cap_code
+        type: integer
+      - mode: NULLABLE
+        name: schlog_acquirer
+        type: string
+      - mode: NULLABLE
+        name: schlog_issuer
+        type: string
+      - mode: NULLABLE
+        name: schlog_transferee
+        type: string
+      - mode: NULLABLE
+        name: schlog_originator
+        type: string
+      - mode: NULLABLE
+        name: schlog_processorid
+        type: string
+      - mode: NULLABLE
+        name: schlog_respcode
+        type: integer
+      - mode: NULLABLE
+        name: schlog_reason_code
+        type: integer
+      - mode: NULLABLE
+        name: schlog_revcode
+        type: integer
+      - mode: NULLABLE
+        name: schlog_shcerror
+        type: integer
+      - mode: NULLABLE
+        name: schlog_saf
+        type: integer
+      - mode: NULLABLE
+        name: schlog_origmsg
+        type: integer
+      - mode: NULLABLE
+        name: schlog_origtrace
+        type: integer
+      - mode: NULLABLE
+        name: schlog_origdate
+        type: timestamp
+      - mode: NULLABLE
+        name: schlog_origtime
+        type: integer
+      - mode: NULLABLE
+        name: schlog_merchant
+        type: string
+      - mode: NULLABLE
+        name: schlog_acq_country
+        type: integer
+      - mode: NULLABLE
+        name: schlog_track2
+        type: string
+      - mode: NULLABLE
+        name: schlog_track3
+        type: string
+      - mode: NULLABLE
+        name: schlog_refnum
+        type: string
+      - mode: NULLABLE
+        name: schlog_authnum
+        type: string
+      - mode: NULLABLE
+        name: schlog_termid
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptorname
+        type: string
+      - mode: NULLABLE
+        name: schlog_termloc
+        type: string
+      - mode: NULLABLE
+        name: schlog_addresponse
+        type: string
+      - mode: NULLABLE
+        name: schlog_acctnum
+        type: string
+      - mode: NULLABLE
+        name: schlog_acqagent
+        type: string
+      - mode: NULLABLE
+        name: schlog_issagent
+        type: string
+      - mode: NULLABLE
+        name: schlog_storeid
+        type: integer
+      - mode: NULLABLE
+        name: schlog_lane
+        type: integer
+      - mode: NULLABLE
+        name: schlog_terminal_trace
+        type: integer
+      - mode: NULLABLE
+        name: schlog_batch_id
+        type: string
+      - mode: NULLABLE
+        name: schlog_extract_flags
+        type: integer
+      - mode: NULLABLE
+        name: schlog_suspect_code
+        type: integer
+      - mode: NULLABLE
+        name: schlog_user_txncode
+        type: string
+      - mode: NULLABLE
+        name: schlog_device_devcap
+        type: integer
+      - mode: NULLABLE
+        name: schlog_shc_devcap
+        type: integer
+      - mode: NULLABLE
+        name: schlog_formatter_devcap
+        type: integer
+      - mode: NULLABLE
+        name: schlog_auth_devcap
+        type: integer
+      - mode: NULLABLE
+        name: schlog_misc_mddenda1
+        type: string
+      - mode: NULLABLE
+        name: schlog_misc_mddenda2
+        type: string
+      - mode: NULLABLE
+        name: schlog_misc_mddenda3
+        type: string
+      - mode: NULLABLE
+        name: schlog_misc_mddenda4
+        type: string
+      - mode: NULLABLE
+        name: schlog_issuer_data
+        type: string
+      - mode: NULLABLE
+        name: schlog_acquirer_data
+        type: string
+      - mode: NULLABLE
+        name: schlog_shc_data_buffer
+        type: string
+      - mode: NULLABLE
+        name: schlog_pk_for_repl
+        type: integer
+      - mode: NULLABLE
+        name: schlog_exp_date
+        type: string
+      - mode: NULLABLE
+        name: schlog_card_type
+        type: string
+      - mode: NULLABLE
+        name: schlog_checkdate
+        type: integer
+      - mode: NULLABLE
+        name: schlog_t_pk_for_repl
+        type: integer
+      - mode: NULLABLE
+        name: schlog_cardnbrmask
+        type: string
+      - mode: NULLABLE
+        name: schlog_cardnbrenc
+        type: string
+      - mode: NULLABLE
+        name: schlog_encryptkey
+        type: string
+      - mode: NULLABLE
+        name: schlog_dateaddedutc
+        type: timestamp
+      - mode: NULLABLE
+        name: schlog_feencryption
+        type: string
+      - mode: NULLABLE
+        name: schlog_matching_pk_for_repl
+        type: integer
+      - mode: NULLABLE
+        name: schlog_tra_amount
+        type: float
+      - mode: NULLABLE
+        name: schlog_new_amount
+        type: float
+      - mode: NULLABLE
+        name: schlog_ab_runnumber
+        type: integer
+      - mode: NULLABLE
+        name: schlog_network_refnum
+        type: string
+      - mode: NULLABLE
+        name: schlog_addtl_pos_data
+        type: string
+      - mode: NULLABLE
+        name: schlog_card_svc_code
+        type: string
+      - mode: NULLABLE
+        name: schlog_surcharge_fee
+        type: float
+      - mode: NULLABLE
+        name: schlog_acceptorstreet
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptorcity
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptorstate
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptorcountry
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptorphone
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptoremail
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptorpostalcode
+        type: string
+      - mode: NULLABLE
+        name: schlog_acceptorsellerid
+        type: string
+      - mode: NULLABLE
+        name: schlog_gatewayid
+        type: integer
+      - mode: NULLABLE
+        name: schlog_transactionid
+        type: string
+      - mode: NULLABLE
+        name: schlog_tokendata
+        type: string
+      - mode: NULLABLE
+        name: schlog_globalbatchid
+        type: string
+      - mode: NULLABLE
+        name: schlog_pspindicator
+        type: string
+      - mode: NULLABLE
+        name: schlog_level2customercode
+        type: string
+      - mode: NULLABLE
+        name: schlog_level2taxamount
+        type: float
+      - mode: NULLABLE
+        name: schlog_nwscompanyid
+        type: string
+      - mode: NULLABLE
+        name: schlog_nwsterminalid
+        type: string
+      - mode: NULLABLE
+        name: schlog_rejectreasoncode
+        type: string
+      - mode: NULLABLE
+        name: schlog_pinauthenticated
+        type: float
+      - mode: NULLABLE
+        name: schlog_transactionidcode
+        type: string
+      - mode: NULLABLE
+        name: schlog_incrementalindicator
+        type: string
+      - mode: NULLABLE
+        name: schlog_etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: schlog_clearingrunnumber
+        type: integer
+      - mode: NULLABLE
+        name: termtot_bin
+        type: string
+      - mode: NULLABLE
+        name: termtot_storeid
+        type: string
+      - mode: NULLABLE
+        name: termtot_lane
+        type: string
+      - mode: NULLABLE
+        name: termtot_batchid
+        type: string
+      - mode: NULLABLE
+        name: termtot_tbatchid
+        type: string
+      - mode: NULLABLE
+        name: termtot_close_flag
+        type: string
+      - mode: NULLABLE
+        name: termtot_settlement_date
+        type: timestamp
+      - mode: NULLABLE
+        name: termtot_close_date
+        type: timestamp
+      - mode: NULLABLE
+        name: termtot_close_time
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_num_db
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_db
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_num_cr
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_cr
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_num_adj
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_adj
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_amt_net
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_num_dbg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_dbg
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_num_crg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_crg
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_num_adjg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_adjg
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_amt_netg
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_num_db
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_db
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_num_cr
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_cr
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_num_adj
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_adj
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_amt_net
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_num_dbg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_dbg
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_num_crg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_crg
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_num_adjg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_adjg
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_amt_netg
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_num_db
+        type: integer
+      - mode: NULLABLE
+        name: termtot_ath_amt_db
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_num_cr
+        type: integer
+      - mode: NULLABLE
+        name: termtot_ath_amt_cr
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_num_adj
+        type: integer
+      - mode: NULLABLE
+        name: termtot_ath_amt_adj
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_amt_net
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_num_dbg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_ath_amt_dbg
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_num_crg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_ath_amt_crg
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_num_adjg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_ath_amt_adjg
+        type: float
+      - mode: NULLABLE
+        name: termtot_ath_amt_netg
+        type: float
+      - mode: NULLABLE
+        name: termtot_o_rowid
+        type: integer
+      - mode: NULLABLE
+        name: termtot_parti_num
+        type: integer
+      - mode: NULLABLE
+        name: termtot_pk_for_repl
+        type: float
+      - mode: NULLABLE
+        name: termtot_checkdate
+        type: integer
+      - mode: NULLABLE
+        name: termtot_clgrunnumber
+        type: integer
+      - mode: NULLABLE
+        name: termtot_lastupdate
+        type: timestamp
+      - mode: NULLABLE
+        name: termtot_batchclosedate
+        type: timestamp
+      - mode: NULLABLE
+        name: termtot_passportind
+        type: string
+      - mode: NULLABLE
+        name: termtot_dateaddedutc
+        type: timestamp
+      - mode: NULLABLE
+        name: termtot_crc_num_rev
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_rev
+        type: float
+      - mode: NULLABLE
+        name: termtot_crc_num_revg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_crc_amt_revg
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_num_rev
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_rev
+        type: float
+      - mode: NULLABLE
+        name: termtot_dbc_num_revg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_dbc_amt_revg
+        type: float
+      - mode: NULLABLE
+        name: termtot_prc_num_db
+        type: integer
+      - mode: NULLABLE
+        name: termtot_prc_amt_db
+        type: float
+      - mode: NULLABLE
+        name: termtot_prc_num_dbg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_prc_amt_dbg
+        type: float
+      - mode: NULLABLE
+        name: termtot_vc_num_db
+        type: integer
+      - mode: NULLABLE
+        name: termtot_vc_amt_db
+        type: float
+      - mode: NULLABLE
+        name: termtot_vc_num_dbg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_vc_amt_dbg
+        type: float
+      - mode: NULLABLE
+        name: termtot_mc_num_db
+        type: integer
+      - mode: NULLABLE
+        name: termtot_mc_amt_db
+        type: float
+      - mode: NULLABLE
+        name: termtot_mc_num_dbg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_mc_amt_dbg
+        type: float
+      - mode: NULLABLE
+        name: termtot_othcc_num_db
+        type: integer
+      - mode: NULLABLE
+        name: termtot_othcc_amt_db
+        type: float
+      - mode: NULLABLE
+        name: termtot_othcc_num_dbg
+        type: integer
+      - mode: NULLABLE
+        name: termtot_othcc_amt_dbg
+        type: float
+      - mode: NULLABLE
+        name: termtot_etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: termtot_clearingrunnumber
+        type: integer
+      - mode: NULLABLE
+        name: oxref_merchantNumber
+        type: string
+      - mode: NULLABLE
+        name: oxref_terminalId
+        type: string
+      - mode: NULLABLE
+        name: oxref_oasisTermId
+        type: string
+      - mode: NULLABLE
+        name: oxref_termMaker
+        type: string
+      - mode: NULLABLE
+        name: oxref_termApp
+        type: string
+      - mode: NULLABLE
+        name: oxref_hpsTId
+        type: string
+      - mode: NULLABLE
+        name: oxref_cpcInd
+        type: string
+      - mode: NULLABLE
+        name: oxref_posType
+        type: string
+      - mode: NULLABLE
+        name: oxref_connType
+        type: string
+      - mode: NULLABLE
+        name: oxref_DtdInd
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_source_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_file_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dif_file_time
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_scan_charge
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_deposit_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_batch_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_card_acceptor_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_tran_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_card_number_rk
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_transaction_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dif_authorization_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_reference_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_transaction_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dif_transaction_time
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_authorization_source_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_term_capability
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_pos_entry_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_merchant_category_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_cardholder_activated_term
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_prepaid_indicator
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_moto_ec_indicator
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_service_development_field
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_cardholder_id_method
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_transaction_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_authorization_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dif_transaction_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_authorization_response
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_validation_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_aci
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_req_payment_service_value
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_market_specific_auth_data
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_authorization_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dif_central_time_indicator
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_avs_response_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_sup_authorization_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dif_purchase_identifier_format
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_purchase_identifier
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_lodging_check_in_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dif_lodging_extra_charges
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_lodging_no_show_indicator
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_car_rental_check_out_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dif_car_rental_extra_charges
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_car_rental_no_show
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_card_type
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_charge_type
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_mc_interchange_level
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_visa_interchange_level
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_cps_indicator
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_error_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_response_downgrade_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dif_visa_product_level_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_cross_border_indicator
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_mc_device_type_cd
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_mc_ucaf
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_paypal_buyer_email_address
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_paypal_payer_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_paypal_transaction_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_debit_card_gateway
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_network_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_original_fee_billing_indicator
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_pinless_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_front_end_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_access_method
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_sub_access_method
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_discover_network_ref
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_terminal_id
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_amount_code_2
+        type: string
+      - mode: NULLABLE
+        name: eod_dif_amount_2
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_tran_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_card_account_number
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_amount_in_original_currency
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_discount_in_original_currency
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_tax_in_original_currency
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_amount_in_settlement_currency
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_discount_settlement_currency
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_tax_settlement_currency
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_settlement_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_merchant_name
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_airline_ticket_number
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_batch_key
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_remarks
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_deposit_control
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_net_payment_amount_in_settlement_currency
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_transaction_date
+        type: date
+      - mode: NULLABLE
+        name: eod_tran_pos_entry_mode
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_authorization_approval_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_card_type
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_terminal
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_dcc_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_cross_border
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_cashback_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_transaction_charge_type
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_transaction_time
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_deposit_batch_number
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_usd_rate
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_usd_equivalent_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_domestic_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_domestic_interchange_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_issuer
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_ipp_term
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_cof
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_gp_share_1
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_gp_share_2
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_interchange
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_issuer_share
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_merchant_sequence_number
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_unique_reference_id
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_scheme_clearing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_tran_split_type
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_transaction_id_banknet_id_trace_id
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_pay_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_dda_account
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_payment_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_pay_debtor_reference_number
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_merchant_name
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_summary_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_india_region_code
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_usd_rate
+        type: float
+      - mode: NULLABLE
+        name: eod_pay_usd_equivalent_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_pay_payment_reference_number
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_payment_reference_number_suffix
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_payment_destination_format
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_payment_mode
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_terminal
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dep_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_dda_account
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_deposit_gross_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_deposit_net_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_deposit_control
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dep_delay_days
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_original_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_merchant_name
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_summary_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_batch_key
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_settlement_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_wht_dcn_adjustment_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_wht_dcn_reason
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_dcc_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_card_total_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_card_exchange_rate
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_card_sales_converted_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_card_activity_type
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_cashback_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_total_items
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_merchant_sequence_number
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_payment_reference_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_split_type
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_fee_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_dda_account
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_fees_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_fee_debtor_reference_number_fee_charge_name
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_merchant_name
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_summary_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_withholding_tax_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_fee_fee_gross_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_fee_charge_type
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_fee_type
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_merchant_sequence_number
+        type: float
+      - mode: NULLABLE
+        name: eod_fee_payment_reference_number
+        type: string
+      - mode: NULLABLE
+        name: eod_nacha_hdr_effective_entry_date
+        type: date
+      - mode: NULLABLE
+        name: eod_nacha_transaction_code
+        type: string
+      - mode: NULLABLE
+        name: eod_nacha_dfi_account_number
+        type: string
+      - mode: NULLABLE
+        name: eod_nacha_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_nacha_identification_number
+        type: float
+      - mode: NULLABLE
+        name: eod_dcn_terminal
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dcn_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_dda_account
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_dcn_adjustment_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dcn_dcn_reason
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_dcn_reason_description
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_deposit_control
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dcn_delay_days
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_original_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dcn_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_merchant_name
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_summary_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_dcc_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_merchant_sequence_number
+        type: float
+      - mode: NULLABLE
+        name: eod_dcn_payment_reference_number
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_terminal
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_cbk_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_dda_account
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_chargeback_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_cbk_chargeback_reason
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_chargeback_reason_description
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_merchant_name
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_summary_flag
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_case_number
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_original_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_cbk_merchant_sequence_number
+        type: float
+      - mode: NULLABLE
+        name: eod_cbk_payment_reference_number
+        type: string
+      - mode: NULLABLE
+        name: eod_cbk_arn
+        type: float

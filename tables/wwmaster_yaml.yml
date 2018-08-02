@@ -1,0 +1,547 @@
+resources:
+- name: wwmaster_super_table
+  properties:
+    datasetId: consumption_layer
+    labels:
+      apigateway: not-applicable
+      build_date: '5152018'
+      bus_contact: mark-kubik
+      businessregion: us
+      cloudzone: google-us
+      company: globalpay
+      costcenter: finance
+      country: us
+      dataclassification: dc2
+      department: product-development
+      description: this_table_is_test_wwmaster_super_table
+      eol_date: not-applicable
+      group: application-delivery
+      lifecycle: development
+      organization: bts
+      prj_code: business-view
+      productversion: 10
+      project: prj-gousenaib-dlak-res01
+      resourcename: wwmaster_super_table
+      sla: gold
+      status: development
+      support_contact: roberto_belardo
+      tech_contact: venu-vidyashankar
+      tier: gcp-bigquery
+    schema:
+      fields:
+      - name: hierarchy_number
+        type: string
+      - name: auth_expiry_date_mask
+        type: string
+      - name: auth_invoice_number
+        type: string
+      - name: auth_terminal_number
+        type: string
+      - name: chain
+        type: string
+      - name: corporate
+        type: string
+      - name: dif_alpha_currency_code
+        type: string
+      - name: associate
+        type: string
+      - name: dif_auth_characteristic_ind_code
+        type: string
+      - name: dif_authorization_amount
+        type: float
+      - name: dif_authorization_code
+        type: string
+      - name: dif_authorization_date
+        type: date
+      - name: dif_authorization_response_code
+        type: string
+      - name: dif_authorization_source_code
+        type: string
+      - name: dif_avs_response_code
+        type: string
+      - name: dif_batch_control_number
+        type: string
+      - name: dif_car_rental_extra_charges
+        type: string
+      - name: dif_car_rental_no_show
+        type: string
+      - name: dif_card_acceptor_id
+        type: string
+      - name: dif_card_holder_activated_terminal_code
+        type: string
+      - name: dif_card_holder_num_mask
+        type: string
+      - name: dif_card_scheme
+        type: string
+      - name: dif_cardholder_id_method
+        type: string
+      - name: dif_cash_letter_number
+        type: string
+      - name: dif_central_time_ind_code
+        type: string
+      - name: dif_charge_type
+        type: string
+      - name: dif_cps_ind
+        type: string
+      - name: dif_cross_border_ind_code
+        type: string
+      - name: dif_deposit_id
+        type: string
+      - name: dif_error_code
+        type: string
+      - name: dif_file_date
+        type: date
+      - name: dif_file_time
+        type: string
+      - name: dif_lodging_check_in_date
+        type: date
+      - name: dif_lodging_extra_charges
+        type: string
+      - name: dif_lodging_no_show_ind
+        type: string
+      - name: dif_market_specific_authorization_data
+        type: string
+      - name: dif_mc_device_type_code
+        type: string
+      - name: dif_mc_interchange_level
+        type: string
+      - name: dif_merchant_category_code
+        type: string
+      - name: dif_merchant_dba_name
+        type: string
+      - name: dif_moto_ecommerce_ind
+        type: string
+      - name: dif_original_transaction_ref
+        type: string
+      - name: dif_pos_entry_code
+        type: string
+      - name: dif_prepaid_ind
+        type: string
+      - name: principal
+        type: string
+      - name: dif_purchase_identifier
+        type: string
+      - name: dif_purchase_identifier_format
+        type: string
+      - name: dif_ref_num
+        type: string
+      - name: dif_req_payment_service_value
+        type: string
+      - name: dif_response_downgrade_code_0
+        type: string
+      - name: dif_response_downgrade_code_1
+        type: string
+      - name: dif_response_downgrade_code_2
+        type: string
+      - name: dif_scan_charge
+        type: string
+      - name: dif_service_development_field_code
+        type: string
+      - name: dif_settled_amount
+        type: float
+      - name: dif_source_id
+        type: string
+      - name: dif_supplemental_authorization_amount
+        type: float
+      - name: dif_terminal_capability
+        type: string
+      - name: dif_tran_code
+        type: string
+      - name: dif_transaction_amount
+        type: float
+      - name: dif_transaction_date
+        type: date
+      - name: dif_transaction_id
+        type: string
+      - name: dif_transaction_time
+        type: string
+      - name: dif_validation_code
+        type: string
+      - name: dif_visa_interchange_level
+        type: string
+      - name: dif_visa_product_level_id
+        type: string
+      - name: region
+        type: string
+      - name: eod_region
+        type: string
+      - name: lotr_authorization_id
+        type: integer
+      - name: index_master_merchant_dba_name
+        type: string
+      - name: merchant_number
+        type: string
+      - name: dif_cash_back_amount
+        type: float
+      - name: sales_tax
+        type: string
+      - name: tip_amount
+        type: float
+      - name: tip_type_desc
+        type: string
+      - name: reponse_downgrade_text
+        type: string
+      - name: scheme_batch_amount
+        type: float
+      - name: scheme_batch_count
+        type: integer
+      - name: scheme_purchase_amount
+        type: float
+      - name: scheme_purchase_count
+        type: integer
+      - name: scheme_refund_count
+        type: integer
+      - name: scheme_refund_amount
+        type: float
+      - name: purchase_amount
+        type: float
+      - name: purchase_count
+        type: integer
+      - name: refund_amount
+        type: float
+      - name: refund_count
+        type: integer
+      - name: batch_amount
+        type: float
+      - name: batch_count
+        type: integer
+      - name: batch_settled_amount
+        type: float
+      - name: auth_transaction_date
+        type: date
+      - name: auth_pan_num_mask
+        type: string
+      - name: auth_card_type_explanation
+        type: string
+      - name: auth_currency_code
+        type: string
+      - name: auth_transaction_amount
+        type: float
+      - name: auth_transaction_currency_code
+        type: string
+      - name: auth_pose_entry_mode
+        type: string
+      - name: auth_authorization_amount
+        type: float
+      - name: auth_authorization_code
+        type: string
+      - name: auth_authorization_date_time
+        type: timestamp
+      - name: auth_batch_control_number
+        type: string
+      - name: auth_response_code
+        type: string
+      - name: auth_transaction_code
+        type: integer
+      - name: card_scheme_desc
+        type: string
+      - name: eod_batch_key
+        type: string
+      - name: eod_cbk_chargeback_amount
+        type: float
+      - name: eod_dcn_dcc_ind
+        type: string
+      - name: eod_dcn_deposit_control
+        type: string
+      - name: eod_dcn_batch_key
+        type: string
+      - name: eod_dcn_deposit_date
+        type: date
+      - name: eod_dcn_original_currency_amount
+        type: float
+      - name: eod_dcn_terminal_number
+        type: string
+      - name: eod_dcn_alpha_currency_code
+        type: string
+      - name: eod_dcn_original_currency_code
+        type: string
+      - name: eod_dcn_dcn_adjustment_amount
+        type: float
+      - name: eod_dcn_dcn_reason_desc
+        type: string
+      - name: eod_delay_day_count
+        type: integer
+      - name: eod_dep_bank_routing_number
+        type: string
+      - name: eod_dep_dda_account_number
+        type: string
+      - name: eod_dep_discount_amount
+        type: float
+      - name: eod_dep_merchant_dba_name
+        type: string
+      - name: eod_dep_original_currency_amount
+        type: float
+      - name: eod_dep_original_currency_code
+        type: string
+      - name: eod_dep_sequence_number
+        type: string
+      - name: eod_dep_terminal_number
+        type: string
+      - name: eod_dep_cashback_discount_amount
+        type: float
+      - name: eod_dep_dcn_adjustment_amount
+        type: float
+      - name: eod_dep_settle_currency_code
+        type: string
+      - name: eod_dep_deposit_date
+        type: date
+      - name: eod_dep_deposit_gross_amount
+        type: float
+      - name: eod_dep_deposit_net_amount
+        type: float
+      - name: eod_dep_alpha_currency_code
+        type: string
+      - name: eod_principal
+        type: string
+      - name: eod_associate
+        type: string
+      - name: eod_chain
+        type: string
+      - name: eod_corp
+        type: string
+      - name: eod_deposit_control_number
+        type: string
+      - name: eod_card_activity_type_ind
+        type: string
+      - name: eod_card_exchange_rate
+        type: string
+      - name: eod_card_sales_converted_amount
+        type: float
+      - name: eod_card_total_amount
+        type: float
+      - name: eod_fee_dcc_incentive_gross_amount
+        type: float
+      - name: eod_fee_dcc_tax_amount
+        type: float
+      - name: eod_fee_fees_amount
+        type: float
+      - name: eod_pay_original_currency_code
+        type: string
+      - name: eod_pay_payment_amount
+        type: float
+      - name: eod_pay_payment_destination
+        type: string
+      - name: eod_pay_payment_mode
+        type: string
+      - name: eod_pay_payment_ref_number
+        type: string
+      - name: eod_pay_payment_ref_number_suffix
+        type: string
+      - name: eod_pay_processing_date
+        type: date
+      - name: eod_pay_summary_ind
+        type: string
+      - name: eod_pay_bank_routing_number
+        type: string
+      - name: eod_pay_dda_account_number
+        type: string
+      - name: eod_pay_debtor_ref_num
+        type: string
+      - name: eod_pay_merchant_number
+        type: string
+      - name: eod_pay_sequence_number
+        type: string
+      - name: eod_processing_date
+        type: date
+      - name: eod_tran_card_holder_num_mask
+        type: string
+      - name: eod_tran_dcc_ind
+        type: string
+      - name: eod_tran_installment_pay_plan_issuer_share
+        type: float
+      - name: eod_tran_installment_payment_plan_term
+        type: string
+      - name: eod_tran_installment_payment_plan_cof
+        type: float
+      - name: eod_tran_installment_payment_plan_gp_share1
+        type: float
+      - name: eod_tran_installment_payment_plan_gp_share2
+        type: float
+      - name: eod_tran_installment_payment_plan_interchange
+        type: float
+      - name: eod_tran_original_currency_amount
+        type: float
+      - name: eod_tran_original_currency_code
+        type: string
+      - name: eod_tran_settle_currency_code
+        type: string
+      - name: eod_tran_settlement_currency_amount
+        type: float
+      - name: eod_tran_transaction_charge_type
+        type: string
+      - name: eod_tran_transaction_date
+        type: date
+      - name: eod_tran_alpha_currency_code
+        type: string
+      - name: eod_tran_deposit_net_amount
+        type: float
+      - name: eod_tran_settlement_currency_discount
+        type: float
+      - name: eod_ukcrdsum_alpha_currency_code
+        type: string
+      - name: eod_ukcrdsum_deposit_date
+        type: date
+      - name: eod_ukcrdsum_deposit_gross_amount
+        type: float
+      - name: eod_ukcrdsum_deposit_net_amount
+        type: float
+      - name: eod_ukcrdsum_discount_amount
+        type: float
+      - name: eod_ukcrdsum_original_currency_amount
+        type: float
+      - name: eod_ukcrdsum_settle_currency_code
+        type: string
+      - name: eod_ukcrdsum_terminal_number
+        type: string
+      - name: eod_ukcrdsum_original_currency_code
+        type: string
+      - name: lotr_funding_id
+        type: integer
+      - name: lotr_transaction_id
+        type: integer
+      - name: seq_key
+        type: string
+      - name: settle_alpha_currency_code
+        type: string
+      - name: store_id
+        type: string
+      - name: tranin_arn
+        type: string
+      - name: merchant_address1
+        type: string
+      - name: merchant_address2
+        type: string
+      - name: merchant_phone
+        type: string
+      - name: state
+        type: string
+      - name: zipcode
+        type: string
+      - name: merchant_attention
+        type: string
+      - name: city
+        type: string
+      - name: merchant_fax_number
+        type: string
+      - name: merchant_status
+        type: string
+      - name: merchant_name
+        type: string
+      - name: ach_effective_entry_date
+        type: date
+      - name: ach_amount
+        type: float
+      - name: ach_header_batch_number
+        type: string
+      - name: ach_company_name
+        type: string
+      - name: ach_immediate_origin_name
+        type: string
+      - name: ach_receiving_dfi_identification
+        type: string
+      - name: ach_file_date
+        type: date
+      - name: ach_merchant_number
+        type: string
+      - name: ach_dfi_account_number
+        type: string
+      - name: ach_transaction_code
+        type: string
+      - name: ach_receiving_company_name
+        type: string
+      - name: eod_ukcrdsum_total_cashback_trans_amount
+        type: float
+      - name: eod_ukcrdsum_total_cashback_discount_amount
+        type: float
+      - name: eod_pay_type_code
+        type: string
+      - name: eod_ukcrdsum_summary_ind
+        type: string
+      - name: eod_ukcrdsum_reserve_warehouse_ind
+        type: string
+      - name: eod_pay_merchant_dba_name
+        type: string
+      - name: eod_ukcrdsum_delay_day_count
+        type: string
+      - name: eod_pay_alpha_currency_code
+        type: string
+      - name: eod_dep_dcc_ind
+        type: string
+      - name: eod_ukcrdsum_processing_date
+        type: date
+      - name: eod_tran_settlement_currency_tax_amount
+        type: float
+      - name: eod_tran_domestic_discount_amount
+        type: float
+      - name: eod_tran_domestic_interchange_amount
+        type: float
+      - name: eod_tran_remarks
+        type: string
+      - name: eod_ukcrdsum_deposit_control
+        type: string
+      - name: eod_ukcrdsum_dcn_reason_desc
+        type: string
+      - name: eod_ukcrdsum_dcn_adjustment_amount
+        type: float
+      - name: eod_ukcrdsum_dcc_ind
+        type: string
+      - name: eod_ukcrdsum_case_number
+        type: string
+      - name: eod_ukcrdsum_chargeback_amount
+        type: float
+      - name: eod_ukcrdsum_fees_amount
+        type: float
+      - name: eod_ukcrdsum_dcc_incentive_gross_amount
+        type: float
+      - name: eod_ukcrdsum_debtor_ref_number
+        type: string
+      - name: eod_ukcrdsum_dcc_tax_amount
+        type: float
+      - name: eod_ukcrdsum_source_sk
+        type: string
+      - name: eod_ukcrdsum_batch_key
+        type: string
+      - name: fund_bank_identification_code
+        type: string
+      - name: fund_international_bank_account_number
+        type: string
+      - name: auth_reponse_code_short_desc
+        type: string
+      - name: auth_reponse_code_long_desc
+        type: string
+      - name: term_number_hpy
+        type: string
+      - name: card_type
+        type: string
+      - name: gaa_code_text
+        type: string
+      - name: dif_sourceid_desc
+        type: string
+      - name: geographical_region
+        type: string
+      - name: ic_code
+        type: string
+      - name: interchange_desc
+        type: string
+      - name: interchange_expense_amount
+        type: float
+      - name: interchange_rate_amount
+        type: float
+      - name: interchange_rate_pct
+        type: float
+      - name: iso_numeric_currency_code
+        type: string
+      - name: dif_sourceid_short_name
+        type: string
+      - name: sequence_number
+        type: string
+      - name: global_token
+        type: string
+      - name: merchant_token
+        type: string
+      - name: etlbatchid
+        type: integer
+    tableReference:
+      projectId: prj-gousenaib-dlak-res01
+      tableId: wwmaster_super_table
+  type: bigquery.v2.table

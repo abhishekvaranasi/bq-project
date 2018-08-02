@@ -1,0 +1,432 @@
+resources:
+- name: wwmaster-dispute
+  type: bigquery.v2.table
+  properties:
+   datasetId: consumption_layer
+   tableReference:
+     projectId: prj-gousenaib-dlak-res01
+     tableId: wwmaster_dispute
+   timePartitioning:
+     type: DAY
+     field: received_date_time
+   description: Table needed for SDM
+   labels:
+     apigateway: not-applicable
+     build_date:  3012018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: wwmaster_dispute
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: wwmaster_dispute
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:       
+      - mode: NULLABLE
+        name: dispute_sequence_key
+        type: string
+        description: ETL generated, Unique key for each record
+      - mode: NULLABLE
+        name: hierarchy
+        type: string
+        description: INDEX/ CORP, REG, PRIN, ASSOC, CHAIN.Used in heading for distribution reporting.
+      - mode: NULLABLE
+        name: corporate
+        type: string
+        description: Hierarchy - Corporate
+      - mode: NULLABLE
+        name: region
+        type: string
+        description: Hierarchy - Region
+      - mode: NULLABLE
+        name: principal
+        type: string
+        description: Hierarchy - Principal
+      - mode: NULLABLE
+        name: associate
+        type: string
+        description: Hierarchy - Association
+      - mode: NULLABLE
+        name: chain
+        type: string
+        description: Hierarchy - Chain
+      - mode: REQUIRED
+        name: merchant_number
+        type: string
+        description: Unique Merchant number assigned to every merchant
+      - mode: REQUIRED
+        name: case_number
+        type: string
+        description: 10 digit Case number for every case.  The case number will be the same as it moves through the Chargeback lifecycle
+      - mode: NULLABLE
+        name: account_status
+        type: string
+        description: Indicates account status and account activity status;
+      - mode: NULLABLE
+        name: anticipated_average_ticket_amount
+        type: float
+        description: description not provided
+      - mode: NULLABLE
+        name: auth_amount
+        type: float
+        description: Amount that was processed while authorization
+      - mode: NULLABLE
+        name: auth_code
+        type: string
+        description: Transaction authorization code taken from the incoming file
+      - mode: NULLABLE
+        name: auth_cvv_results
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: auth_date_time
+        type: timestamp
+        description: description not provided
+      - mode: NULLABLE
+        name: avs_code
+        type: string
+        description: address verification code through which merchant may verify card holders billing address
+      - mode: NULLABLE
+        name: card_number_rk
+        type: string
+        description: Redacted Cardholder account number used for transaction
+      - mode: NULLABLE
+        name: card_scheme_desc
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: card_type
+        type: string
+        description: card type corresponding to the type of card accepted by the
+      - mode: NULLABLE
+        name: case_amount
+        type: float
+        description: description not provided
+      - mode: NULLABLE
+        name: merchant_pay_currency_code
+        type: string
+        description: merchant.
+      - mode: NULLABLE
+        name: currency_code
+        type: string
+        description: Currency for terminal location.
+      - mode: NULLABLE
+        name: merchant_name
+        type: string
+        description: Merchant DBA Name
+      - mode: NULLABLE
+        name: case_reason_code
+        type: string
+        description: Dispute reason code assigned by Card Schemes
+      - mode: NULLABLE
+        name: case_reason_desc
+        type: string
+        description: Dispute reason code description Example => 72 No Authorization 4850 Installment Billing Dispute 4808Authorization-related Chargeback C32 Goods/Services Damaged or Defective
+      - mode: NULLABLE
+        name: case_status_code
+        type: string
+        description: Code to indicate if a case is new, old, pended, resolved, etc.
+      - mode: NULLABLE
+        name: case_status_desc
+        type: string
+        description: Indicates the case status code desc Example=> Open-PreArbitration Pending-Confirmation Resolved-Bank
+      - mode: NULLABLE
+        name: case_sub_type_desc
+        type: string
+        description: Case subtype Desc Valid values CB Duplicate CB Bundled CB IPA OPA
+      - mode: NULLABLE
+        name: case_type_code
+        type: string
+        description: Code to indicate the case stage in the Dispute Lifecycle.
+      - mode: NULLABLE
+        name: case_type_desc
+        type: string
+        description: Indicates the case type code desc  Examples ChargeBack Incoming Arbitration Incoming Compliance Outgoing GoodFaith
+      - mode: NULLABLE
+        name: cash_back_amount
+        type: float
+        description: description not provided
+      - mode: NULLABLE
+        name: chargeback_date
+        type: date
+        description: Date when the Dispute was initiated by the Schemes
+      - mode: NULLABLE
+        name: chargeback_amount
+        type: float
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_address1
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_address2
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_city
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_contact
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_phone1
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_fax
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_name
+        type: string
+        description: Name of the merchant in the transaction
+      - mode: NULLABLE
+        name: dba_state
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dba_zip
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: deposit_control_number
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: dispute_reason_desc
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: due_date
+        type: date
+        description: description not provided
+      - mode: NULLABLE
+        name: foreign_amount
+        type: float
+        description: description not provided
+      - mode: NULLABLE
+        name: foreign_currency_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: investigator_comments
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: invoice_number
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: mcc
+        type: string
+        description: Code established by MasterCard and Visa to describe the merchant's business.
+      - mode: NULLABLE
+        name: mcc_desc
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: member_message_block
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: merchant_adjustment_desc
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: merchant_pay_amount
+        type: float
+        description: description not provided
+      - mode: NULLABLE
+        name: merchant_gl_account_number
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: pega_case_id
+        type: string
+        description: Unique work item number created by Pega software for every new case  ( and also existing case with a different case type)
+      - mode: NULLABLE
+        name: pos_entry_mode_code
+        type: string
+        description: description exceeds 1024 character limit. can be found at "https://docs.google.com/spreadsheets/d/1zFxIFZUQjgR8dR8Uioe4vEMa5-2sUi7QFG_1PGs1oxk/edit#gid=0"
+      - mode: NULLABLE
+        name: pos_entry_mode_desc
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: post_date
+        type: date
+        description: description not provided
+      - mode: NULLABLE
+        name: received_date_time
+        type: timestamp
+        description: description not provided
+      - mode: NULLABLE
+        name: refute_by_date_time
+        type: timestamp
+        description: description not provided
+      - mode: NULLABLE
+        name: remarks
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: resolved_date
+        type: date
+        description: description not provided
+      - mode: NULLABLE
+        name: retrieval_due_date_time
+        type: TIMESTAMP
+        description: description not provided
+      - mode: NULLABLE
+        name: transaction_date
+        type: date
+        description: Date the transaction was closed by the merchant
+      - mode: NULLABLE
+        name: transaction_id
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: transaction_type_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: card_brand_code
+        type: string
+        description: Identify Card brand using this code Description of the Card Brand Code  Sample Data 1 Visa 2 MasterCard 3 Diners 5 Discover -1 Lookup Null Blank -2 Lookup Failure 9 Amex
+      - mode: NULLABLE
+        name: card_number_hash
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: case_created_date_time
+        type: timestamp
+        description: description not provided
+      - mode: NULLABLE
+        name: dispute_currency_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: issuing_bank_comments
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: original_ref_number
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: reject_reason_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: scheme_case_number
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: terminal_number
+        type: string
+        description: Numeric code identifying a specific terminal
+      - mode: NULLABLE
+        name: transaction_amount
+        type: float
+        description: amount of the transaction.
+      - mode: NULLABLE
+        name: transaction_arn
+        type: string
+        description: Acquirer Reference Number  23 digit ARN number generated by MAS
+      - mode: NULLABLE
+        name: retrieval_ref_number
+        type: string
+        description: The retrieval reference number is the reference number from the transaction authorization record for the original transaction.
+      - mode: NULLABLE
+        name: store_number
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: language_code
+        type: string
+        description: 2 character language code is used to identify the language to be used in reports
+      - mode: NULLABLE
+        name: record_type
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: case_acquirer_bin_ica
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: case_status_ind
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: case_load_date_time
+        type: timestamp
+        description: description not provided
+      - mode: NULLABLE
+        name: case_resolved_to_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: transaction_currency_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: case_pended_by_name
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: case_resolved_by_name
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: case_uploaded_ind
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: tran_transaction_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: closed_date
+        type: date
+        description: description not provided
+      - mode: NULLABLE
+        name: card_brand_short_desc
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: comment_type_code
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: sequence_key
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: global_token
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: merchant_token
+        type: string
+        description: description not provided
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer
+        description: ETL generated, Unique key for each load batch

@@ -1,0 +1,146 @@
+resources:
+ - name: vw_bi_transaction_finder
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_transaction_finder
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_transaction_finder
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: SELECT  
+              seq_key,
+              dif_alpha_currency_code,
+              dif_card_scheme,
+              auth_authorization_code,
+              dif_authorization_code,
+              dif_authorization_amount,
+              dif_authorization_date,
+              dif_avs_response_code,
+              eod_dep_bank_routing_number,
+              dif_transaction_id,
+              auth_batch_control_number,
+              dif_batch_control_number,
+              eod_batch_key,
+              dif_card_holder_num_mask,
+              eod_tran_card_holder_num_mask,
+              CAST('' as string) as dif_card_type,
+              CAST('' as string) as eod_tran_card_type,
+              eod_cbk_chargeback_amount,
+              dif_cross_border_ind_code,
+              eod_fee_dcc_incentive_gross_amount,
+              eod_dcn_dcc_ind,
+              eod_tran_dcc_ind,
+              eod_fee_dcc_tax_amount,
+              eod_dcn_dcn_adjustment_amount,
+              eod_dcn_dcn_reason_desc,
+              eod_dep_dda_account_number,
+              eod_delay_day_count,
+              eod_deposit_control_number,
+              cast (null as date) as dif_deposit_date,
+              dif_deposit_id,
+              eod_dep_discount_amount,
+              auth_expiry_date_mask as auth_exp_date,
+              dif_mc_interchange_level,
+              cast('' as string) as auth_merchant_name,
+              dif_merchant_category_code,
+              dif_merchant_dba_name,
+              eod_dep_merchant_dba_name,
+              merchant_number,
+              eod_dep_original_currency_amount,
+              eod_tran_original_currency_amount,
+              eod_dep_original_currency_code,
+              eod_pay_original_currency_code,
+              eod_tran_original_currency_code,
+              dif_original_transaction_ref,
+              eod_pay_payment_amount,
+              eod_pay_payment_destination,
+              eod_pay_payment_mode,
+              eod_pay_payment_ref_number as eod_pay_payment_ref_num,
+              eod_pay_payment_ref_number_suffix as eod_pay_payment_ref_num_suf,
+              dif_pos_entry_code,
+              CAST('' as string) as eod_tran_pos_entry_mode,
+              eod_processing_date,
+              eod_pay_processing_date,
+              dif_purchase_identifier,
+              settle_alpha_currency_code,
+              eod_tran_settle_currency_code,
+              dif_settled_amount,
+              eod_tran_settlement_currency_amount,
+              eod_pay_summary_ind,
+              auth_terminal_number,
+              dif_tran_code,
+              dif_transaction_amount,
+              eod_tran_transaction_charge_type,
+              CAST(dif_transaction_date as TIMESTAMP) as dif_transaction_date ,
+              eod_tran_transaction_date,
+              cast('' as string) as eod_tran_transaction_time,
+              tranin_arn,
+              dif_visa_interchange_level,
+              dif_visa_product_level_id,
+              auth_pan_num_mask,
+              cast('' as string) as auth_card_type,
+              auth_transaction_code,
+              eod_tran_installment_pay_plan_issuer_share,
+              eod_tran_installment_payment_plan_term as eod_tran_installment_pay_plan_term,
+              eod_tran_installment_payment_plan_cof,
+              eod_tran_installment_payment_plan_gp_share1,
+              eod_tran_installment_payment_plan_gp_share2,
+              eod_tran_installment_payment_plan_interchange,
+              eod_fee_fees_amount,
+              cast ('' as string) as auth_merchant_number,
+              CAST(NULL as timestamp) as auth_tran_time,
+              auth_authorization_date_time,
+              auth_authorization_amount,
+              CAST(NULL as STRING) as auth_approval_code,
+              CAST(NULL As STRING) auth_card_holder_num_mask,
+              auth_expiry_date_mask as auth_expiry_date,
+              auth_response_code as auth_original_response_code,
+              CAST(NULL as STRING) as auth_card_acceptor_name,
+              CAST(NULL as STRING) as auth_network_ref_num,
+              index_master_merchant_dba_name,
+              store_id,
+              CAST(NULL as STRING) as auth_response_code_desc,
+              auth_response_code,
+              card_scheme_desc,
+              dif_ref_num,
+              lotr_transaction_id,
+              lotr_authorization_id as lotr_auth_id,
+              lotr_funding_id,
+              corporate as corp,
+              region,
+              principal as principal,
+              associate as associate,
+              chain,
+              concat(substr(dif_transaction_time,1,2),':',substr(dif_transaction_time,3,2),':',substr(dif_transaction_time,5,2)) as dif_transaction_time,
+              auth_reponse_code_short_desc,
+              dif_file_date
+              ,dif_card_acceptor_id
+              ,null as reserve_warehouse_indicator
+              ,null as remarks
+              FROM `PROJECT_ID.consumption_layer.wwmaster_super_table`
+       useLegacySql: false

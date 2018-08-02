@@ -1,0 +1,109 @@
+resources:
+ - name: vw_bi_sdm_chargeback_cases
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_sdm_chargeback_cases
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_sdm_chargeback_cases
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: SELECT 
+               dispute_sequence_key as seq_key
+              ,merchant_number
+              ,received_date_time
+              ,case_type_code
+              ,case_type_desc
+              ,card_type
+              ,case_amount
+              ,merchant_pay_amount
+              ,pega_case_id
+              ,case_number
+              ,card_number_rk
+              ,dispute_reason_desc
+              ,corporate
+              ,region
+              ,principal
+              ,associate
+              ,chain
+              ,dba_name
+              ,merchant_name
+              ,mcc
+              ,transaction_type_code
+              ,case_sub_type_desc
+              ,currency_code
+              ,merchant_pay_currency_code
+              ,foreign_amount
+              ,foreign_currency_code
+              ,transaction_date
+              ,member_message_block
+              ,original_ref_number
+              ,remarks
+              ,invoice_number
+              ,transaction_arn
+              ,deposit_control_number
+              ,cash_back_amount
+              ,due_date
+              ,investigator_comments
+              ,pos_entry_mode_code
+              ,pos_entry_mode_desc
+              ,case_reason_code
+              ,case_reason_desc
+              ,case_status_desc as last_disposition
+              ,case_type_desc as exception_type
+              ,store_number
+              ,anticipated_average_ticket_amount
+              ,refute_by_date_time
+              ,dba_address1
+              ,dba_address2
+              ,dba_city
+              ,dba_fax
+              ,account_status
+              ,dba_state
+              ,dba_phone1
+              ,original_ref_number as retrieval_reference_number
+              ,mcc_desc
+              ,case_status_code
+              ,case_status_desc
+              ,resolved_date
+              ,transaction_id
+              ,auth_amount
+              ,auth_date_time
+              ,auth_code
+              ,avs_code
+              ,auth_cvv_results
+              ,card_scheme_desc
+              ,merchant_adjustment_desc
+              ,record_type
+              ,language_code
+              ,case when case_status_desc IN ('OPEN-CHARGEBACK','OPEN-REVERSAL','PENDING-BANKDOC','PENDING-CONFIRMATION') then 'Pending-Analyst'
+              when case_status_desc IN ('PENDING-PRENOTESRESPONSE','PENDING-UPDATE') then 'Pending-Merchant Response'
+              when case_status_desc IN ('RESOLVED-BANK','RESOLVED-CLOSED','RESOLVED-GL','RESOLVED-MERCHANT') then 'Closed'
+              else case_status_desc end as dispute_category_status
+              FROM `PROJECT_ID.consumption_layer.wwmaster_dispute` 
+              WHERE     (record_type IS NULL OR trim(record_type) = '') AND case_type_code IN ('1', '2', '3', '4')
+       useLegacySql: false

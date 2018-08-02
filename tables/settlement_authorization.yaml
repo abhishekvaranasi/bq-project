@@ -1,0 +1,172 @@
+resources:
+- name: settlement-authorization
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: settlement_authorization
+   labels:
+     apigateway: not-applicable
+     build_date:  2132018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: trans_ft_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:      
+      - mode: nullable
+        name: card_number_hk
+        type: integer
+        description: card number hashed
+      - mode: nullable
+        name: card_number_rk
+        type: string
+        description: card number masked to display first 6 and last 4 digits
+      - mode: nullable
+        name: merchant_number
+        type: float
+        description: merchant number
+      - mode: nullable
+        name: auth_ma_auth_amt
+        type: float
+        description: authorization amount
+      - mode: nullable
+        name: transaction_code
+        type: string
+        description: transaction code to display sale, returns
+      - mode: nullable
+        name: authorization_date
+        type: string
+        description: date of authorization
+      - mode: nullable
+        name: authorization_time
+        type: string
+        description: time of authorization
+      - mode: nullable
+        name: authorization_code
+        type: string
+        description: the approval code
+      - mode: nullable
+        name: authorization_source_code
+        type: string
+        description: the source of authorization
+      - mode: nullable
+        name: transaction_id
+        type: string
+        description: unique transcation id network reference id
+      - mode: nullable
+        name: pos_entry_code
+        type: string
+        description: point of sales entry code that represent type of transactions like emv, contactless
+      - mode: nullable
+        name: authorization_description
+        type: string
+        description: no description
+      - mode: nullable
+        name: authorization_vendor
+        type: string
+        description: the hosts where authorization was done like b24 ndc
+      - mode: nullable
+        name: expiration_date
+        type: string
+        description: card expiration date
+      - mode: nullable
+        name: pmt_service_indicator
+        type: string
+        description: payment service indicator
+      - mode: nullable
+        name: issuer_response_code
+        type: string
+        description: response code sent by issuer
+      - mode: nullable
+        name: avs_response_code
+        type: string
+        description: address verification response code
+      - mode: nullable
+        name: cvccode
+        type: string
+        description: creditcard verification code
+      - mode: nullable
+        name: corp
+        type: string
+        description: mas corp a merchant belongs to
+      - mode: nullable
+        name: region
+        type: string
+        description: mas region a merchant belongs to
+      - mode: nullable
+        name: principal
+        type: string
+        description: mas principal a merchant belongs to
+      - mode: nullable
+        name: associate
+        type: string
+        description: mas associate a merchant belongs to
+      - mode: nullable
+        name: chain
+        type: string
+        description: mas chain a merchant belongs to
+      - mode: nullable
+        name: outlet
+        type: string
+        description: outlet of transaction
+      - mode: nullable
+        name: card_type
+        type: string
+        description: card type used for authorization
+      - mode: nullable
+        name: charge_type
+        type: string
+        description: the chargetype associated with the transaction
+      - mode: nullable
+        name: merchant_dba_name
+        type: string
+        description: merchant doing business as name
+      - mode: nullable
+        name: currency_code
+        type: string
+        description: currency code of authorization
+      - mode: nullable
+        name: iso_numeric_currency_code
+        type: string
+        description: numeric currency code of authorization
+      - mode: nullable
+        name: auth_ma_auth_cnt
+        type: integer
+        description: count of auths
+      - mode: nullable
+        name: hierarchy
+        type: string
+        description: mas hierarchy a merchant belongs to
+      - mode: nullable
+        name: card_scheme
+        type: string
+        description: the card brand or proudct like visa, mastercard, amex
+      - mode: nullable
+        name: issuer_response_code_desc
+        type: string
+        description: issuers response code descriptions for authorization
+      - mode: nullable
+        name: card_number_token
+        type: string
+        description: token number for card number sanitization

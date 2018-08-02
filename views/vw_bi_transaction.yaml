@@ -1,0 +1,145 @@
+resources:
+ - name: vw_bi_transaction
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_transaction
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_transaction
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: select
+              seq_key
+             ,dif_auth_characteristic_ind_code
+             ,associate
+             ,dif_authorization_amount
+             ,dif_authorization_code
+             ,dif_authorization_date
+             ,dif_authorization_response_code
+             ,dif_authorization_source_code
+             ,dif_avs_response_code
+             ,dif_batch_control_number
+             ,'9999-12-31' as car_rental_check_out_datetime
+             ,dif_car_rental_extra_charges
+             ,dif_car_rental_no_show
+             ,dif_card_acceptor_id
+             ,dif_card_holder_num_mask
+             ,null as card_number_token
+             ,dif_card_scheme
+             ,null as card_type
+             ,dif_card_holder_activated_terminal_code
+             ,dif_cardholder_id_method
+             ,dif_cash_letter_number
+             ,dif_central_time_ind_code
+             ,CHAIN
+             ,dif_charge_type
+             ,null as code_text
+             ,corporate
+             ,dif_cps_ind
+             ,dif_cross_border_ind_code
+             ,dif_alpha_currency_code
+             ,null as debit_card_gateway
+             ,cast(concat(cast(dif_file_date as string),' ',concat(substr(dif_file_time,1,2),':',substr(dif_file_time,3,2),':',substr(dif_file_time,5,2))) as timestamp) as file_date_time
+             ,dif_deposit_id
+             ,null as description
+             ,dif_error_code
+             ,etlbatchid
+             ,0.0 as fees
+             ,null as geographical_region
+             ,concat(corporate,REGION,principal,associate,CHAIN ) hierarchy
+             ,merchant_number
+             ,null as ic_code
+             ,null as interchange_desc
+             ,null as interchange_expense_amount
+             ,null as interchange_rate_amount
+             ,null as interchange_rate_pct
+             ,null as iso_numeric_currency_code
+             ,'9999-12-31' as lodging_check_in_datetime
+             ,dif_lodging_extra_charges
+             ,dif_lodging_no_show_ind
+             ,dif_market_specific_authorization_data
+             ,dif_mc_device_type_code
+             ,dif_mc_interchange_level
+             ,dif_merchant_category_code
+             ,dif_merchant_dba_name
+             ,dif_moto_ecommerce_ind
+             ,CASE WHEN ((corporate = '052') AND (dif_source_id in ('501','502', '521', '522','541')) AND (dif_alpha_currency_code <> 'GBP')) THEN dif_settled_amount ELSE dif_transaction_amount END as net_amount
+             ,null as network_id
+             ,null as original_fee_billing_ind
+             ,dif_original_transaction_ref
+             ,null as paypal_buyer_email_address
+             ,null as paypal_payer_id
+             ,null as paypal_tran_id
+             ,null as pinless_flag
+             ,dif_pos_entry_code
+             ,dif_prepaid_ind
+             ,principal
+             ,dif_purchase_identifier
+             ,dif_purchase_identifier_format
+             ,dif_ref_num
+             ,REGION
+             ,dif_req_payment_service_value
+             ,dif_response_downgrade_code_0
+             ,dif_scan_charge
+             ,dif_service_development_field_code
+             ,dif_settled_amount
+             ,settle_alpha_currency_code
+             ,null as settled_iso_currency_code
+             ,null as short_name
+             ,0 as source_file_key
+             ,dif_source_id
+             ,'A'as status
+             ,dif_supplemental_authorization_amount
+             ,dif_terminal_capability
+             ,null as  timezone_offset
+             ,CASE WHEN ((corporate = '052') AND (dif_source_id in ('501','502','521','522','541')) AND (dif_alpha_currency_code <> 'GBP')) and (dif_tran_code = '07') THEN dif_settled_amount 
+               when (dif_tran_code = '07') then  dif_transaction_amount END as total_ma_cash_advance_amount
+             ,CASE WHEN (dif_tran_code = '07') THEN 1 ELSE 0 END  as total_ma_cash_advance_count
+             ,CASE WHEN ((corporate = '052') AND (dif_source_id in ('501','502','521','522','541')) AND (dif_alpha_currency_code <> 'GBP')) and (dif_tran_code = '06') THEN -dif_settled_amount  
+                   WHEN ((corporate = '052') AND (dif_source_id in ('501','502','521','522','541')) AND (dif_alpha_currency_code <> 'GBP')) and (dif_tran_code <>'06') THEN dif_settled_amount  
+                   when (dif_tran_code = '06') then -dif_transaction_amount 
+                   else dif_transaction_amount end as  total_ma_settled_amount 
+             ,CASE WHEN (dif_tran_code = '06') THEN 0 ELSE 1 END as total_ma_purchase_count
+             ,CASE WHEN ((corporate = '052') AND (dif_source_id in ('501','502','521','522','541')) AND (dif_alpha_currency_code <> 'GBP')) and (dif_tran_code = '06') THEN -dif_settled_amount  
+                   when (dif_tran_code = '06') then -dif_transaction_amount 
+                   else 0.0 end total_ma_refund_amount
+             ,CASE WHEN (dif_tran_code = '06') THEN 1 ELSE 0 END  as total_ma_refund_count
+             ,CASE WHEN ((corporate = '052') AND (dif_source_id in ('501','502','521','522','541')) AND (dif_alpha_currency_code <> 'GBP')) and (dif_tran_code <> '06') THEN dif_settled_amount  
+                   when (dif_tran_code <> '06') then dif_transaction_amount 
+                   else 0.0 end as total_ma_purchase_amount
+             ,1 as total_ma_settled_count
+             ,dif_transaction_amount
+             ,dif_tran_code
+             ,cast(concat(cast(dif_transaction_date as string),' ',concat(substr(dif_transaction_time,1,2),':',substr(dif_transaction_time,3,2),':',substr(dif_transaction_time,5,2))) as timestamp) as transaction_date_time
+             ,dif_transaction_id
+             ,CASE WHEN ((corporate = '052') AND (dif_source_id in ('501','502','521','522','541')) AND (dif_alpha_currency_code <> 'GBP')) THEN dif_settled_amount ELSE dif_transaction_amount END as tran_report_amount
+             ,CASE WHEN (dif_tran_code= '06') THEN 'REFUND' WHEN dif_tran_code = '05' THEN 'SALE' WHEN dif_tran_code = '07' THEN 'CASH ADVANCE' ELSE '' end as  transaction_type
+             ,dif_validation_code
+             ,dif_visa_interchange_level
+             ,dif_visa_product_level_id
+             from `PROJECT_ID.consumption_layer.wwmaster_super_table`
+       useLegacySql: false

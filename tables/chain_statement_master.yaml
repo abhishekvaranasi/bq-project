@@ -1,0 +1,147 @@
+resources:
+ - name: chain_statement_master
+   type: bigquery.v2.table
+   metadata:
+    dependsOn:
+    - trusted-layer
+   properties:
+    datasetId: trusted_layer
+    tableReference:
+      projectId: prj-gousenaib-dlak-res01
+      tableId: chain_statement_master
+    labels:
+      apigateway: not-applicable
+      build_date:  2142018
+      bus_contact: mark-kubik
+      businessregion: us
+      cloudzone: google-us
+      company: globalpay
+      costcenter: finance
+      country: us
+      dataclassification: dc2
+      department: product-development
+      description: chain_statement_master
+      eol_date: not-applicable
+      group: application-delivery
+      lifecycle: development
+      organization: bts
+      prj_code: business-view
+      productversion: 10
+      project: prj-gousenaib-dlak-res01
+      resourcename: chain_statement_master
+      service: gcp-cloud-datalake
+      sla: gold
+      status: development
+      support_contact: roberto_belardo
+      tech_contact: venu-vidyashankar
+      tier: gcp-bigquery
+    schema:
+      fields:
+       - description: corporate part of the hierarchy
+         type: STRING
+         name: corporate
+         mode: NULLABLE
+       - description: region part of the hierarchy
+         type: STRING
+         name: region
+         mode: NULLABLE
+       - description: principal part of the hierarchy
+         type: STRING
+         name: principal
+         mode: NULLABLE
+       - description: associate part of the hierarchy
+         type: STRING
+         name: associate
+         mode: NULLABLE
+       - description: chain part of the hierarchy
+         type: STRING
+         name: chain
+         mode: NULLABLE
+       - description: name of the chain
+         type: STRING
+         name: chain_name
+         mode: NULLABLE
+       - description: attention line of the chain
+         type: STRING
+         name: attention
+         mode: NULLABLE
+       - description: address line 1 of the chain
+         type: STRING
+         name: address1
+         mode: NULLABLE
+       - description: address line 2 of the chain
+         type: STRING
+         name: address2
+         mode: NULLABLE
+       - description: address line 3 of the chain
+         type: STRING
+         name: address3
+         mode: NULLABLE
+       - description: address city of the chain
+         type: STRING
+         name: city
+         mode: NULLABLE
+       - description: address state of the chain
+         type: STRING
+         name: state
+         mode: NULLABLE
+       - description: address country of the chain
+         type: STRING
+         name: country
+         mode: NULLABLE
+       - description: address postal code of the chain
+         type: STRING
+         name: postal_code
+         mode: NULLABLE
+       - description: indicates whether statement is for aggregate report or chain merchant
+         type: STRING
+         name: statement_type
+         mode: NULLABLE
+       - description: year and month of the chain statement in YYYYMM format
+         type: STRING
+         name: statement_month_year
+         mode: NULLABLE
+       - description: indicates whether chain statement has been released
+         type: BOOLEAN
+         name: statement_released_ind
+         mode: NULLABLE
+       - description: UTC date time of the release date for chain statement
+         type: TIMESTAMP
+         name: statement_released_date_time
+         mode: NULLABLE
+       - description: offset for the UTC date time of the release date for chain statement
+         type: STRING
+         name: statement_released_date_time_offset
+         mode: NULLABLE
+       - description: user id who released the chain statement
+         type: STRING
+         name: statement_released_user_id
+         mode: NULLABLE
+       - description: UTC date time of the creation date for chain statement
+         type: TIMESTAMP
+         name: statement_created_date_time
+         mode: NULLABLE
+       - description: offset for the UTC date time of the creation date for chain statement
+         type: STRING
+         name: statement_created_date_time_offset
+         mode: NULLABLE
+       - description: user id who created the chain statement
+         type: STRING
+         name: statement_created_user_id
+         mode: NULLABLE
+       - description: UTC date time of the update date for chain statement
+         type: TIMESTAMP
+         name: statement_updated_date_time
+         mode: NULLABLE
+       - description: offset for the UTC date time of the update date for chain statement
+         type: STRING
+         name: statement_updated_date_time_offset
+         mode: NULLABLE
+       - description: user id who updated the chain statement
+         type: STRING
+         name: statement_updated_user_id
+         mode: NULLABLE
+       - description: unique id assigned to etl batch job
+         type: INTEGER
+         name: etlbatchid
+         mode: REQUIRED

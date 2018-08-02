@@ -1,0 +1,89 @@
+resources:
+- name: ca_mmusesq_user_info
+  type: bigquery.v2.table
+  properties:
+    datasetId: trusted_layer
+    labels:
+      apigateway: not-applicable
+      build_date: '5152018'
+      bus_contact: mark-kubik
+      businessregion: us
+      cloudzone: google-us
+      company: globalpay
+      costcenter: finance
+      country: us
+      dataclassification: dc2
+      department: product-development
+      description: this_table_is_ca_mmusesq_user_info
+      eol_date: not-applicable
+      group: application-delivery
+      lifecycle: development
+      organization: bts
+      prj_code: business-view
+      productversion: 10
+      project: prj-gousenaib-dlak-res01
+      resourcename: ca_mmusesq_user_info
+      sla: gold
+      status: development
+      support_contact: roberto_belardo
+      tech_contact: venu-vidyashankar
+      tier: gcp-bigquery
+    schema:
+      fields:
+       - name: pk_hash
+         type: string
+       - name: cdc_hash
+         type: string
+       - name: corporate
+         type: string
+       - name: region
+         type: string
+       - name: principal
+         type: string
+       - name: associate
+         type: string
+       - name: chain
+         type: string
+       - name: merchant
+         type: integer
+       - name: cd_a4
+         type: string
+       - name: cd_b4
+         type: string
+       - name: cd_c4
+         type: string
+       - name: cd_d4
+         type: string
+       - name: cd_e4
+         type: string
+       - name: cd_f4
+         type: string
+       - name: cd_a16
+         type: string
+       - name: cd_b16
+         type: string
+       - name: cd_c16
+         type: string
+       - name: cd_d16
+         type: string
+       - name: adj_down_grade
+         type: string
+       - name: window_disc
+         type: string
+       - name: old_merchant_nbr
+         type: string
+       - name: store_nbr
+         type: string
+       - name: file_name
+         type: string
+       - name: dw_create_dtm
+         type: timestamp
+       - name: dw_update_dtm
+         type: timestamp
+       - name: actual_updt_dtm
+         type: timestamp
+       - name: current_ind
+         type: integer
+    tableReference:
+      projectId: prj-gousenaib-dlak-res01
+      tableId: ca_mmusesq_user_info

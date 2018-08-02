@@ -1,0 +1,115 @@
+resources:
+ - name: vw_bi_settlement_batch
+   type: bigquery.v2.table
+   properties:
+    datasetId: consumption_layer
+    tableReference:
+      projectId: PROJECT_ID
+      tableId: vw_bi_settlement_batch
+    labels:
+      apigateway: not-applicable
+      bus_contact: mark-kubik
+      businessregion: us
+      cloudzone: google-us
+      company: globalpay
+      costcenter: finance
+      country: us
+      dataclassification: dc2
+      department: product-development
+      description: vw_bi_settlement_batch
+      eol_date: not-applicable
+      group: application-delivery
+      lifecycle: development
+      organization: bts
+      prj_code: business-view
+      productversion: 10
+      project: PROJECT_ID
+      resourcename: location-table
+      service: gcp-cloud-datalake
+      sla: gold
+      status: development
+      support_contact: roberto_belardo
+      tech_contact: venu-vidyashankar
+      tier: gcp-bigquery
+    view:
+      query: select
+             row_number()over(order by null) as seq_key,
+             sum(batch_count) as batch_count ,
+             dif_alpha_currency_code ,
+             sum(batch_amount) as batch_amount ,
+             sum(batch_settled_amount) as batch_settled_amount ,
+             dif_card_acceptor_id ,
+             auth_terminal_number ,
+             dif_batch_control_number ,
+             index_master_merchant_dba_name ,
+             dif_merchant_dba_name ,
+             merchant_number ,
+             sum(refund_count) as refund_count ,
+             tip_type ,
+             sum(tip_amount) as tip_amount,
+             sum(cast (sales_tax as FLOAT64)) as sales_tax ,
+             auth_invoice_number ,
+             dif_merchant_category_code ,
+             sum(purchase_count) as purchase_count, 
+             sum(refund_amount) as  refund_amount,
+             sum(purchase_amount) as purchase_amount,
+             dif_file_date,
+             settle_alpha_currency_code,
+             corp,
+             region,
+             dif_principal as principal,
+             dif_associate as associate,
+             chain
+             from 
+             (
+             select 
+             distinct 
+             batch_count,
+             batch_amount,
+             batch_settled_amount,
+             refund_count,
+             tip_amount,
+             sales_tax,
+             purchase_count,
+             refund_amount,
+             purchase_amount,
+             dif_alpha_currency_code ,
+             dif_card_acceptor_id ,
+             auth_terminal_number ,
+             dif_batch_control_number ,
+             index_master_merchant_dba_name ,
+             dif_merchant_dba_name ,
+             merchant_number ,
+             tip_type_desc as tip_type ,
+             auth_invoice_number ,
+             dif_merchant_category_code ,
+             dif_file_date,
+             settle_alpha_currency_code,
+             corporate as corp,
+             region,
+             principal as dif_principal ,
+             associate as dif_associate ,
+             chain
+             from `PROJECT_ID.consumption_layer.wwmaster_super_table` 
+             )
+             
+             group by
+             dif_alpha_currency_code ,
+             dif_card_acceptor_id ,
+             auth_terminal_number ,
+             dif_batch_control_number ,
+             index_master_merchant_dba_name ,
+             dif_merchant_dba_name ,
+             merchant_number ,
+             tip_type ,
+             auth_invoice_number ,
+             dif_merchant_category_code ,
+             dif_file_date,
+             settle_alpha_currency_code,
+             corp,
+             region,
+             principal ,
+             associate ,
+             chain
+      useLegacySql: false
+ 

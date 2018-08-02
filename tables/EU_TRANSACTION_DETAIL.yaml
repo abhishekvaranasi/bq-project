@@ -1,0 +1,108 @@
+resources:
+- name: eu-transaction-detail
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: eu_transaction_detail
+   labels:
+     apigateway: not-applicable
+     build_date:  2152018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: eu_transaction_detail_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer      
+      - mode: NULLABLE
+        name: transaction_compliance_sequence_key
+        type: string
+      - mode: NULLABLE
+        name: transaction_compliance_month_id
+        type: integer
+      - mode: NULLABLE
+        name: hierarchy
+        type: string
+      - mode: NULLABLE
+        name: corporate
+        type: string
+      - mode: NULLABLE
+        name: region
+        type: string
+      - mode: NULLABLE
+        name: principal
+        type: string
+      - mode: NULLABLE
+        name: associate
+        type: string
+      - mode: NULLABLE
+        name: chain
+        type: string
+      - mode: NULLABLE
+        name: merchant_number
+        type: string
+      - mode: NULLABLE
+        name: merchant_name
+        type: string
+      - mode: NULLABLE
+        name: transaction_datetime
+        type: TIMESTAMP
+      - mode: NULLABLE
+        name: timezone_offset
+        type: string
+      - mode: NULLABLE
+        name: card_type
+        type: string
+      - mode: NULLABLE
+        name: card_number_redact_key
+        type: string
+      - mode: NULLABLE
+        name: originating_currency_code
+        type: string
+      - mode: NULLABLE
+        name: transaction_amount
+        type: float
+      - mode: NULLABLE
+        name: transaction_crediting_currency_code
+        type: string
+      - mode: NULLABLE
+        name: transaction_crediting_amount
+        type: float
+      - mode: NULLABLE
+        name: surcharge_discount_currency_code
+        type: string
+      - mode: NULLABLE
+        name: surcharge_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: interchange_gbp_amount
+        type: float
+      - mode: NULLABLE
+        name: transaction_gbp_amount
+        type: float
+      - mode: NULLABLE
+        name: surcharge_per_item_discount_gbp_amount
+        type: float

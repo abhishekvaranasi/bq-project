@@ -1,0 +1,74 @@
+resources:
+ - name: vw_bi_ma_us_fct_payment_advice
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_ma_us_fct_payment_advice
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_ma_us_fct_payment_advice
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: SELECT 
+              city
+              ,eod_associate
+              ,eod_chain
+              ,eod_corp
+              ,eod_dep_alpha_currency_code
+              ,eod_dep_bank_routing_number
+              ,eod_card_activity_type_ind as eod_card_activity_type
+              ,eod_card_exchange_rate
+              ,eod_card_sales_converted_amount
+              ,eod_card_total_amount
+              ,eod_dep_cashback_discount_amount
+              ,eod_dep_dcn_adjustment_amount
+              ,eod_dep_dda_account_number
+              ,eod_dep_deposit_date
+              ,eod_dep_deposit_gross_amount
+              ,eod_dep_deposit_net_amount
+              ,eod_dep_discount_amount
+              ,eod_dep_merchant_dba_name
+              ,eod_dep_original_currency_amount
+              ,eod_dep_sequence_number
+              ,eod_dep_settle_currency_code
+              ,eod_dep_terminal_number
+              ,eod_deposit_control_number
+              ,eod_principal
+              ,eod_processing_date
+              ,merchant_address1
+              ,merchant_address2
+              ,merchant_fax_number
+              ,merchant_name
+              ,merchant_number
+              ,merchant_phone
+              ,merchant_status
+              ,region
+              ,state
+              ,zipcode
+              FROM `PROJECT_ID.consumption_layer.wwmaster_super_table`
+              WHERE EOD_CORP = '055' AND REGION <> '50'
+       useLegacySql: false
+  

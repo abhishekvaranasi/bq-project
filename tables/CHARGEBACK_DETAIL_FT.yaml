@@ -1,0 +1,135 @@
+resources:
+- name: chargeback-detail-ft
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: chargeback_detail_ft
+   labels:
+     apigateway: not-applicable
+     build_date:  2082018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: chargeback_detail_ft_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer      
+      - mode: NULLABLE
+        type: string
+        name: CORP
+        description: Source coloum type =>CHARACTER VARYING(3)
+      - mode: NULLABLE
+        type: string
+        name: REGION
+        description: Source coloum type =>CHARACTER VARYING(2)
+      - mode: NULLABLE
+        type: string
+        name: PRINCIPAL
+        description: Source coloum type =>CHARACTER VARYING(3)
+      - mode: NULLABLE
+        type: string
+        name: ASSOCIATE
+        description: Source coloum type =>CHARACTER VARYING(3)
+      - mode: NULLABLE
+        type: string
+        name: CHAIN
+        description: Source coloum type =>CHARACTER VARYING(3)
+      - mode: NULLABLE
+        type: float
+        name: MERCHANT_NUMBER
+        description: Source coloum type =>NUMERIC(16)
+      - mode: NULLABLE
+        type: string
+        name: TERMINAL_NUMBER
+        description: Source coloum type =>CHARACTER VARYING(12)
+      - mode: NULLABLE
+        type: date
+        name: PROCESSING_DATE
+        description: Source coloum type =>DATE
+      - mode: NULLABLE
+        type: string
+        name: TYPE_CODE
+        description: Source coloum type =>CHARACTER VARYING(2)
+      - mode: NULLABLE
+        type: string
+        name: SEQUENCE_NUMBER
+        description: Source coloum type =>CHARACTER VARYING(7)
+      - mode: NULLABLE
+        type: string
+        name: BANK_ROUTING_NUMBER
+        description: Source coloum type =>CHARACTER VARYING(9)
+      - mode: NULLABLE
+        type: string
+        name: DDA_ACCOUNT_NUMBER
+        description: Source coloum type =>CHARACTER VARYING(17)
+      - mode: NULLABLE
+        type: float
+        name: CHARGEBACK_AMOUNT
+        description: Source coloum type =>NUMERIC(19,4)
+      - mode: NULLABLE
+        type: string
+        name: CHARGEBACK_REASON
+        description: Source coloum type =>CHARACTER VARYING(4)
+      - mode: NULLABLE
+        type: string
+        name: CHARGEBACK_REASON_DESCRIPTION
+        description: Source coloum type =>NATIONAL CHARACTER VARYING(32)
+      - mode: NULLABLE
+        type: string
+        name: MERCHANT_DBA_NAME
+        description: Source coloum type =>NATIONAL CHARACTER VARYING(32)
+      - mode: NULLABLE
+        type: string
+        name: SUMMARY_INDICATOR
+        description: Source coloum type =>CHARACTER VARYING(1)
+      - mode: NULLABLE
+        type: string
+        name: CASE_NUMBER
+        description: Source coloum type =>CHARACTER VARYING(10)
+      - mode: NULLABLE
+        type: string
+        name: ORIGINAL_CURRENCY_CODE
+        description: Source coloum type =>CHARACTER VARYING(3)
+      - mode: NULLABLE
+        type: float
+        name: ORIGINAL_CURRENCY_AMOUNT
+        description: Source coloum type =>NUMERIC(19,4)
+      - mode: NULLABLE
+        type: float
+        name: MERCHANT_SEQUENCE_NUM
+        description: Source coloum type =>NUMERIC(4,0)
+      - mode: NULLABLE
+        type: string
+        name: PAYMENT_REFERENCE_NUM
+        description: Source coloum type =>CHARACTER VARYING(15)
+      - mode: NULLABLE
+        type: float
+        name: ACQUIRER_REFERENCE_NUM
+        description: Source coloum type =>NUMERIC(23,0)
+      - mode: NULLABLE
+        type: TIMESTAMP
+        name: SOURCE_CREATE_DATETIME
+        description: Source coloum type => TIMESTAMP                      

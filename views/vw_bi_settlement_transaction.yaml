@@ -1,0 +1,111 @@
+resources:
+ - name: vw_bi_settlement_transaction
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_settlement_transaction
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_settlement_transaction
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: select 
+              seq_key,
+              auth_expiry_date_mask as auth_exp_date_masked,
+              dif_file_date,
+              dif_authorization_date,
+              dif_authorization_amount,
+              dif_transaction_amount,
+              dif_settled_amount,
+              reponse_downgrade_text,
+              dif_response_downgrade_code_0 as dif_response_downgrade_code,
+              dif_cash_back_amount,
+              dif_auth_characteristic_ind_code as auth_characteristic_ind,
+              merchant_number,
+              auth_invoice_number,
+              dif_ref_num,
+              dif_authorization_code,
+              dif_card_holder_num_mask,
+              dif_card_scheme,
+              lotr_transaction_id,
+              lotr_authorization_id as lotr_auth_id,
+              dif_transaction_date,
+              dif_lodging_check_in_date,
+              CHAIN,
+              REGION,
+              principal as dif_principal,
+              associate as dif_associate,
+              corporate as corp,
+              dif_merchant_dba_name,
+              dif_merchant_category_code
+              dif_card_holder_activated_terminal_code,
+              dif_authorization_response_code,
+              dif_batch_control_number,
+              dif_tran_code,
+              dif_pos_entry_code,
+              dif_transaction_id,
+              dif_cross_border_ind_code,
+              dif_original_transaction_ref,
+              dif_mc_interchange_level,
+              dif_merchant_category_code,
+              dif_visa_interchange_level,
+              dif_visa_product_level_id,
+              dif_alpha_currency_code,
+              dif_validation_code,
+              dif_charge_type,
+              dif_source_id,
+              dif_cardholder_id_method,
+              settle_alpha_currency_code,
+              dif_mc_device_type_code,
+              dif_terminal_capability,
+              dif_authorization_source_code,
+              dif_avs_response_code,
+              dif_prepaid_ind,
+              dif_moto_ecommerce_ind,
+              dif_service_development_field_code,
+              dif_market_specific_authorization_data,
+              dif_scan_charge,
+              dif_deposit_id,
+              dif_cash_letter_number,
+              dif_req_payment_service_value,
+              dif_central_time_ind_code,
+              dif_supplemental_authorization_amount,
+              dif_purchase_identifier_format,
+              dif_purchase_identifier,
+              dif_error_code,
+              dif_lodging_no_show_ind,
+              dif_lodging_extra_charges,
+              dif_car_rental_no_show,
+              dif_car_rental_extra_charges,
+              dif_card_acceptor_id,
+              dif_cps_ind,
+              concat(substr(dif_file_time,1,2),':',substr(dif_file_time,3,2),':',substr(dif_file_time,5,2)) as file_time
+              ,cast(concat(cast(dif_file_date as string),' ',concat(substr(dif_file_time,1,2),':',substr(dif_file_time,3,2),':',substr(dif_file_time,5,2))) as timestamp) as file_date_time
+              ,cast(concat(cast(dif_transaction_date as string),' ',concat(substr(dif_transaction_time,1,2),':',substr(dif_transaction_time,3,2),':',substr(dif_transaction_time,5,2))) as timestamp) as transaction_date_time
+              , concat(substr(dif_transaction_time,1,2),':',substr(dif_transaction_time,3,2),':',substr(dif_transaction_time,5,2)) as transaction_time
+              from `PROJECT_ID.consumption_layer.wwmaster_super_table` 
+       useLegacySql: false
+

@@ -1,0 +1,35 @@
+resources:
+ - name: trusted_layer
+   type: bigquery.v2.dataset
+   properties:
+    friendlyName: Trusted_layer_dataset
+    description: dataset will contains supertables
+    datasetReference:
+     datasetId: trusted_layer
+     projectId: analytics-and-presentation
+    labels:
+      resourcename : example-dataset
+      project : gcp-cloud-data-lake
+      lifecycle : development
+      tier : gcp-bigquery
+      dataclassification : dc2
+      costcenter : finance
+      businessregion : us
+      country : us
+      cloudzone : google-us
+      company : globalpay
+      organization : bts
+      department : product-development
+      group : application-delivery
+      apigateway : not-applicable
+      service : gcp-cloud-datalake
+      tech_contact : venu-vidyashankar
+      bus_contact : mark-kubik
+      prj_code : business-view
+      productversion : 1_0
+      sla : gold
+      build_date : "1302018"
+      status : development
+      eol_date : not-applicable
+      support : roberto-belardo
+      description : this-dataset-is-for-the-gpn-data-lake-in-the-us

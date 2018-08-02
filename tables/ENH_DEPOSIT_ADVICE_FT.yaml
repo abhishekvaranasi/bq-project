@@ -1,0 +1,187 @@
+resources:
+- name: enh-deposit-advice-ft
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: enh_deposit_advice_ft
+   labels:
+     apigateway: not-applicable
+     build_date:  2092018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: enh_deposit_advice_ft_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: CORP
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: REGION
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: PRINCIPAL
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: ASSOCIATE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: CHAIN
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: MERCHANT_NUMBER
+        type: float
+        description: Source column type => NUMERIC(16)
+      - mode: NULLABLE
+        name: TERMINAL_NUMBER
+        type: string
+        description: Source column type => CHARACTER VARYING(12)
+      - mode: NULLABLE
+        name: PROCESSING_DATE
+        type: date
+        description: Source column type => DATE
+      - mode: NULLABLE
+        name: TYPE_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: SEQUENCE_NUMBER
+        type: string
+        description: Source column type => CHARACTER VARYING(7)
+      - mode: NULLABLE
+        name: BANK_ROUTING_NUMBER
+        type: string
+        description: Source column type => CHARACTER VARYING(9)
+      - mode: NULLABLE
+        name: DDA_ACCOUNT_NUMBER
+        type: string
+        description: Source column type => CHARACTER VARYING(17)
+      - mode: NULLABLE
+        name: DEPOSIT_GROSS_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: DISCOUNT_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: DEPOSIT_NET_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: DEPOSIT_CONTROL
+        type: string
+        description: Source column type => NATIONAL CHARACTER VARYING(7)
+      - mode: NULLABLE
+        name: DEPOSIT_DATE
+        type: date
+        description: Source column type => DATE
+      - mode: NULLABLE
+        name: DELAY_DAYS
+        type: float
+        description: Source column type => NUMERIC(3,0)
+      - mode: NULLABLE
+        name: ORIGINAL_CURRENCY_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: ORIGINAL_CURRENCY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: MERCHANT_DBA_NAME
+        type: string
+        description: Source column type => NATIONAL CHARACTER VARYING(64)
+      - mode: NULLABLE
+        name: SUMMARY_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: BATCH_KEY
+        type: string
+        description: Source column type => CHARACTER VARYING(13)
+      - mode: NULLABLE
+        name: SETTLEMENT_CURRENCY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: DCN_ADJUSTMENT_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: DCN_REASON
+        type: float
+        description: Source column type => NUMERIC(2,0)
+      - mode: NULLABLE
+        name: DCC_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: Card_Total_Amount
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: Card_Exchange_Rate
+        type: string
+        description: Source column type => CHARACTER VARYING(11)
+      - mode: NULLABLE
+        name: Card_Sales_Converted_Amount
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: Card_Activity_Type
+        type: string
+        description: Source column type => CHARACTER VARYING(10)
+      - mode: NULLABLE
+        name: Cashback_Discount_Amount
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: Total_Items
+        type: float
+        description: Source column type => NUMERIC(6,0)
+      - mode: NULLABLE
+        name: MERCHANT_SEQUENCE_NUM
+        type: float
+        description: Source column type => NUMERIC(4,0)
+      - mode: NULLABLE
+        name: PAYMENT_REFERENCE_NUM
+        type: string
+        description: Source column type => CHARACTER VARYING(15)
+      - mode: NULLABLE
+        name: SPLIT_TYPE
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: SOURCE_CREATE_DATETIME
+        type: TIMESTAMP
+        description: Source column type => TIMESTAMP

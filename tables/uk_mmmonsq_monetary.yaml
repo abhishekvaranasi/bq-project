@@ -1,0 +1,138 @@
+resources:
+- name: uk_mmmonsq_monetary
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: uk_mmmonsq_monetary
+   labels:
+     apigateway: not-applicable
+     build_date:  2192018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: uk_mmmonsq_monetary
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: uk_mmmonsq_monetary
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:      
+      - mode: NULLABLE
+        name: pk_hash
+        type: string
+      - mode: NULLABLE
+        name: cdc_hash
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_corporate
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_region
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_principal
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_associate
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_chain
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_merchant
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_card_type
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_charge_type
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_date_last_activity
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_date_last_fm
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_operator_id
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_update_level
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_discnt_rate_type
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_discnt_apply_type
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_discnt_pct1
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_discnt_pct2
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_break_basis
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_single_break_amt
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_sliding_scale_tbl
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_pi_sliding_scale_tbl
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_pi_rate_type
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_pi_apply_type
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_per_item_amt
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_per_item_amt_2
+        type: float
+      - mode: NULLABLE
+        name: mm_mnt_interchg_rate_type
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_special_pricing
+        type: string
+      - mode: NULLABLE
+        name: mm_mnt_date_deactive
+        type: string
+      - mode: NULLABLE
+        name: current_ind
+        type: integer
+      - mode: NULLABLE
+        name: file_name
+        type: string
+      - mode: NULLABLE
+        name: dw_create_dtm
+        type: timestamp
+      - mode: NULLABLE
+        name: dw_update_dtm
+        type: timestamp
+      - mode: NULLABLE
+        name: actual_updt_dtm
+        type: timestamp

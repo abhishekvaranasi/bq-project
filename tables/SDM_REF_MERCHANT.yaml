@@ -1,0 +1,390 @@
+resources:
+- name: sdm-ref-merchant
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: sdm_ref_merchant
+   labels:
+     apigateway: not-applicable
+     build_date:  2192018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: ecan_super_table_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: md_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: md_corporate_number
+        type: string
+      - mode: NULLABLE
+        name: md_region_number
+        type: string
+      - mode: NULLABLE
+        name: md_dba_name
+        type: string
+      - mode: NULLABLE
+        name: md_dba_contact
+        type: string
+      - mode: NULLABLE
+        name: md_dba_address1
+        type: string
+      - mode: NULLABLE
+        name: md_dba_address2
+        type: string
+      - mode: NULLABLE
+        name: md_dba_city
+        type: string
+      - mode: NULLABLE
+        name: md_dba_state
+        type: string
+      - mode: NULLABLE
+        name: md_dba_zip
+        type: string
+      - mode: NULLABLE
+        name: md_dba_country
+        type: string
+      - mode: NULLABLE
+        name: md_dba_usstcd
+        type: string
+      - mode: NULLABLE
+        name: md_dba_phone1
+        type: string
+      - mode: NULLABLE
+        name: md_dba_fax
+        type: string
+      - mode: NULLABLE
+        name: md_corp_name
+        type: string
+      - mode: NULLABLE
+        name: md_corp_contact
+        type: string
+      - mode: NULLABLE
+        name: md_corp_address1
+        type: string
+      - mode: NULLABLE
+        name: md_corp_address2
+        type: string
+      - mode: NULLABLE
+        name: md_corp_city
+        type: string
+      - mode: NULLABLE
+        name: md_corp_state
+        type: string
+      - mode: NULLABLE
+        name: md_corp_zip
+        type: string
+      - mode: NULLABLE
+        name: md_corp_country
+        type: string
+      - mode: NULLABLE
+        name: md_corp_usstcd
+        type: string
+      - mode: NULLABLE
+        name: md_corp_phone1
+        type: string
+      - mode: NULLABLE
+        name: md_region_name
+        type: string
+      - mode: NULLABLE
+        name: md_region_contact
+        type: string
+      - mode: NULLABLE
+        name: md_region_address1
+        type: string
+      - mode: NULLABLE
+        name: md_region_address2
+        type: string
+      - mode: NULLABLE
+        name: md_region_city
+        type: string
+      - mode: NULLABLE
+        name: md_region_state
+        type: string
+      - mode: NULLABLE
+        name: md_region_zip
+        type: string
+      - mode: NULLABLE
+        name: md_region_country
+        type: string
+      - mode: NULLABLE
+        name: md_region_usstcd
+        type: string
+      - mode: NULLABLE
+        name: md_region_fax
+        type: string
+      - mode: NULLABLE
+        name: md_misc_name
+        type: string
+      - mode: NULLABLE
+        name: md_misc_contact
+        type: string
+      - mode: NULLABLE
+        name: md_misc_address1
+        type: string
+      - mode: NULLABLE
+        name: md_misc_address2
+        type: string
+      - mode: NULLABLE
+        name: md_misc_city
+        type: string
+      - mode: NULLABLE
+        name: md_misc_state
+        type: string
+      - mode: NULLABLE
+        name: md_misc_zip
+        type: string
+      - mode: NULLABLE
+        name: md_misc_country
+        type: string
+      - mode: NULLABLE
+        name: md_misc_usstcd
+        type: string
+      - mode: NULLABLE
+        name: md_misc_fax
+        type: string
+      - mode: NULLABLE
+        name: md_merchant_category_code
+        type: string
+      - mode: NULLABLE
+        name: md_transaction_category_code
+        type: string
+      - mode: NULLABLE
+        name: md_bank_id
+        type: string
+      - mode: NULLABLE
+        name: md_assoc_number
+        type: string
+      - mode: NULLABLE
+        name: md_bin
+        type: string
+      - mode: NULLABLE
+        name: md_ica
+        type: string
+      - mode: NULLABLE
+        name: md_rr_contact
+        type: string
+      - mode: NULLABLE
+        name: md_rr_address
+        type: string
+      - mode: NULLABLE
+        name: md_rr_fax
+        type: string
+      - mode: NULLABLE
+        name: md_sd_request_method
+        type: string
+      - mode: NULLABLE
+        name: md_chargeback_contact
+        type: string
+      - mode: NULLABLE
+        name: md_chargeback_address
+        type: string
+      - mode: NULLABLE
+        name: md_chargeback_fax
+        type: string
+      - mode: NULLABLE
+        name: md_chargeback_group_code
+        type: string
+      - mode: NULLABLE
+        name: md_chargeback_print_ind
+        type: string
+      - mode: NULLABLE
+        name: md_oc_address
+        type: string
+      - mode: NULLABLE
+        name: md_merchant_payment_method
+        type: string
+      - mode: NULLABLE
+        name: md_retail_desc
+        type: string
+      - mode: NULLABLE
+        name: md_alt_retail_desc
+        type: string
+      - mode: NULLABLE
+        name: md_account_status
+        type: string
+      - mode: NULLABLE
+        name: md_activity_status
+        type: string
+      - mode: NULLABLE
+        name: md_business_type
+        type: string
+      - mode: NULLABLE
+        name: md_cash_advances
+        type: string
+      - mode: NULLABLE
+        name: md_retail_sales
+        type: string
+      - mode: NULLABLE
+        name: md_opened_date
+        type: date
+      - mode: NULLABLE
+        name: md_closed_date
+        type: date
+      - mode: NULLABLE
+        name: md_last_update_datetime
+        type: timestamp
+      - mode: NULLABLE
+        name: md_authorization_vendor
+        type: string
+      - mode: NULLABLE
+        name: md_edc_type
+        type: string
+      - mode: NULLABLE
+        name: md_transit_routing_number
+        type: string
+      - mode: NULLABLE
+        name: md_old_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: md_language_ind
+        type: string
+      - mode: NULLABLE
+        name: md_acq_site_data_id
+        type: INTEGER
+      - mode: NULLABLE
+        name: md_reserve_pct
+        type: string
+      - mode: NULLABLE
+        name: md_premier_ind
+        type: string
+      - mode: NULLABLE
+        name: md_tax_id
+        type: string
+      - mode: NULLABLE
+        name: md_currency_code
+        type: string
+      - mode: NULLABLE
+        name: md_email_address
+        type: string
+      - mode: NULLABLE
+        name: md_anticipated_annual_volume
+        type: float
+      - mode: NULLABLE
+        name: md_anticipated_average_ticket
+        type: float
+      - mode: NULLABLE
+        name: md_frozen_date
+        type: date
+      - mode: NULLABLE
+        name: md_sales_rep_code
+        type: string
+      - mode: NULLABLE
+        name: md_same_day_fund
+        type: string
+      - mode: NULLABLE
+        name: md_first_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: md_user_visa_ic
+        type: string
+      - mode: NULLABLE
+        name: md_user_mc_ic
+        type: string
+      - mode: NULLABLE
+        name: md_merch_summary_flag
+        type: string
+      - mode: NULLABLE
+        name: md_dba_address3
+        type: string
+      - mode: NULLABLE
+        name: md_corp_address3
+        type: string
+      - mode: NULLABLE
+        name: md_region_address3
+        type: string
+      - mode: NULLABLE
+        name: md_misc_address3
+        type: string
+      - mode: NULLABLE
+        name: md_principal_number
+        type: string
+      - mode: NULLABLE
+        name: md_hierarchy_number
+        type: string
+      - mode: NULLABLE
+        name: md_mas_last_update_date
+        type: date
+      - mode: NULLABLE
+        name: md_insert_datetime
+        type: timestamp
+      - mode: NULLABLE
+        name: md_update_datetime
+        type: timestamp
+      - mode: NULLABLE
+        name: md_tm_batch_date_number
+        type: string
+      - mode: NULLABLE
+        name: md_chain_number
+        type: string
+      - mode: NULLABLE
+        name: md_cb_mas_address_code
+        type: string
+      - mode: NULLABLE
+        name: md_rr_mas_address_code
+        type: string
+      - mode: NULLABLE
+        name: md_corp_fax
+        type: string
+      - mode: NULLABLE
+        name: md_misc_phone1
+        type: string
+      - mode: NULLABLE
+        name: md_region_phone1
+        type: string
+      - mode: NULLABLE
+        name: mm_user_store_nbr
+        type: string
+      - mode: NULLABLE
+        name: mm_email_address
+        type: string
+      - mode: NULLABLE
+        name: mm_user_code_d16
+        type: string
+      - mode: NULLABLE
+        name: mm_aad_opt_data
+        type: string
+      - mode: NULLABLE
+        name: stmnt_typ
+        type: string
+      - mode: NULLABLE
+        name: stmnt_hold_sw
+        type: string
+      - mode: NULLABLE
+        name: stmnt_correspond_cd
+        type: string
+      - mode: NULLABLE
+        name: rpt_country_code
+        type: string
+      - mode: NULLABLE
+        name: rpt_postal_code
+        type: string
+      - mode: NULLABLE
+        name: rpt_phone_type_code
+        type: string
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer

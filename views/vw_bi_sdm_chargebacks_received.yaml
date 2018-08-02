@@ -1,0 +1,338 @@
+resources:
+ - name: vw_bi_sdm_chargebacks_received
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_sdm_chargebacks_received
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_sdm_chargebacks_received
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: select 
+              dispute_sequence_key as seq_key
+              ,merchant_number
+              ,merchant_name
+              ,case_number
+              ,case_amount
+              ,currency_code
+              ,due_date as case_due_date
+              ,case_status_desc
+              ,case_reason_code
+              ,case_reason_desc
+              ,auth_code as authorization_code
+              ,merchant_pay_amount as adjustment_amount
+              ,merchant_pay_currency_code as adjustment_currency_code
+              ,merchant_adjustment_desc as Credit_Debit
+              ,card_scheme_desc as card_brand
+              ,card_number_rk as card_number 
+              ,transaction_date 
+              ,foreign_amount AS original_transaction_amount
+              ,foreign_currency_code as original_transaction_currency
+              ,transaction_type_code as transaction_type
+              ,pos_entry_mode_code
+              ,pos_entry_mode_desc
+              ,transaction_arn
+              ,original_ref_number
+              ,pega_case_id
+              ,case_type_desc
+              ,corporate
+              ,region
+              ,principal
+              ,associate
+              ,chain
+              ,resolved_date
+              ,chargeback_date
+              ,record_type
+              ,language_code
+              ,case_type_code
+              ,case 
+              when case_type_code='0' and case_status_code='36' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='0' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='0' and case_status_code='14' and case_status_desc='PENDING-TRANSACTIONMATCH' then 'Pending'
+              when case_type_code='0' and case_status_code='15' and case_status_desc='PENDING-MERCHANTRESPONSE' then 'Open'
+              when case_type_code='0' and case_status_code='16' and case_status_desc='PENDING-INDEXERREVIEW' then 'Pending'
+              when case_type_code='0' and case_status_code='17' and case_status_desc='OPEN-RETRIEVAL' then 'Pending'
+              when case_type_code='0' and case_status_code='30' and case_status_desc='PENDING-CONFIRMATION-FULFILLED' then 'Closed'
+              when case_type_code='0' and case_status_code='31' and case_status_desc='RESOLVED-FULFILLED' then 'Closed'
+              when case_type_code='0' and case_status_code='32' and case_status_desc='RESOLVED-NOTFULFILLED' then 'Closed'
+              when case_type_code='0' and case_status_code='34' and case_status_desc='PENDINGCONFIRMATION-NOTFULFILLED' then 'Closed'
+              when case_type_code='1' and case_status_code='12' and case_status_desc='PENDING-SCHEMEINFO' then 'Pending'
+              when case_type_code='1' and case_status_code='34' and case_status_desc='PENDING-CONFIRMATION-REVIEW' then 'Pending'
+              when case_type_code='1' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='1' and case_status_code='14' and case_status_desc='PENDING-TRANSACTIONMATCH' then 'Pending'
+              when case_type_code='1' and case_status_code='15' and case_status_desc='PENDING-BANKDOC' then 'Pending'
+              when case_type_code='1' and case_status_code='17' and case_status_desc='PENDING-PRENOTESRESPONSE' then 'Open'
+              when case_type_code='1' and case_status_code='18' and case_status_desc='PENDING-SYSTEMFIX' then 'Pending'
+              when case_type_code='1' and case_status_code='19' and case_status_desc='PENDING-EXPIRYREVIEW' then 'Pending'
+              when case_type_code='1' and case_status_code='20' and case_status_desc='OPEN-CHARGEBACK' then 'Pending'
+              when case_type_code='1' and case_status_code='21' and case_status_desc='PENDING-REVIEW' then 'Pending'
+              when case_type_code='1' and case_status_code='22' and case_status_desc='PENDING-WRITEOFFDENIED' then 'Pending'
+              when case_type_code='1' and case_status_code='23' and case_status_desc='PENDING-WRITEOFF' then 'Pending'
+              when case_type_code='1' and case_status_code='24' and case_status_desc='PENDING-REVIEWDENIAL' then 'Pending'
+              when case_type_code='1' and case_status_code='25' and case_status_desc='PENDING-TRANSACTIONREVIEW' then 'Pending'
+              when case_type_code='1' and case_status_code='26' and case_status_desc='PENDING-REVIEWEXCEPTION' then 'Pending'
+              when case_type_code='1' and case_status_code='27' and case_status_desc='RESOLVED-SPLIT' then 'Closed'
+              when case_type_code='1' and case_status_code='28' and case_status_desc='RESOLVED-GL' then 'Closed'
+              when case_type_code='1' and case_status_code='29' and case_status_desc='RESOLVED-MERCHANT' then 'Open'
+              when case_type_code='1' and case_status_code='30' and case_status_desc='RESOLVED-WRITEOFF' then 'Closed'
+              when case_type_code='1' and case_status_code='31' and case_status_desc='RESOLVED-BANK' then 'Closed'
+              when case_type_code='1' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Closed'
+              when case_type_code='1' and case_status_code='36' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='1' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='2' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='2' and case_status_code='14' and case_status_desc='PENDING-TRANSACTIONMATCH' then 'Pending'
+              when case_type_code='2' and case_status_code='15' and case_status_desc='PENDING-BANKDOC' then 'Pending'
+              when case_type_code='2' and case_status_code='17' and case_status_desc='PENDING-PRENOTESRESPONSE' then 'Open'
+              when case_type_code='2' and case_status_code='18' and case_status_desc='PENDING-SYSTEMFIX' then 'Pending'
+              when case_type_code='2' and case_status_code='19' and case_status_desc='PENDING-EXPIRYREVIEW' then 'Pending'
+              when case_type_code='2' and case_status_code='20' and case_status_desc='OPEN-CHARGEBACK' then 'Pending'
+              when case_type_code='2' and case_status_code='21' and case_status_desc='PENDING-REVIEW' then 'Pending'
+              when case_type_code='2' and case_status_code='22' and case_status_desc='PENDING-WRITEOFFDENIED' then 'Pending'
+              when case_type_code='2' and case_status_code='23' and case_status_desc='PENDING-WRITEOFF' then 'Pending'
+              when case_type_code='2' and case_status_code='24' and case_status_desc='PENDING-REVIEWDENIAL' then 'Pending'
+              when case_type_code='2' and case_status_code='25' and case_status_desc='PENDING-TRANSACTIONREVIEW' then 'Pending'
+              when case_type_code='2' and case_status_code='26' and case_status_desc='PENDING-REVIEWEXCEPTION' then 'Pending'
+              when case_type_code='2' and case_status_code='27' and case_status_desc='RESOLVED-SPLIT' then 'Closed'
+              when case_type_code='2' and case_status_code='28' and case_status_desc='RESOLVED-GL' then 'Closed'
+              when case_type_code='2' and case_status_code='29' and case_status_desc='RESOLVED-MERCHANT' then 'Closed'
+              when case_type_code='2' and case_status_code='30' and case_status_desc='RESOLVED-WRITEOFF' then 'Closed'
+              when case_type_code='2' and case_status_code='31' and case_status_desc='RESOLVED-BANK' then 'Closed'
+              when case_type_code='2' and case_status_code='33' and case_status_desc='PRINTED' then 'Closed'
+              when case_type_code='2' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Closed'
+              when case_type_code='2' and case_status_code='36' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='2' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='3' and case_status_code='34' and case_status_desc='PENDING-CONFIRMATIONREVIEW' then 'Pending'
+              when case_type_code='3' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='3' and case_status_code='14' and case_status_desc='PENDING-TRANSACTIONMATCH' then 'Pending'
+              when case_type_code='3' and case_status_code='18' and case_status_desc='PENDING-SYSTEMFIX' then 'Pending'
+              when case_type_code='3' and case_status_code='19' and case_status_desc='PENDING-EXPIRYREVIEW' then 'Pending'
+              when case_type_code='3' and case_status_code='20' and case_status_desc='OPEN-REVERSAL' then 'Pending'
+              when case_type_code='3' and case_status_code='21' and case_status_desc='PENDING-REVIEW' then 'Pending'
+              when case_type_code='3' and case_status_code='22' and case_status_desc='PENDING-WRITEOFFDENIED' then 'Pending'
+              when case_type_code='3' and case_status_code='23' and case_status_desc='PENDING-WRITEOFF' then 'Pending'
+              when case_type_code='3' and case_status_code='24' and case_status_desc='PENDING-REVIEWDENIAL' then 'Pending'
+              when case_type_code='3' and case_status_code='26' and case_status_desc='PENDING-REVIEWEXCEPTION' then 'Pending'
+              when case_type_code='3' and case_status_code='27' and case_status_desc='RESOLVED-SPLIT' then 'Closed'
+              when case_type_code='3' and case_status_code='28' and case_status_desc='RESOLVED-GL' then 'Closed'
+              when case_type_code='3' and case_status_code='29' and case_status_desc='RESOLVED-MERCHANT' then 'Closed'
+              when case_type_code='3' and case_status_code='30' and case_status_desc='RESOLVED-WRITEOFF' then 'Closed'
+              when case_type_code='3' and case_status_code='31' and case_status_desc='RESOLVED-BANK' then 'Closed'
+              when case_type_code='3' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Closed'
+              when case_type_code='3' and case_status_code='36' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='3' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Closed'
+              when case_type_code='4' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='4' and case_status_code='14' and case_status_desc='PENDING-TRANSACTIONMATCH' then 'Pending'
+              when case_type_code='4' and case_status_code='18' and case_status_desc='PENDING-SYSTEMFIX' then 'Pending'
+              when case_type_code='4' and case_status_code='19' and case_status_desc='PENDING-EXPIRYREVIEW' then 'Pending'
+              when case_type_code='4' and case_status_code='20' and case_status_desc='OPEN-REVERSAL' then 'Pending'
+              when case_type_code='4' and case_status_code='21' and case_status_desc='PENDING-REVIEW' then 'Pending'
+              when case_type_code='4' and case_status_code='22' and case_status_desc='PENDING-WRITEOFFDENIED' then 'Pending'
+              when case_type_code='4' and case_status_code='23' and case_status_desc='PENDING-WRITEOFF' then 'Pending'
+              when case_type_code='4' and case_status_code='24' and case_status_desc='PENDING-REVIEWDENIAL' then 'Pending'
+              when case_type_code='4' and case_status_code='26' and case_status_desc='PENDING-REVIEWEXCEPTION' then 'Pending'
+              when case_type_code='4' and case_status_code='27' and case_status_desc='RESOLVED-SPLIT' then 'Closed'
+              when case_type_code='4' and case_status_code='28' and case_status_desc='RESOLVED-GL' then 'Closed'
+              when case_type_code='4' and case_status_code='29' and case_status_desc='RESOLVED-MERCHANT' then 'Closed'
+              when case_type_code='4' and case_status_code='30' and case_status_desc='RESOLVED-WRITEOFF' then 'Closed'
+              when case_type_code='4' and case_status_code='31' and case_status_desc='RESOLVED-BANK' then 'Closed'
+              when case_type_code='4' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Closed'
+              when case_type_code='4' and case_status_code='36' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='4' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='10' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='10' and case_status_code='19' and case_status_desc='PENDING-REVIEWEXCEPTION' then 'Pending'
+              when case_type_code='10' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='10' and case_status_code='21' and case_status_desc='OPEN-REJECTS' then 'Pending'
+              when case_type_code='10' and case_status_code='27' and case_status_desc='RESOLVED-SPLIT' then 'Closed'
+              when case_type_code='10' and case_status_code='28' and case_status_desc='RESOLVED-GL' then 'Closed'
+              when case_type_code='10' and case_status_code='29' and case_status_desc='RESOLVED-MERCHANT' then 'Closed'
+              when case_type_code='10' and case_status_code='30' and case_status_desc='RESOLVED-WRITEOFF' then 'Closed'
+              when case_type_code='10' and case_status_code='31' and case_status_desc='RESOLVED-BANK' then 'Closed'
+              when case_type_code='10' and case_status_code='36' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='12' and case_status_code='18' and case_status_desc='PENDING-DATAMATCH' then 'Pending'
+              when case_type_code='12' and case_status_code='25' and case_status_desc='RESOLVED-RECALLED' then 'Closed'
+              when case_type_code='12' and case_status_code='30' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='12' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='12' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='12' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='12' and case_status_code='21' and case_status_desc='OPEN-PRECOMPLIANCE' then 'Pending'
+              when case_type_code='12' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='12' and case_status_code='31' and case_status_desc='PENDING-PRECOMPLIANCEREVIEW' then 'Pending'
+              when case_type_code='12' and case_status_code='32' and case_status_desc='PENDING-MERCHANTRESPONSE' then 'Open'
+              when case_type_code='12' and case_status_code='41' and case_status_desc='RESOLVED-PRECOMPLIANCESUCCESS' then 'Closed'
+              when case_type_code='12' and case_status_code='42' and case_status_desc='RESOLVED-PRECOMPLIANCELOST' then 'Closed'
+              when case_type_code='12' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='12' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='12' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='12' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='13' and case_status_code='18' and case_status_desc='PENDING-DATAMATCH' then 'Pending'
+              when case_type_code='13' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='13' and case_status_code='21' and case_status_desc='OPEN-PRECOMPLIANCE' then 'Pending'
+              when case_type_code='13' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='13' and case_status_code='31' and case_status_desc='PENDING-PRECOMPLIANCEREVIEW' then 'Pending'
+              when case_type_code='13' and case_status_code='32' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='13' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='13' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='13' and case_status_code='41' and case_status_desc='RESOLVED-PRECOMPLIANCESUCCESS' then 'Closed'
+              when case_type_code='13' and case_status_code='42' and case_status_desc='RESOLVED-PRECOMPLIANCELOST' then 'Closed'
+              when case_type_code='13' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='13' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='13' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='13' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='14' and case_status_code='18' and case_status_desc='PENDING-SYSTEMFIX' then 'Pending'
+              when case_type_code='14' and case_status_code='25' and case_status_desc='RESOLVED-RECALLED' then 'Closed'
+              when case_type_code='14' and case_status_code='30' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='14' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='14' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='14' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='14' and case_status_code='21' and case_status_desc='OPEN-PREARBITRATION' then 'Pending'
+              when case_type_code='14' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='14' and case_status_code='31' and case_status_desc='PENDING-PREARBITRATIONREVIEW' then 'Pending'
+              when case_type_code='14' and case_status_code='32' and case_status_desc='PENDING-MERCHANTRESPONSE' then 'Open'
+              when case_type_code='14' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Pending'
+              when case_type_code='14' and case_status_code='41' and case_status_desc='RESOLVED-PREARBITRATIONSUCCESS' then 'Closed'
+              when case_type_code='14' and case_status_code='42' and case_status_desc='RESOLVED-PREARBITRATIONLOST' then 'Closed'
+              when case_type_code='14' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='14' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='14' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='14' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='15' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='15' and case_status_code='21' and case_status_desc='OPEN-PREARBITRATION' then 'Pending'
+              when case_type_code='15' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='15' and case_status_code='31' and case_status_desc='PENDING-PREARBITRATIONREVIEW' then 'Pending'
+              when case_type_code='15' and case_status_code='32' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='15' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='15' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='15' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Pending'
+              when case_type_code='15' and case_status_code='41' and case_status_desc='RESOLVED-PREARBITRATIONSUCCESS' then 'Closed'
+              when case_type_code='15' and case_status_code='42' and case_status_desc='RESOLVED-PREARBITRATIONLOST' then 'Closed'
+              when case_type_code='15' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='15' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='15' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='15' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='31' and case_status_code='18' and case_status_desc='PENDING-DATAMATCH' then 'Pending'
+              when case_type_code='31' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='31' and case_status_code='21' and case_status_desc='OPEN-ARBITRATION' then 'Pending'
+              when case_type_code='31' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='31' and case_status_code='31' and case_status_desc='PENDING-ARBITRATIONREVIEW' then 'Pending'
+              when case_type_code='31' and case_status_code='32' and case_status_desc='PENDING-MERCHANTRESPONSE' then 'Open'
+              when case_type_code='31' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Pending'
+              when case_type_code='31' and case_status_code='40' and case_status_desc='RESOLVED-ARBITRATIONSPLIT' then 'Closed'
+              when case_type_code='31' and case_status_code='41' and case_status_desc='RESOLVED-ARBITRATIONSUCCESS' then 'Closed'
+              when case_type_code='31' and case_status_code='42' and case_status_desc='RESOLVED-ARBITRATIONLOST' then 'Closed'
+              when case_type_code='31' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='31' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='31' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='31' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='32' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='32' and case_status_code='21' and case_status_desc='OPEN-ARBITRATION' then 'Pending'
+              when case_type_code='32' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='32' and case_status_code='31' and case_status_desc='PENDING-ARBITRATIONREVIEW' then 'Pending'
+              when case_type_code='32' and case_status_code='32' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='32' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='32' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='32' and case_status_code='35' and case_status_desc='PENDING-CONFIRMATION' then 'Pending'
+              when case_type_code='32' and case_status_code='40' and case_status_desc='RESOLVED-ARBITRATIONSPLIT' then 'Closed'
+              when case_type_code='32' and case_status_code='41' and case_status_desc='RESOLVED-ARBITRATIONSUCCESS' then 'Closed'
+              when case_type_code='32' and case_status_code='42' and case_status_desc='RESOLVED-ARBITRATIONLOST' then 'Closed'
+              when case_type_code='32' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='32' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='32' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='32' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='33' and case_status_code='21' and case_status_desc='PENDING-MERCHANTRESPONSE' then 'Open'
+              when case_type_code='5' and case_status_code='18' and case_status_desc='PENDING-DATAMATCH' then 'Pending'
+              when case_type_code='5' and case_status_code='30' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='5' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='5' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='5' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='5' and case_status_code='21' and case_status_desc='OPEN-COLLECTIONS' then 'Pending'
+              when case_type_code='5' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='5' and case_status_code='31' and case_status_desc='PENDING-COLLECTIONSREVIEW' then 'Pending'
+              when case_type_code='5' and case_status_code='32' and case_status_desc='PENDING-MERCHANTRESPONSE' then 'Open'
+              when case_type_code='5' and case_status_code='41' and case_status_desc='RESOLVED-COLLECTIONSSUCCESS' then 'Closed'
+              when case_type_code='5' and case_status_code='42' and case_status_desc='RESOLVED-COLLECTIONSLOST' then 'Closed'
+              when case_type_code='5' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='5' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='5' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='6' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='6' and case_status_code='21' and case_status_desc='OPEN-COLLECTIONS' then 'Pending'
+              when case_type_code='6' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='6' and case_status_code='31' and case_status_desc='PENDING-COLLECTIONSREVIEW' then 'Pending'
+              when case_type_code='6' and case_status_code='32' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='6' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='6' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='6' and case_status_code='41' and case_status_desc='RESOLVED-COLLECTIONSSUCCESS' then 'Closed'
+              when case_type_code='6' and case_status_code='42' and case_status_desc='RESOLVED-COLLECTIONSLOST' then 'Closed'
+              when case_type_code='6' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='6' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='6' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='7' and case_status_code='18' and case_status_desc='PENDING-DATAMATCH' then 'Pending'
+              when case_type_code='7' and case_status_code='30' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='7' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='7' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='7' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='7' and case_status_code='21' and case_status_desc='OPEN-COMPLIANCE' then 'Pending'
+              when case_type_code='7' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='7' and case_status_code='31' and case_status_desc='PENDING-COMPLIANCEREVIEW' then 'Pending'
+              when case_type_code='7' and case_status_code='32' and case_status_desc='PENDING-MERCHANTRESPONSE' then 'Open'
+              when case_type_code='7' and case_status_code='40' and case_status_desc='RESOLVED-COMPLIANCESPLIT' then 'Closed'
+              when case_type_code='7' and case_status_code='41' and case_status_desc='RESOLVED-COMPLIANCESUCCESS' then 'Closed'
+              when case_type_code='7' and case_status_code='42' and case_status_desc='RESOLVED-COMPLIANCELOST' then 'Closed'
+              when case_type_code='7' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='7' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='7' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='7' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='8' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='8' and case_status_code='21' and case_status_desc='OPEN-COMPLIANCE' then 'Pending'
+              when case_type_code='8' and case_status_code='24' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='8' and case_status_code='31' and case_status_desc='PENDING-COMPLIANCEREVIEW' then 'Pending'
+              when case_type_code='8' and case_status_code='32' and case_status_desc='PENDING-ISSUERRESPONSE' then 'Pending'
+              when case_type_code='8' and case_status_code='33' and case_status_desc='PENDING-ISSUERFINANCIAL' then 'Pending'
+              when case_type_code='8' and case_status_code='34' and case_status_desc='PENDING-SCHEMERULING' then 'Pending'
+              when case_type_code='8' and case_status_code='40' and case_status_desc='RESOLVED-COMPLIANCESPLIT' then 'Closed'
+              when case_type_code='8' and case_status_code='41' and case_status_desc='RESOLVED-COMPLIANCESUCCESS' then 'Closed'
+              when case_type_code='8' and case_status_code='42' and case_status_desc='RESOLVED-COMPLIANCELOST' then 'Closed'
+              when case_type_code='8' and case_status_code='43' and case_status_desc='RESOLVED-WITHDRAWN' then 'Closed'
+              when case_type_code='8' and case_status_code='14' and case_status_desc='PENDING-DATAREVIEW' then 'Pending'
+              when case_type_code='8' and case_status_code='16' and case_status_desc='PENDING-UPDATE' then 'Pending'
+              when case_type_code='8' and case_status_code='23' and case_status_desc='RESOLVED-REJECTED' then 'Closed'
+              when case_type_code='9' and case_status_code='10' and case_status_desc='OPEN-ERROR' then 'Pending'
+              when case_type_code='9' and case_status_code='21' and case_status_desc='OPEN-REJECTS' then 'Pending'
+              when case_type_code='9' and case_status_code='27' and case_status_desc='RESOLVED-SPLIT' then 'Closed'
+              when case_type_code='9' and case_status_code='28' and case_status_desc='RESOLVED-GL' then 'Closed'
+              when case_type_code='9' and case_status_code='29' and case_status_desc='RESOLVED-MERCHANT' then 'Closed'
+              when case_type_code='9' and case_status_code='30' and case_status_desc='RESOLVED-WRITEOFF' then 'Closed'
+              when case_type_code='9' and case_status_code='31' and case_status_desc='RESOLVED-BANK' then 'Closed'
+              when case_type_code='9' and case_status_code='36' and case_status_desc='RESOLVED-CLOSED' then 'Closed'
+              when case_type_code='9' and case_status_code='24' and case_status_desc='PENDING-REVIEWDENIAL' then 'Pending'
+              end as status
+              ,null as purchase_id
+              ,remarks
+              from `PROJECT_ID.consumption_layer.wwmaster_dispute`
+       useLegacySql: false
+
+
+

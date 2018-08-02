@@ -1,0 +1,3072 @@
+resources:
+- name: can-super-table-gsap
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: can_super_table_gsap
+   labels:
+     apigateway: not-applicable
+     build_date:  2262018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: ecan_super_table_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer      
+      - mode: NULLABLE
+        name: key_sk_lotr_guid_key_id
+        type: integer
+      - mode: NULLABLE
+        name: key_sk_trans_id
+        type: integer
+      - mode: NULLABLE
+        name: key_sk_auth_id
+        type: integer
+      - mode: NULLABLE
+        name: key_sk_eod_lotr_payment_ft_id
+        type: integer
+      - mode: NULLABLE
+        name: key_tran_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_auth_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_card_number
+        type: string
+      - mode: NULLABLE
+        name: key_card_num_mask
+        type: string
+      - mode: NULLABLE
+        name: key_card_num_hk
+        type: integer
+      - mode: NULLABLE
+        name: key_corp
+        type: string
+      - mode: NULLABLE
+        name: key_region
+        type: string
+      - mode: NULLABLE
+        name: key_principal
+        type: string
+      - mode: NULLABLE
+        name: key_associate
+        type: string
+      - mode: NULLABLE
+        name: key_chain
+        type: string
+      - mode: NULLABLE
+        name: key_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_pay_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_dep_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_dcn_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_charge_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_fees_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_tax_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: key_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: key_sk_pay_merchant_name_id
+        type: integer
+      - mode: NULLABLE
+        name: key_arn
+        type: string
+      - mode: NULLABLE
+        name: key_transaction_date
+        type: date
+      - mode: NULLABLE
+        name: key_transaction_amount
+        type: float
+      - mode: NULLABLE
+        name: key_tran_processing_date
+        type: date
+      - mode: NULLABLE
+        name: key_tran_banknet_trace_number
+        type: string
+      - mode: NULLABLE
+        name: key_dep_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: key_dep_deposit_net_amount
+        type: float
+      - mode: NULLABLE
+        name: key_payment_ref_num
+        type: string
+      - mode: NULLABLE
+        name: key_pay_processing_date
+        type: date
+      - mode: NULLABLE
+        name: key_pay_payment_amount
+        type: float
+      - mode: NULLABLE
+        name: key_chargeback_case_number
+        type: string
+      - mode: NULLABLE
+        name: key_chargeback_processing_date
+        type: date
+      - mode: NULLABLE
+        name: key_chargeback_chargeback_amount
+        type: float
+      - mode: NULLABLE
+        name: key_created_by
+        type: string
+      - mode: NULLABLE
+        name: key_dw_create_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: key_updated_by
+        type: string
+      - mode: NULLABLE
+        name: key_dw_update_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: key_current_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_sk_us_tds_transaction_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_transaction_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_transaction_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_batch_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_capture_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_device_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_app_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_transaction_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_card_type
+        type: integer
+      - mode: NULLABLE
+        name: auth_pan
+        type: string
+      - mode: NULLABLE
+        name: auth_local_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_transmit_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_auth_code
+        type: string
+      - mode: NULLABLE
+        name: auth_retrieval_number
+        type: string
+      - mode: NULLABLE
+        name: auth_sys_audit_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_tran_currency_code
+        type: integer
+      - mode: NULLABLE
+        name: auth_exp_date
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_auth_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_transaction_id
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_valid_code
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_mkt_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_duration
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_prop_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_acq_settle_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_merchant_type_code
+        type: integer
+      - mode: NULLABLE
+        name: auth_msg_rsn_code
+        type: integer
+      - mode: NULLABLE
+        name: auth_acq_inst_id
+        type: string
+      - mode: NULLABLE
+        name: auth_service_code
+        type: string
+      - mode: NULLABLE
+        name: auth_term_location
+        type: integer
+      - mode: NULLABLE
+        name: auth_do_not_remit
+        type: string
+      - mode: NULLABLE
+        name: auth_remit_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_edit_bypass_code
+        type: string
+      - mode: NULLABLE
+        name: auth_orig_stan
+        type: integer
+      - mode: NULLABLE
+        name: auth_origin_rc
+        type: string
+      - mode: NULLABLE
+        name: auth_cipher_key_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_access_method
+        type: string
+      - mode: NULLABLE
+        name: auth_acq_local_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_addr_vresp
+        type: string
+      - mode: NULLABLE
+        name: auth_appl_id
+        type: string
+      - mode: NULLABLE
+        name: auth_auto_adj_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_auto_rent_rate_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_banknet_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_banknet_ref_num
+        type: string
+      - mode: NULLABLE
+        name: auth_card_acpt_ref
+        type: string
+      - mode: NULLABLE
+        name: auth_card_auth_vresult
+        type: string
+      - mode: NULLABLE
+        name: auth_card_presence_ind
+        type: integer
+      - mode: NULLABLE
+        name: auth_cash_back_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_cat_security_ind
+        type: integer
+      - mode: NULLABLE
+        name: auth_check_in_date
+        type: string
+      - mode: NULLABLE
+        name: auth_check_out_date
+        type: string
+      - mode: NULLABLE
+        name: auth_city
+        type: string
+      - mode: NULLABLE
+        name: auth_clerk_id
+        type: string
+      - mode: NULLABLE
+        name: auth_country
+        type: string
+      - mode: NULLABLE
+        name: auth_crdhldr_id_method
+        type: integer
+      - mode: NULLABLE
+        name: auth_cust_code
+        type: string
+      - mode: NULLABLE
+        name: auth_cust_def_data
+        type: string
+      - mode: NULLABLE
+        name: auth_cust_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_cvv_result
+        type: string
+      - mode: NULLABLE
+        name: auth_department_codes
+        type: string
+      - mode: NULLABLE
+        name: auth_dest_rc
+        type: string
+      - mode: NULLABLE
+        name: auth_dev_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_downgrade_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_ebt_voucher
+        type: string
+      - mode: NULLABLE
+        name: auth_ecomm_goods_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_ext_merch_id
+        type: string
+      - mode: NULLABLE
+        name: auth_extend_payment_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_extra_charges_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_batch_item_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_from_acct
+        type: integer
+      - mode: NULLABLE
+        name: auth_item_desc
+        type: string
+      - mode: NULLABLE
+        name: auth_joint_coverage
+        type: integer
+      - mode: NULLABLE
+        name: auth_market_type_code
+        type: string
+      - mode: NULLABLE
+        name: auth_mastercard_ica
+        type: integer
+      - mode: NULLABLE
+        name: auth_merchant_address1
+        type: string
+      - mode: NULLABLE
+        name: auth_merchant_address2
+        type: string
+      - mode: NULLABLE
+        name: auth_merchant_chain_number
+        type: string
+      - mode: NULLABLE
+        name: auth_merchant_id
+        type: string
+      - mode: NULLABLE
+        name: auth_merchant_name
+        type: string
+      - mode: NULLABLE
+        name: auth_merchant_type
+        type: string
+      - mode: NULLABLE
+        name: auth_message_spec_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_moto_eci
+        type: integer
+      - mode: NULLABLE
+        name: auth_net_sale_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_network_id
+        type: string
+      - mode: NULLABLE
+        name: auth_no_show_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_order_number
+        type: string
+      - mode: NULLABLE
+        name: auth_orig_auth_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_orig_auth_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_override_value
+        type: string
+      - mode: NULLABLE
+        name: auth_pay_serv_provider
+        type: string
+      - mode: NULLABLE
+        name: auth_pc_id
+        type: string
+      - mode: NULLABLE
+        name: auth_phone
+        type: string
+      - mode: NULLABLE
+        name: auth_pos_crdhld_pr_ind
+        type: integer
+      - mode: NULLABLE
+        name: auth_pos_entry_mode
+        type: string
+      - mode: NULLABLE
+        name: auth_pos_oper_env_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_program_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_promo_exten_period
+        type: string
+      - mode: NULLABLE
+        name: auth_promo_free_months
+        type: integer
+      - mode: NULLABLE
+        name: auth_promotion_code
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_ex_dbt_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_iss_src_code
+        type: string
+      - mode: NULLABLE
+        name: auth_rental_class_id
+        type: string
+      - mode: NULLABLE
+        name: auth_rental_pick_city
+        type: string
+      - mode: NULLABLE
+        name: auth_rental_pick_state
+        type: string
+      - mode: NULLABLE
+        name: auth_rental_rate
+        type: float
+      - mode: NULLABLE
+        name: auth_rental_ret_city
+        type: string
+      - mode: NULLABLE
+        name: auth_rental_ret_contry
+        type: string
+      - mode: NULLABLE
+        name: auth_rental_ret_loc_id
+        type: string
+      - mode: NULLABLE
+        name: auth_rental_ret_state
+        type: string
+      - mode: NULLABLE
+        name: auth_renter_name
+        type: string
+      - mode: NULLABLE
+        name: auth_room_rate
+        type: float
+      - mode: NULLABLE
+        name: auth_room_tax
+        type: float
+      - mode: NULLABLE
+        name: auth_single_coverage
+        type: string
+      - mode: NULLABLE
+        name: auth_state
+        type: string
+      - mode: NULLABLE
+        name: auth_sub_access_method
+        type: string
+      - mode: NULLABLE
+        name: auth_supplier_order_number
+        type: string
+      - mode: NULLABLE
+        name: auth_surchg
+        type: float
+      - mode: NULLABLE
+        name: auth_tax_1_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_tax_2_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_tax_amount_1
+        type: float
+      - mode: NULLABLE
+        name: auth_tax_amount_2
+        type: float
+      - mode: NULLABLE
+        name: auth_tax_exempt_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_tip_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_total_auth_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_transaction_cat_code
+        type: string
+      - mode: NULLABLE
+        name: auth_transaction_code
+        type: integer
+      - mode: NULLABLE
+        name: auth_transaction_reference_number
+        type: string
+      - mode: NULLABLE
+        name: auth_trml_input_cap
+        type: integer
+      - mode: NULLABLE
+        name: auth_trml_input_mode
+        type: integer
+      - mode: NULLABLE
+        name: auth_ucaf_ind
+        type: integer
+      - mode: NULLABLE
+        name: auth_visa_bin
+        type: integer
+      - mode: NULLABLE
+        name: auth_term_id
+        type: string
+      - mode: NULLABLE
+        name: auth_alt_dba_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_audit_id
+        type: string
+      - mode: NULLABLE
+        name: auth_card_level_results
+        type: string
+      - mode: NULLABLE
+        name: auth_cust_serv_phone
+        type: string
+      - mode: NULLABLE
+        name: auth_data_input_cap
+        type: integer
+      - mode: NULLABLE
+        name: auth_fire_safe_act_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_global_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: auth_global_proc_code
+        type: string
+      - mode: NULLABLE
+        name: auth_iata_id
+        type: string
+      - mode: NULLABLE
+        name: auth_mc_comply_stat_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_merch_currency_code
+        type: string
+      - mode: NULLABLE
+        name: auth_mtid
+        type: integer
+      - mode: NULLABLE
+        name: auth_no_bill_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_postcode
+        type: string
+      - mode: NULLABLE
+        name: auth_store_number
+        type: string
+      - mode: NULLABLE
+        name: auth_tax_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_term_attendance
+        type: integer
+      - mode: NULLABLE
+        name: auth_total_addenda
+        type: integer
+      - mode: NULLABLE
+        name: auth_voice_operator_id
+        type: string
+      - mode: NULLABLE
+        name: auth_commrcl_card_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_card_type_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_alt_remit_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_dev_output_fmt
+        type: integer
+      - mode: NULLABLE
+        name: auth_orig_batch_itm_number
+        type: string
+      - mode: NULLABLE
+        name: auth_pcl3_data_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_market_data
+        type: string
+      - mode: NULLABLE
+        name: auth_bonus_point_data
+        type: string
+      - mode: NULLABLE
+        name: auth_chip_condition_code
+        type: integer
+      - mode: NULLABLE
+        name: auth_emv_tag_82
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_95
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9a
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9c
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f02
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f10
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f1a
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f1e
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f26
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f27
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f33
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f36
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f37
+        type: string
+      - mode: NULLABLE
+        name: auth_ic_script_rslt
+        type: string
+      - mode: NULLABLE
+        name: auth_installment_count
+        type: integer
+      - mode: NULLABLE
+        name: auth_jcb_acq_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_mbr_number
+        type: string
+      - mode: NULLABLE
+        name: auth_tran_seq_number
+        type: string
+      - mode: NULLABLE
+        name: auth_tran_type
+        type: string
+      - mode: NULLABLE
+        name: auth_term_ind
+        type: integer
+      - mode: NULLABLE
+        name: auth_emv_tag_5f2a
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f03
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f09
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f34
+        type: string
+      - mode: NULLABLE
+        name: auth_card_presence_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_card_type_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_cat_security_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_crdhldr_id_method_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_cvv_result_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_moto_eci_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_ex_dbt_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_mkt_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_ps2k_prop_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_transaction_cat_code_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_transaction_code_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_trml_input_mode_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_deposit_ctl_number
+        type: string
+      - mode: NULLABLE
+        name: auth_merch_curr_cd_al
+        type: string
+      - mode: NULLABLE
+        name: auth_global_proc_code_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_batch_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_message_spec_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_95_post
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9b_post
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f10_post
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f26_post
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f27_post
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f36_post
+        type: string
+      - mode: NULLABLE
+        name: auth_exp_update_error_count
+        type: integer
+      - mode: NULLABLE
+        name: auth_global_network_id
+        type: string
+      - mode: NULLABLE
+        name: auth_global_network_id_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_global_rc
+        type: string
+      - mode: NULLABLE
+        name: auth_discover_acq_id
+        type: integer
+      - mode: NULLABLE
+        name: auth_global_term_type
+        type: string
+      - mode: NULLABLE
+        name: auth_g2_region
+        type: string
+      - mode: NULLABLE
+        name: auth_merch_currency_cd_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_partial_appr_ind
+        type: integer
+      - mode: NULLABLE
+        name: auth_address_change_notify
+        type: string
+      - mode: NULLABLE
+        name: auth_network_ref_id
+        type: string
+      - mode: NULLABLE
+        name: auth_issuer_proc_code
+        type: string
+      - mode: NULLABLE
+        name: auth_current_batch_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_access_method_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_sub_access_method_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_market_type_code_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_add_proc_info
+        type: string
+      - mode: NULLABLE
+        name: auth_pmt_transaction_type_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_transaction_display_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_transaction_qualifier
+        type: string
+      - mode: NULLABLE
+        name: auth_trml_cond_code
+        type: integer
+      - mode: NULLABLE
+        name: auth_emv_tag_9f35
+        type: string
+      - mode: NULLABLE
+        name: auth_issuer_id
+        type: string
+      - mode: NULLABLE
+        name: auth_sw_out_dev_name
+        type: string
+      - mode: NULLABLE
+        name: auth_lob_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_pan_masked
+        type: string
+      - mode: NULLABLE
+        name: auth_exp_date_masked
+        type: string
+      - mode: NULLABLE
+        name: auth_batch_control_number
+        type: string
+      - mode: NULLABLE
+        name: auth_auto_adj_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_extra_charges
+        type: float
+      - mode: NULLABLE
+        name: auth_triple_des_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_orig_mtid
+        type: integer
+      - mode: NULLABLE
+        name: auth_transaction_curr_cd_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_lob_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_payer_id
+        type: string
+      - mode: NULLABLE
+        name: auth_payer_name
+        type: string
+      - mode: NULLABLE
+        name: auth_invoice_number
+        type: string
+      - mode: NULLABLE
+        name: auth_invoice_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_mvv
+        type: string
+      - mode: NULLABLE
+        name: auth_auth_by_whom_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_global_rc_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_ucaf_sec_level
+        type: integer
+      - mode: NULLABLE
+        name: auth_seller_vendor_cd
+        type: string
+      - mode: NULLABLE
+        name: auth_aggregator_seller_name
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_84
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f41
+        type: string
+      - mode: NULLABLE
+        name: auth_ucaf_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_trml_input_cap_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_term_location_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_term_attendance_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_pos_crdhld_pr_ind_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_mtid_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_msg_rsn_code_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_from_acct_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_data_input_cap_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_orig_tran_code
+        type: string
+      - mode: NULLABLE
+        name: auth_aggregator_flag
+        type: string
+      - mode: NULLABLE
+        name: auth_mc_assigned_id
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f53
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f6e
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f7c
+        type: string
+      - mode: NULLABLE
+        name: auth_network_resv
+        type: string
+      - mode: NULLABLE
+        name: auth_id3_acct_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_tran_record_type_exp
+        type: string
+      - mode: NULLABLE
+        name: auth_access_method_inv
+        type: string
+      - mode: NULLABLE
+        name: auth_sub_access_method_inv
+        type: string
+      - mode: NULLABLE
+        name: auth_sw_out_dev_number
+        type: integer
+      - mode: NULLABLE
+        name: auth_track_data_con_code
+        type: string
+      - mode: NULLABLE
+        name: auth_ninety_healthcare
+        type: string
+      - mode: NULLABLE
+        name: auth_cleared_transaction
+        type: string
+      - mode: NULLABLE
+        name: auth_iss_settle_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_product_code
+        type: string
+      - mode: NULLABLE
+        name: auth_custom_id_detail
+        type: string
+      - mode: NULLABLE
+        name: auth_dest_zipcode
+        type: string
+      - mode: NULLABLE
+        name: auth_source_zipcode
+        type: string
+      - mode: NULLABLE
+        name: auth_debit_fee_prg_bill_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_sales_type
+        type: string
+      - mode: NULLABLE
+        name: auth_addl_resp
+        type: string
+      - mode: NULLABLE
+        name: auth_cup_bin
+        type: string
+      - mode: NULLABLE
+        name: auth_visa_debit_bin
+        type: string
+      - mode: NULLABLE
+        name: auth_mc_debit_bin
+        type: string
+      - mode: NULLABLE
+        name: auth_interlink_fee_prg_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_trans_fee_amount
+        type: float
+      - mode: NULLABLE
+        name: auth_trans_fee_amount_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_91
+        type: string
+      - mode: NULLABLE
+        name: auth_pin_service_code
+        type: string
+      - mode: NULLABLE
+        name: auth_pin_capture_cap
+        type: string
+      - mode: NULLABLE
+        name: auth_dev_type_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_wallet_id
+        type: string
+      - mode: NULLABLE
+        name: auth_discover_retained
+        type: string
+      - mode: NULLABLE
+        name: auth_ax_retained
+        type: string
+      - mode: NULLABLE
+        name: auth_rupay_debit_bin
+        type: string
+      - mode: NULLABLE
+        name: auth_alt_terminal_number
+        type: string
+      - mode: NULLABLE
+        name: auth_mpos
+        type: string
+      - mode: NULLABLE
+        name: auth_spend_qual_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_acct_status
+        type: string
+      - mode: NULLABLE
+        name: auth_token_assur_level
+        type: string
+      - mode: NULLABLE
+        name: auth_token_pan_acct_range
+        type: string
+      - mode: NULLABLE
+        name: auth_dev_type_accpt_cap
+        type: integer
+      - mode: NULLABLE
+        name: auth_token_requestor_id
+        type: string
+      - mode: NULLABLE
+        name: auth_tle_compliant
+        type: string
+      - mode: NULLABLE
+        name: auth_dukpt_compliant
+        type: string
+      - mode: NULLABLE
+        name: auth_orig_pos_cond_code
+        type: string
+      - mode: NULLABLE
+        name: auth_payment_fac_id
+        type: string
+      - mode: NULLABLE
+        name: auth_iso_id
+        type: string
+      - mode: NULLABLE
+        name: auth_common_aid_transaction
+        type: string
+      - mode: NULLABLE
+        name: auth_payment_forms_number
+        type: string
+      - mode: NULLABLE
+        name: auth_tax_id1
+        type: string
+      - mode: NULLABLE
+        name: auth_tax_id2
+        type: string
+      - mode: NULLABLE
+        name: auth_tax_id3
+        type: string
+      - mode: NULLABLE
+        name: auth_tax_3_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_recipient_name
+        type: string
+      - mode: NULLABLE
+        name: auth_pst_tax_reg
+        type: string
+      - mode: NULLABLE
+        name: auth_local_tax_rate
+        type: string
+      - mode: NULLABLE
+        name: auth_local_tax
+        type: string
+      - mode: NULLABLE
+        name: auth_created_by
+        type: string
+      - mode: NULLABLE
+        name: auth_dw_create_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_update_by
+        type: string
+      - mode: NULLABLE
+        name: auth_dw_update_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: auth_current_ind
+        type: string
+      - mode: NULLABLE
+        name: auth_pan_hk
+        type: string
+      - mode: NULLABLE
+        name: auth_emv_tag_9f07
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_trans_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_sk_source_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_avs_response_code
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_avs_response_code_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_card_type
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_card_type_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_card_scheme
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_card_scheme_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_merchant_information_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_charge_type
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_charge_type_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_corp
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_corp_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_region
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_region_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_principal
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_principal_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_associate
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_associate_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_chain
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_chain_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_merchant_category_code
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_merchant_category_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_tran_code
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_transaction_code_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_transaction_currency_code
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_transaction_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: dif_iso_numeric_currency_code
+        type: string
+      - mode: NULLABLE
+        name: dif_settle_currency_code
+        type: string
+      - mode: NULLABLE
+        name: dif_sk_settle_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: dif_settled_amount
+        type: float
+      - mode: NULLABLE
+        name: dif_settle_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: dif_settle_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: dif_source_home
+        type: string
+      - mode: NULLABLE
+        name: dif_aci
+        type: string
+      - mode: NULLABLE
+        name: dif_auth_amount
+        type: float
+      - mode: NULLABLE
+        name: dif_auth_code
+        type: string
+      - mode: NULLABLE
+        name: dif_auth_date
+        type: date
+      - mode: NULLABLE
+        name: dif_auth_response
+        type: string
+      - mode: NULLABLE
+        name: dif_auth_source_code
+        type: string
+      - mode: NULLABLE
+        name: dif_batch_control_number
+        type: string
+      - mode: NULLABLE
+        name: dif_car_rental_check_out_date
+        type: date
+      - mode: NULLABLE
+        name: dif_car_rental_extra_charges
+        type: string
+      - mode: NULLABLE
+        name: dif_car_rental_no_show
+        type: string
+      - mode: NULLABLE
+        name: dif_card_acceptor_id
+        type: string
+      - mode: NULLABLE
+        name: dif_card_num_hk
+        type: integer
+      - mode: NULLABLE
+        name: dif_card_num_num_mask
+        type: string
+      - mode: NULLABLE
+        name: dif_cardholder_activated_term
+        type: string
+      - mode: NULLABLE
+        name: dif_cardholder_id_method
+        type: string
+      - mode: NULLABLE
+        name: dif_cash_letter_number
+        type: string
+      - mode: NULLABLE
+        name: dif_central_time_ind
+        type: string
+      - mode: NULLABLE
+        name: dif_cps_ind
+        type: string
+      - mode: NULLABLE
+        name: dif_cross_border_ind
+        type: string
+      - mode: NULLABLE
+        name: dif_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: dif_deposit_id
+        type: string
+      - mode: NULLABLE
+        name: dif_file_date
+        type: date
+      - mode: NULLABLE
+        name: dif_file_time
+        type: string
+      - mode: NULLABLE
+        name: dif_lodging_check_in_date
+        type: date
+      - mode: NULLABLE
+        name: dif_lodging_extra_charges
+        type: string
+      - mode: NULLABLE
+        name: dif_lodging_no_show_ind
+        type: string
+      - mode: NULLABLE
+        name: dif_market_specific_auth_data
+        type: string
+      - mode: NULLABLE
+        name: dif_mc_interchange_level
+        type: string
+      - mode: NULLABLE
+        name: dif_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: dif_moto_ec_ind
+        type: string
+      - mode: NULLABLE
+        name: dif_pos_entry_code
+        type: string
+      - mode: NULLABLE
+        name: dif_prepaid_ind
+        type: string
+      - mode: NULLABLE
+        name: dif_purchase_identifier
+        type: string
+      - mode: NULLABLE
+        name: dif_purchase_identifier_format
+        type: string
+      - mode: NULLABLE
+        name: dif_ref_num
+        type: string
+      - mode: NULLABLE
+        name: dif_req_payment_service_value
+        type: string
+      - mode: NULLABLE
+        name: dif_response_downgrade_code
+        type: string
+      - mode: NULLABLE
+        name: dif_scan_charge
+        type: string
+      - mode: NULLABLE
+        name: dif_service_development_field
+        type: string
+      - mode: NULLABLE
+        name: dif_source_id
+        type: string
+      - mode: NULLABLE
+        name: dif_sup_auth_amount
+        type: float
+      - mode: NULLABLE
+        name: dif_term_capability
+        type: string
+      - mode: NULLABLE
+        name: dif_error_code
+        type: string
+      - mode: NULLABLE
+        name: dif_transaction_amount
+        type: float
+      - mode: NULLABLE
+        name: dif_transaction_date
+        type: date
+      - mode: NULLABLE
+        name: dif_transaction_id
+        type: string
+      - mode: NULLABLE
+        name: dif_transaction_time_str
+        type: string
+      - mode: NULLABLE
+        name: dif_validation_code
+        type: string
+      - mode: NULLABLE
+        name: dif_visa_interchange_level
+        type: string
+      - mode: NULLABLE
+        name: dif_visa_product_level_id
+        type: string
+      - mode: NULLABLE
+        name: dif_mc_device_type_code
+        type: string
+      - mode: NULLABLE
+        name: dif_source_file_key
+        type: integer
+      - mode: NULLABLE
+        name: dif_src_hash
+        type: string
+      - mode: NULLABLE
+        name: dif_merchant_hash
+        type: string
+      - mode: NULLABLE
+        name: dif_current_ind
+        type: string
+      - mode: NULLABLE
+        name: dif_created_by
+        type: string
+      - mode: NULLABLE
+        name: dif_updated_by
+        type: string
+      - mode: NULLABLE
+        name: dif_dw_create_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: dif_dw_update_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: dif_original_transaction_ref
+        type: string
+      - mode: NULLABLE
+        name: dif_file_date_original
+        type: date
+      - mode: NULLABLE
+        name: dif_mc_ucaf
+        type: string
+      - mode: NULLABLE
+        name: dif_filler_1
+        type: string
+      - mode: NULLABLE
+        name: dif_paypal_buyer_email_address
+        type: string
+      - mode: NULLABLE
+        name: dif_paypal_payer_id
+        type: string
+      - mode: NULLABLE
+        name: dif_paypal_transaction_id
+        type: string
+      - mode: NULLABLE
+        name: dif_debit_card_gateway
+        type: string
+      - mode: NULLABLE
+        name: dif_network_id
+        type: string
+      - mode: NULLABLE
+        name: dif_original_fee_billing_indicator
+        type: string
+      - mode: NULLABLE
+        name: dif_pinless_flag
+        type: string
+      - mode: NULLABLE
+        name: dif_front_end_id
+        type: string
+      - mode: NULLABLE
+        name: dif_access_method
+        type: string
+      - mode: NULLABLE
+        name: dif_sub_access_method
+        type: string
+      - mode: NULLABLE
+        name: dif_discover_network_ref
+        type: string
+      - mode: NULLABLE
+        name: dif_terminal_id
+        type: string
+      - mode: NULLABLE
+        name: dif_amount_code_2
+        type: string
+      - mode: NULLABLE
+        name: dif_amount_2
+        type: float
+      - mode: NULLABLE
+        name: dif_filler_2
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_eod_lotr_payment_ft_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_pay_payment_advice_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_dep_payment_advice_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_tran_payment_advice_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_dcn_dcn_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_chargeback_chargeback_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_fee_fees_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_tax_tax_information_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_corp
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_corp_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_region
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_region_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_principal
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_principal_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_associate
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_associate_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_chain
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_chain_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_pay_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: eod_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: eod_charge_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: eod_fees_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_merchant_information_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_pay_dda_account_number
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_pay_merchant_dda_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_pay_merchant_addr_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_sk_pay_merchant_name_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_pay_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_pay_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_dep_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_settle_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_settle_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_settle_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_dep_settle_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_dcn_reason
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_dep_reason_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_dda_account_number
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_dep_merchant_dda_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_tran_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_tran_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_tran_settle_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_settle_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_settle_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_tran_settle_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_tran_card_type
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_tran_card_type_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_dcn_dda_account_number
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_dcn_merchant_dda_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_dcn_dcn_reason
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_dcn_reason_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_dcn_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_dcn_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_chargeback_chargeback_reason
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_case_number
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_chargeback_chargeback_reason_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_chargeback_dda_account_number
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_chargeback_merchant_dda_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_chargeback_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_chargeback_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_fee_dda_account_number
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_fee_merchant_dda_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_fee_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_fee_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_tax_original_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_alpha_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_iso_currency_code
+        type: string
+      - mode: NULLABLE
+        name: eod_sk_tax_currency_code_id
+        type: integer
+      - mode: NULLABLE
+        name: eod_pay_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_pay_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_summary_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_debtor_ref_num
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_payment_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_pay_region_code
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_usd_rate
+        type: float
+      - mode: NULLABLE
+        name: eod_pay_usd_equivalent_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_pay_payment_ref_num_suf
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_payment_destination
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_payment_mode
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_merchant_dda_hash
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_bank_routing_num_hk
+        type: integer
+      - mode: NULLABLE
+        name: eod_pay_bank_routing_num_mask
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_dda_account_num_hk
+        type: integer
+      - mode: NULLABLE
+        name: eod_pay_dda_account_num_mask
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_original_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_card_activity_type
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_card_exchange_rate
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_card_sales_converted_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_dcc_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_dcn_adjustment_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_delay_days
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_deposit_control
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dep_deposit_gross_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_deposit_net_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dep_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_terminal_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_card_total_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_summary_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_cashback_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_total_items
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_merchant_sequence_num
+        type: integer
+      - mode: NULLABLE
+        name: eod_pay_payment_ref_num
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_split_type
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_merchant_dda_hash
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_bank_routing_num_hk
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_bank_routing_num_mask
+        type: string
+      - mode: NULLABLE
+        name: eod_dep_dda_account_num_hk
+        type: integer
+      - mode: NULLABLE
+        name: eod_dep_dda_account_num_mask
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_original_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_original_currency_discount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_original_currency_tax
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_settlement_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_settlement_currency_discount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_settlement_currency_tax
+        type: float
+      - mode: NULLABLE
+        name: eod_dep_batch_key
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_dcc_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_deposit_control
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_deposit_net_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_tran_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_airline_ticket_number
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_remarks
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_transaction_date
+        type: date
+      - mode: NULLABLE
+        name: eod_tran_cashback_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_pos_entry_mode
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_auth_approval_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_terminal
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_cross_border
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_transaction_charge_type
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_transaction_time
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_deposit_batch_num
+        type: integer
+      - mode: NULLABLE
+        name: eod_tran_usd_rate
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_usd_equivalent_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_domestic_discount_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_domestic_interchange_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_issuer
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_ipp_term
+        type: integer
+      - mode: NULLABLE
+        name: eod_tran_ipp_cof
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_gp_share1
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_gp_share2
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_interchange
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_ipp_issuer_share
+        type: float
+      - mode: NULLABLE
+        name: eod_tran_merchant_sequence_number
+        type: integer
+      - mode: NULLABLE
+        name: eod_tran_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_unique_reference_id
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_scheme_clearing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_tran_split_type
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_banknet_trace_id
+        type: string
+      - mode: NULLABLE
+        name: eod_tran_card_num_hk
+        type: integer
+      - mode: NULLABLE
+        name: eod_tran_card_num_mask
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_dcc_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_dcn_adjustment_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dcn_dcn_reason_desc
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_delay_days
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_deposit_control
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_deposit_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dcn_merchant_sequence_number
+        type: integer
+      - mode: NULLABLE
+        name: eod_dcn_original_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_dcn_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_dcn_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_summary_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_terminal_number
+        type: string
+      - mode: NULLABLE
+        name: eod_dcn_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_chargeback_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_chargeback_merchant_sequence_number
+        type: integer
+      - mode: NULLABLE
+        name: eod_chargeback_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_original_currency_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_chargeback_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_chargeback_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_summary_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_terminal_number
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_chargeback_reason_desc
+        type: string
+      - mode: NULLABLE
+        name: eod_chargeback_acquirer_reference_num
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_fee_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_bank_routing_number
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_merchant_dba_name
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_fees_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_fee_debtor_ref_number
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_summary_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_dcc_tax_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_fee_dcc_incentive_gross_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_fee_charge_type
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_fee_type
+        type: string
+      - mode: NULLABLE
+        name: eod_fee_merchant_sequence_number
+        type: float
+      - mode: NULLABLE
+        name: eod_tax_processing_date
+        type: date
+      - mode: NULLABLE
+        name: eod_tax_type_code
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_sequence_number
+        type: integer
+      - mode: NULLABLE
+        name: eod_tax_tax_id
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_total_disc_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tax_total_opn_fee
+        type: float
+      - mode: NULLABLE
+        name: eod_tax_ser_tax_amount
+        type: float
+      - mode: NULLABLE
+        name: eod_tax_edu_cess
+        type: float
+      - mode: NULLABLE
+        name: eod_tax_sec_h_cess
+        type: float
+      - mode: NULLABLE
+        name: eod_tax_net_total
+        type: float
+      - mode: NULLABLE
+        name: eod_tax_merchant_seq_number
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_split_type
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_tax_id_hk
+        type: string
+      - mode: NULLABLE
+        name: eod_tax_tax_id_num_mask
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_merchant_hash
+        type: string
+      - mode: NULLABLE
+        name: eod_pay_src_hash
+        type: string
+      - mode: NULLABLE
+        name: eod_service_lvl
+        type: string
+      - mode: NULLABLE
+        name: eod_paid_nonpaid_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_current_ind
+        type: string
+      - mode: NULLABLE
+        name: eod_created_by
+        type: string
+      - mode: NULLABLE
+        name: eod_updated_by
+        type: string
+      - mode: NULLABLE
+        name: eod_dw_create_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: eod_dw_update_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: eod_pay_dw_update_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: eod_pay_source_create_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: eod_dcn_batch_key
+        type: string
+      - mode: NULLABLE
+        name: tranin_record_code
+        type: string
+      - mode: NULLABLE
+        name: tranin_acq_ref_num
+        type: string
+      - mode: NULLABLE
+        name: tranin_merchant_number
+        type: string
+      - mode: NULLABLE
+        name: tranin_original_reference
+        type: string
+      - mode: NULLABLE
+        name: tranin_cardholder_account_hk
+        type: string
+      - mode: NULLABLE
+        name: tranin_cardholder_account_num_mask
+        type: string
+      - mode: NULLABLE
+        name: tranin_transaction_amount
+        type: float
+      - mode: NULLABLE
+        name: tranin_transaction_code
+        type: string
+      - mode: NULLABLE
+        name: tranin_transaction_date
+        type: date
+      - mode: NULLABLE
+        name: tranin_transaction_time
+        type: string
+      - mode: NULLABLE
+        name: tranin_invoice
+        type: string
+      - mode: NULLABLE
+        name: tranin_foreign_domestic
+        type: string
+      - mode: NULLABLE
+        name: tranin_authorization_source
+        type: string
+      - mode: NULLABLE
+        name: tranin_cardholder_id_method
+        type: string
+      - mode: NULLABLE
+        name: tranin_terminal_entry_mode
+        type: string
+      - mode: NULLABLE
+        name: tranin_transaction_identifier
+        type: string
+      - mode: NULLABLE
+        name: tranin_currency_code
+        type: string
+      - mode: NULLABLE
+        name: tranin_merchant_category_code
+        type: string
+      - mode: NULLABLE
+        name: tranin_pos_entry_mode
+        type: string
+      - mode: NULLABLE
+        name: tranin_currency_exponent
+        type: string
+      - mode: NULLABLE
+        name: tranin_bank
+        type: string
+      - mode: NULLABLE
+        name: tranin_foreign_amount
+        type: float
+      - mode: NULLABLE
+        name: tranin_batch_date
+        type: date
+      - mode: NULLABLE
+        name: tranin_batch_number
+        type: string
+      - mode: NULLABLE
+        name: tranin_batch_amount
+        type: float
+      - mode: NULLABLE
+        name: tranin_recurring_pay
+        type: string
+      - mode: NULLABLE
+        name: tranin_cat_ind
+        type: string
+      - mode: NULLABLE
+        name: tranin_sec_prot
+        type: string
+      - mode: NULLABLE
+        name: tranin_card_auth
+        type: string
+      - mode: NULLABLE
+        name: tranin_ucaf_ind
+        type: string
+      - mode: NULLABLE
+        name: tranin_rpsv_ind
+        type: string
+      - mode: NULLABLE
+        name: tranin_terminal_tid
+        type: string
+      - mode: NULLABLE
+        name: tranin_moto_ecp_ind
+        type: string
+      - mode: NULLABLE
+        name: tranin_terminal_capacity
+        type: string
+      - mode: NULLABLE
+        name: tranin_load_date
+        type: timestamp
+      - mode: NULLABLE
+        name: tranin_auth_response
+        type: string
+      - mode: NULLABLE
+        name: tranin_auth_ind
+        type: string
+      - mode: NULLABLE
+        name: tranin_transaction_type
+        type: string
+      - mode: NULLABLE
+        name: tranin_term_transaction_date
+        type: date
+      - mode: NULLABLE
+        name: tranin_term_capability_profile
+        type: string
+      - mode: NULLABLE
+        name: tranin_cryptogram
+        type: string
+      - mode: NULLABLE
+        name: tranin_term_verification_results
+        type: string
+      - mode: NULLABLE
+        name: tranin_terminal_country_code
+        type: string
+      - mode: NULLABLE
+        name: tranin_unpredictable_number
+        type: string
+      - mode: NULLABLE
+        name: tranin_application_transaction_cntr
+        type: string
+      - mode: NULLABLE
+        name: tranin_application_intrch_profile
+        type: string
+      - mode: NULLABLE
+        name: tranin_cryptogram_information
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_1
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_2
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_3
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_4_7
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_8
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_9_16
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_17
+        type: string
+      - mode: NULLABLE
+        name: tranin_iss_app_data_18_32
+        type: string
+      - mode: NULLABLE
+        name: tranin_auth_amount
+        type: float
+      - mode: NULLABLE
+        name: tranin_qps_flag
+        type: string
+      - mode: NULLABLE
+        name: tranin_auth_code
+        type: string
+      - mode: NULLABLE
+        name: tranin_deposit_control_number
+        type: string
+      - mode: NULLABLE
+        name: tranin_cash_back_amount
+        type: integer
+      - mode: NULLABLE
+        name: tranin_audit_id
+        type: string
+      - mode: NULLABLE
+        name: tranin_source_file_key
+        type: integer
+      - mode: NULLABLE
+        name: tranin_file_name
+        type: string
+      - mode: NULLABLE
+        name: tranin_created_by
+        type: string
+      - mode: NULLABLE
+        name: tranin_dw_create_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: tranin_updated_by
+        type: string
+      - mode: NULLABLE
+        name: tranin_dw_update_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: tranin_current_ind
+        type: string
+      - mode: NULLABLE
+        name: tranin_remarks
+        type: string
+      - mode: NULLABLE
+        name: ach10_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: ach10_hdr_priority_code
+        type: float
+      - mode: NULLABLE
+        name: ach10_hdr_immediate_destination
+        type: string
+      - mode: NULLABLE
+        name: ach10_hdr_immediate_origin
+        type: string
+      - mode: NULLABLE
+        name: ach10_hdr_file_creation_date
+        type: date
+      - mode: NULLABLE
+        name: ach10_hdr_file_creation_time
+        type: string
+      - mode: NULLABLE
+        name: ach10_hdr_file_id_modifier
+        type: string
+      - mode: NULLABLE
+        name: ach10_hdr_record_size
+        type: float
+      - mode: NULLABLE
+        name: ach10_hdr_blocking_factor
+        type: float
+      - mode: NULLABLE
+        name: ach10_hdr_format_code
+        type: string
+      - mode: NULLABLE
+        name: ach10_hdr_immediate_destination_name
+        type: string
+      - mode: NULLABLE
+        name: ach10_hdr_immediate_origin_name
+        type: string
+      - mode: NULLABLE
+        name: ach10_hdr_reference_code
+        type: string
+      - mode: NULLABLE
+        name: ach10_tlr_batch_count
+        type: float
+      - mode: NULLABLE
+        name: ach10_tlr_block_count
+        type: float
+      - mode: NULLABLE
+        name: ach10_tlr_entry_addenda_count
+        type: float
+      - mode: NULLABLE
+        name: ach10_tlr_entry_hash
+        type: float
+      - mode: NULLABLE
+        name: ach10_tlr_total_debit_entry_dollar_amount_in_file
+        type: float
+      - mode: NULLABLE
+        name: ach10_tlr_total_credit_entry_dollar_amount_in_file
+        type: float
+      - mode: NULLABLE
+        name: ach10_ach_source_file_nm
+        type: string
+      - mode: NULLABLE
+        name: ach10_filedate
+        type: date
+      - mode: NULLABLE
+        name: ach10_etl_createdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach10_etl_lastupdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach10_etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: ach20_file_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: ach20_batch_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: ach20_hdr_service_class_code
+        type: float
+      - mode: NULLABLE
+        name: ach20_hdr_company_name
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_company_discretionary_data
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_company_identification
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_standard_entry_class_code
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_company_entry_description
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_company_descriptive_date
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_effective_entry_date
+        type: date
+      - mode: NULLABLE
+        name: ach20_hdr_settlement_date
+        type: float
+      - mode: NULLABLE
+        name: ach20_hdr_originator_status_code
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_originating_dfi_identification
+        type: string
+      - mode: NULLABLE
+        name: ach20_hdr_batch_number
+        type: float
+      - mode: NULLABLE
+        name: ach20_tlr_service_class_code
+        type: float
+      - mode: NULLABLE
+        name: ach20_tlr_entry_addenda_count
+        type: float
+      - mode: NULLABLE
+        name: ach20_tlr_entry_hash
+        type: float
+      - mode: NULLABLE
+        name: ach20_tlr_total_debit_entry_dollar_amount
+        type: float
+      - mode: NULLABLE
+        name: ach20_tlr_total_credit_entry_dollar_amount
+        type: float
+      - mode: NULLABLE
+        name: ach20_tlr_company_identification
+        type: string
+      - mode: NULLABLE
+        name: ach20_tlr_message_authentication_code
+        type: string
+      - mode: NULLABLE
+        name: ach20_tlr_reserved
+        type: string
+      - mode: NULLABLE
+        name: ach20_tlr_originating_dfi_identification
+        type: string
+      - mode: NULLABLE
+        name: ach20_tlr_batch_number
+        type: float
+      - mode: NULLABLE
+        name: ach20_ach_source_file_nm
+        type: string
+      - mode: NULLABLE
+        name: ach20_filedate
+        type: date
+      - mode: NULLABLE
+        name: ach20_etl_createdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach20_etl_lastupdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach20_etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: ach30_file_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: ach30_batch_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: ach30_batch_dtl_seq_number
+        type: integer
+      - mode: NULLABLE
+        name: ach30_transaction_code
+        type: float
+      - mode: NULLABLE
+        name: ach30_receiving_dfi_identification
+        type: string
+      - mode: NULLABLE
+        name: ach30_check_digit
+        type: float
+      - mode: NULLABLE
+        name: ach30_dfi_account_number
+        type: string
+      - mode: NULLABLE
+        name: ach30_amount
+        type: float
+      - mode: NULLABLE
+        name: ach30_identification_number
+        type: string
+      - mode: NULLABLE
+        name: ach30_receiving_company_name
+        type: string
+      - mode: NULLABLE
+        name: ach30_discretionary_data
+        type: string
+      - mode: NULLABLE
+        name: ach30_addenda_record_indicator
+        type: float
+      - mode: NULLABLE
+        name: ach30_trace_number
+        type: float
+      - mode: NULLABLE
+        name: ach30_ach_source_file_nm
+        type: string
+      - mode: NULLABLE
+        name: ach30_filedate
+        type: date
+      - mode: NULLABLE
+        name: ach30_etl_createdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach30_etl_lastupdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach30_etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: ach40_file_seq_num
+        type: integer
+      - mode: NULLABLE
+        name: ach40_batch_dtl_seq_num
+        type: integer
+      - mode: NULLABLE
+        name: ach40_batch_seq_num
+        type: integer
+      - mode: NULLABLE
+        name: ach40_addenda_type_code
+        type: string
+      - mode: NULLABLE
+        name: ach40_payment_related_information
+        type: string
+      - mode: NULLABLE
+        name: ach40_addenda_sequence_number
+        type: string
+      - mode: NULLABLE
+        name: ach40_entry_detail_sequence_number
+        type: float
+      - mode: NULLABLE
+        name: ach40_ach_source_file_nm
+        type: string
+      - mode: NULLABLE
+        name: ach40_filedate
+        type: date
+      - mode: NULLABLE
+        name: ach40_etl_createdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach40_etl_lastupdate_date_time
+        type: timestamp
+      - mode: NULLABLE
+        name: ach40_etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: acct_id1
+        type: string
+      - mode: NULLABLE
+        name: acct_id2
+        type: string
+      - mode: NULLABLE
+        name: acct_id3
+        type: string
+      - mode: NULLABLE
+        name: acct_nbr
+        type: float
+      - mode: NULLABLE
+        name: acq_add_data
+        type: string
+      - mode: NULLABLE
+        name: acq_cntry_code
+        type: float
+      - mode: NULLABLE
+        name: addl_amts
+        type: string
+      - mode: NULLABLE
+        name: addl_consumer_id
+        type: string
+      - mode: NULLABLE
+        name: applied_from_amt
+        type: float
+      - mode: NULLABLE
+        name: applied_id3_amt
+        type: float
+      - mode: NULLABLE
+        name: applied_to_amt
+        type: float
+      - mode: NULLABLE
+        name: applied_vel_amt
+        type: float
+      - mode: NULLABLE
+        name: aut_cashback_amt
+        type: float
+      - mode: NULLABLE
+        name: aut_curr_amt
+        type: float
+      - mode: NULLABLE
+        name: aut_curr_cd
+        type: float
+      - mode: NULLABLE
+        name: aut_curr_rate
+        type: float
+      - mode: NULLABLE
+        name: auth_amt
+        type: float
+      - mode: NULLABLE
+        name: auth_by_whom
+        type: string
+      - mode: NULLABLE
+        name: auth_life_cycle
+        type: float
+      - mode: NULLABLE
+        name: auth_result_cd
+        type: string
+      - mode: NULLABLE
+        name: auth_result_cd_exp
+        type: string
+      - mode: NULLABLE
+        name: bal_updated
+        type: float
+      - mode: NULLABLE
+        name: bal1_amt
+        type: float
+      - mode: NULLABLE
+        name: bal1_code
+        type: float
+      - mode: NULLABLE
+        name: bal2_amt
+        type: float
+      - mode: NULLABLE
+        name: bal2_code
+        type: float
+      - mode: NULLABLE
+        name: bta_id
+        type: string
+      - mode: NULLABLE
+        name: card_auth_vvalue
+        type: string
+      - mode: NULLABLE
+        name: card_cntry_code
+        type: float
+      - mode: NULLABLE
+        name: card_nbr
+        type: float
+      - mode: NULLABLE
+        name: category_name
+        type: string
+      - mode: NULLABLE
+        name: ccertif_serial_nbr
+        type: string
+      - mode: NULLABLE
+        name: check_nbr
+        type: float
+      - mode: NULLABLE
+        name: check_type
+        type: float
+      - mode: NULLABLE
+        name: check_type_exp
+        type: string
+      - mode: NULLABLE
+        name: commrcl_card_type
+        type: string
+      - mode: NULLABLE
+        name: consumer_bus_phone
+        type: string
+      - mode: NULLABLE
+        name: consumer_hom_phone
+        type: string
+      - mode: NULLABLE
+        name: consumer_name
+        type: string
+      - mode: NULLABLE
+        name: conv_avail_amt
+        type: float
+      - mode: NULLABLE
+        name: conv_ledger_amt
+        type: float
+      - mode: NULLABLE
+        name: cvv2_presence
+        type: string
+      - mode: NULLABLE
+        name: cvv2_resp_type
+        type: string
+      - mode: NULLABLE
+        name: data
+        type: string
+      - mode: NULLABLE
+        name: dev_type
+        type: float
+      - mode: NULLABLE
+        name: dev_type_exp
+        type: string
+      - mode: NULLABLE
+        name: edc_emv_spillage
+        type: string
+      - mode: NULLABLE
+        name: edc_log_spillage
+        type: string
+      - mode: NULLABLE
+        name: edc_match_spillage
+        type: string
+      - mode: NULLABLE
+        name: eff_date
+        type: string
+      - mode: NULLABLE
+        name: ems_acq_trace_data
+        type: string
+      - mode: NULLABLE
+        name: ems_iss_trace_data
+        type: string
+      - mode: NULLABLE
+        name: ems_lpd1
+        type: string
+      - mode: NULLABLE
+        name: ems_lpd2
+        type: string
+      - mode: NULLABLE
+        name: ems_lpd3
+        type: string
+      - mode: NULLABLE
+        name: ems_lpd4
+        type: string
+      - mode: NULLABLE
+        name: ems_payee
+        type: string
+      - mode: NULLABLE
+        name: ems_tran_desc
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_4f
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_71_1
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_71_2
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_72_1
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_72_2
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_8a
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_9f06
+        type: string
+      - mode: NULLABLE
+        name: emv_tag_9f08
+        type: string
+      - mode: NULLABLE
+        name: enh_tran_match
+        type: string
+      - mode: NULLABLE
+        name: ext_pos_entry_mode
+        type: string
+      - mode: NULLABLE
+        name: ext_proc_code
+        type: string
+      - mode: NULLABLE
+        name: format_version
+        type: string
+      - mode: NULLABLE
+        name: from_curr_amt
+        type: float
+      - mode: NULLABLE
+        name: from_curr_cd
+        type: float
+      - mode: NULLABLE
+        name: from_curr_rate
+        type: float
+      - mode: NULLABLE
+        name: function_code
+        type: string
+      - mode: NULLABLE
+        name: function_code_exp
+        type: string
+      - mode: NULLABLE
+        name: hold_type
+        type: float
+      - mode: NULLABLE
+        name: ic_log_data
+        type: string
+      - mode: NULLABLE
+        name: id_state_code
+        type: string
+      - mode: NULLABLE
+        name: id3_acct
+        type: float
+      - mode: NULLABLE
+        name: id3_curr_amt
+        type: float
+      - mode: NULLABLE
+        name: id3_curr_cd
+        type: float
+      - mode: NULLABLE
+        name: id3_curr_rate
+        type: float
+      - mode: NULLABLE
+        name: identifying_date
+        type: string
+      - mode: NULLABLE
+        name: info_text1
+        type: string
+      - mode: NULLABLE
+        name: info_text2
+        type: string
+      - mode: NULLABLE
+        name: iss_inst_id
+        type: string
+      - mode: NULLABLE
+        name: ledbal1_amt
+        type: float
+      - mode: NULLABLE
+        name: ledbal2_amt
+        type: float
+      - mode: NULLABLE
+        name: mc_reason_ind
+        type: string
+      - mode: NULLABLE
+        name: mcertif_serial_nbr
+        type: string
+      - mode: NULLABLE
+        name: merch_advice_code
+        type: string
+      - mode: NULLABLE
+        name: msec_tran
+        type: float
+      - mode: NULLABLE
+        name: nau
+        type: float
+      - mode: NULLABLE
+        name: network_data
+        type: string
+      - mode: NULLABLE
+        name: nii
+        type: string
+      - mode: NULLABLE
+        name: note_type
+        type: float
+      - mode: NULLABLE
+        name: on_us
+        type: float
+      - mode: NULLABLE
+        name: on_us_exp
+        type: string
+      - mode: NULLABLE
+        name: orig_mtid_exp
+        type: string
+      - mode: NULLABLE
+        name: orig_reference_nbr
+        type: string
+      - mode: NULLABLE
+        name: orig_transmit_dt
+        type: string
+      - mode: NULLABLE
+        name: pin_block_req
+        type: string
+      - mode: NULLABLE
+        name: preauth_amt
+        type: float
+      - mode: NULLABLE
+        name: prepaid_card_ind
+        type: string
+      - mode: NULLABLE
+        name: recon_control_data
+        type: string
+      - mode: NULLABLE
+        name: referral_talk_time
+        type: float
+      - mode: NULLABLE
+        name: rsv_prv_data
+        type: string
+      - mode: NULLABLE
+        name: sale_amt
+        type: float
+      - mode: NULLABLE
+        name: sect_tran_id
+        type: string
+      - mode: NULLABLE
+        name: service_type
+        type: float
+      - mode: NULLABLE
+        name: stock_exp_date
+        type: string
+      - mode: NULLABLE
+        name: stock_nbr
+        type: string
+      - mode: NULLABLE
+        name: stock_type
+        type: string
+      - mode: NULLABLE
+        name: sw_msg_rsn_code
+        type: float
+      - mode: NULLABLE
+        name: sw_resp_time
+        type: float
+      - mode: NULLABLE
+        name: swout_date_xmit
+        type: string
+      - mode: NULLABLE
+        name: sws_curr_amt
+        type: float
+      - mode: NULLABLE
+        name: sws_curr_cd
+        type: float
+      - mode: NULLABLE
+        name: sws_curr_rate
+        type: float
+      - mode: NULLABLE
+        name: sys_info
+        type: string
+      - mode: NULLABLE
+        name: tds_seq_num
+        type: integer
+      - mode: NULLABLE
+        name: term_type
+        type: float
+      - mode: NULLABLE
+        name: tip_amt_2
+        type: float
+      - mode: NULLABLE
+        name: to_acct
+        type: float
+      - mode: NULLABLE
+        name: to_acct_exp
+        type: string
+      - mode: NULLABLE
+        name: to_curr_amt
+        type: float
+      - mode: NULLABLE
+        name: to_curr_cd
+        type: float
+      - mode: NULLABLE
+        name: to_curr_rate
+        type: float
+      - mode: NULLABLE
+        name: to_curr_rate_exp
+        type: string
+      - mode: NULLABLE
+        name: track_data
+        type: string
+      - mode: NULLABLE
+        name: track_id
+        type: float
+      - mode: NULLABLE
+        name: track_id_exp
+        type: string
+      - mode: NULLABLE
+        name: tran_proc_time
+        type: float
+      - mode: NULLABLE
+        name: tran_record_type
+        type: string
+      - mode: NULLABLE
+        name: trans_description
+        type: string
+      - mode: NULLABLE
+        name: vendor_id
+        type: string

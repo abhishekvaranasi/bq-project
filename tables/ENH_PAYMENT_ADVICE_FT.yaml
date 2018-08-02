@@ -1,0 +1,131 @@
+resources:
+- name: enh-payment-advice-ft
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: enh_payment_advice_ft
+   labels:
+     apigateway: not-applicable
+     build_date:  2092018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: enh_payment_advice_ft_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: CORP
+        type: string
+        description: Source table type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: REGION
+        type: string
+        description: Source table type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: PRINCIPAL
+        type: string
+        description: Source table type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: ASSOCIATE
+        type: string
+        description: Source table type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: CHAIN
+        type: string
+        description: Source table type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: MERCHANT_NUMBER
+        type: float
+        description: Source table type => NUMERIC(16)
+      - mode: NULLABLE
+        name: PROCESSING_DATE
+        type: date
+        description: Source table type => DATE
+      - mode: NULLABLE
+        name: TYPE_CODE
+        type: string
+        description: Source table type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: SEQUENCE_NUMBER
+        type: string
+        description: Source table type => CHARACTER VARYING(7)
+      - mode: NULLABLE
+        name: BANK_ROUTING_NUMBER
+        type: string
+        description: Source table type => CHARACTER VARYING(9)
+      - mode: NULLABLE
+        name: DDA_ACCOUNT_NUMBER
+        type: string
+        description: Source table type => CHARACTER VARYING(17)
+      - mode: NULLABLE
+        name: PAYMENT_AMOUNT
+        type: float
+        description: Source table type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: DEBTOR_REFERENCE_NUM
+        type: string
+        description: Source table type => CHARACTER VARYING(18)
+      - mode: NULLABLE
+        name: MERCHANT_DBA_NAME
+        type: string
+        description: Source table type => NATIONAL CHARACTER VARYING(64)
+      - mode: NULLABLE
+        name: SUMMARY_INDICATOR
+        type: string
+        description: Source table type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: ORIGINAL_CURRENCY_CODE
+        type: string
+        description: Source table type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: REGION_CODE
+        type: string
+        description: Source table type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: USD_Rate
+        type: float
+        description: Source table type => NUMERIC(7,4)
+      - mode: NULLABLE
+        name: USD_Equivalent_Amount
+        type: float
+        description: Source table type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: PAYMENT_REFERENCE_NUM
+        type: string
+        description: Source table type => CHARACTER VARYING(15)
+      - mode: NULLABLE
+        name: PAYMENT_REFERENCE_NUM_SUF
+        type: string
+        description: Source table type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: PAYMENT_DESTINATION
+        type: string
+        description: Source table type => NATIONAL CHARACTER VARYING(5)
+      - mode: NULLABLE
+        name: PAYMENT_MODE
+        type: string
+        description: Source table type => CHARACTER VARYING(2)

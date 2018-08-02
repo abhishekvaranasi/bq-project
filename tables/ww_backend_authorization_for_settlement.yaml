@@ -1,0 +1,173 @@
+resources:
+- name: ww_backend_authorization_for_settlement 
+  type: bigquery.v2.table
+  properties:
+   datasetId: consumption_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: ww_backend_authorization_for_settlement 
+   description: Table needed for EU transaction detail report. Uses data from DIF, monthly UK monetary, surcharge and interchange files and multiple internal computations for compliance.
+   labels:
+     apigateway: not-applicable
+     build_date:  4162018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: ww_backend_authorization_for_settlement 
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: card_holder_num_hk
+        type: integer
+        description: Card number hashed
+      - mode: NULLABLE
+        name: card_holder_num_mask
+        type: string
+        description: card number masked to display first 6 and last 4 digits
+      - mode: NULLABLE
+        name: merchant_number
+        type: float
+        description: merchant number
+      - mode: NULLABLE
+        name: authorization_amount
+        type: float
+        description: Authorization amount
+      - mode: NULLABLE
+        name: transaction_code
+        type: string
+        description: transaction code to display sale, returns
+      - mode: NULLABLE
+        name: authorization_date
+        type: string
+        description: Date of Authorization
+      - mode: NULLABLE
+        name: authorization_time
+        type: string
+        description: Time of Authorization
+      - mode: NULLABLE
+        name: authorization_code
+        type: string
+        description: The approval code
+      - mode: NULLABLE
+        name: authorization_source_code
+        type: string
+        description: the code for the source of authorization
+      - mode: NULLABLE
+        name: transaction_id
+        type: string
+        description: unique transcation id / network reference id
+      - mode: NULLABLE
+        name: pos_entry_code
+        type: string
+        description: point of sales entry code that represent type of transactions like EMV, Contactless
+      - mode: NULLABLE
+        name: authorization_desc
+        type: string
+        description: no description available
+      - mode: NULLABLE
+        name: authorization_vendor_code
+        type: string
+        description: The hosts where authorization was done like :B24 NDC
+      - mode: NULLABLE
+        name: expiration_date
+        type: string
+        description: card expiration date
+      - mode: NULLABLE
+        name: payment_service_ind
+        type: string
+        description: payment service indicator
+      - mode: NULLABLE
+        name: issuer_response_code
+        type: string
+        description: response code sent by issuer
+      - mode: NULLABLE
+        name: issuer_response_code_desc
+        type: string
+        description: Issuers response code descriptions for authorization
+      - mode: NULLABLE
+        name: avs_response_code
+        type: string
+        description: address verification service response code
+      - mode: NULLABLE
+        name: credit_card_verification_code
+        type: string
+        description: creditcard verification code
+      - mode: NULLABLE
+        name: corporate
+        type: string
+        description: MAS Corp a merchant belongs to
+      - mode: NULLABLE
+        name: region
+        type: string
+        description: MAS Region a merchant belongs to
+      - mode: NULLABLE
+        name: principal
+        type: string
+        description: MAS principal a merchant belongs to
+      - mode: NULLABLE
+        name: associate
+        type: string
+        description: MAS Associate a merchant belongs to
+      - mode: NULLABLE
+        name: chain
+        type: string
+        description: MAS Chain a merchant belongs to
+      - mode: NULLABLE
+        name: outlet
+        type: string
+        description: Outlet of transaction
+      - mode: NULLABLE
+        name: card_type
+        type: string
+        description: Card type used for authorization
+      - mode: NULLABLE
+        name: charge_type
+        type: string
+        description: The chargetype associated with the transaction
+      - mode: NULLABLE
+        name: merchant_dba_name
+        type: string
+        description: Merchant doing business as name
+      - mode: NULLABLE
+        name: currency_code
+        type: string
+        description: Currency code of Authorization
+      - mode: NULLABLE
+        name: iso_numeric_currency_code
+        type: string
+        description: Numeric Currency code of Authorization
+      - mode: NULLABLE
+        name: authorization_count
+        type: integer
+        description: Count of Auths
+      - mode: NULLABLE
+        name: hierarchy
+        type: string
+        description: MAS hierarchy a merchant belongs to
+      - mode: NULLABLE
+        name: card_scheme
+        type: string
+        description: The card brand or product like Visa, Mastercard, Amex - sample values are - VI UP UK SU RP PL MES MC JCB HC GC EBT DI DC DB CUP
+      - mode: NULLABLE
+        name: card_number_token
+        type: string
+        description: Token number for card number sanitization

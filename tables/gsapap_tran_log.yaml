@@ -1,0 +1,1989 @@
+resources:
+- name: gsapap_tran_log
+  type: bigquery.v2.table
+  properties:
+    schema:
+      fields:
+      - mode: REQUIRED
+        name: tran_time
+        description: TRAN_TIME DATE NOT NULL
+        type: DATE
+      - mode: REQUIRED
+        name: tran_nbr
+        description: TRAN_NBR NUMBER ( 11 ) NOT NULL
+        type: INT64
+      - mode: NULLABLE
+        name: cipher_key_id
+        description: CIPHER_KEY_ID NUMBER ( 10 )
+        type: INT64
+      - mode: REQUIRED
+        name: capture_date
+        description: CAPTURE_DATE DATE NOT NULL
+        type: DATE
+      - mode: NULLABLE
+        name: transmit_time
+        description: TRANSMIT_TIME DATE
+        type: DATE
+      - mode: NULLABLE
+        name: local_time
+        description: LOCAL_TIME DATE
+        type: DATE
+      - mode: NULLABLE
+        name: eff_date
+        description: EFF_DATE DATE
+        type: DATE
+      - mode: NULLABLE
+        name: exp_date
+        description: EXP_DATE VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_type_code
+        description: MERCH_TYPE_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: acq_cntry_code
+        description: ACQ_CNTRY_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: function_code
+        description: FUNCTION_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: msg_rsn_code
+        description: MSG_RSN_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: acq_inst_id
+        description: ACQ_INST_ID VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: acq_local_time
+        description: ACQ_LOCAL_TIME TIMESTAMP ( 6 ) WITH TIME ZONE
+        type: TIMESTAMP
+      - mode: NULLABLE
+        name: dest_rc
+        description: DEST_RC VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: service_code
+        description: SERVICE_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: term_id
+        description: TERM_ID VARCHAR2 ( 19 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_id
+        description: MERCH_ID VARCHAR2 ( 19 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: term_location
+        description: TERM_LOCATION NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: acct_id2
+        description: ACCT_ID2 VARCHAR2 ( 28 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sw_resp_time
+        description: SW_RESP_TIME NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: tran_proc_time
+        description: TRAN_PROC_TIME NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: nau
+        description: NAU NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: sw_out_dev_name
+        description: SW_OUT_DEV_NAME VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: track_data
+        description: TRACK_DATA VARCHAR2 ( 105 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: track_id
+        description: TRACK_ID NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: to_acct
+        description: TO_ACCT NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: dev_seq_nbr
+        description: DEV_SEQ_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: batch_nbr
+        description: BATCH_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: bal1_code
+        description: BAL1_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: bal1_amt
+        description: BAL1_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: bal2_code
+        description: BAL2_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: bal2_amt
+        description: BAL2_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: origin_rc
+        description: ORIGIN_RC VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auth_by_whom
+        description: AUTH_BY_WHOM NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: issuer_id
+        description: ISSUER_ID VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: iss_settle_dt
+        description: ISS_SETTLE_DT DATE
+        type: DATE
+      - mode: NULLABLE
+        name: info_text1
+        description: INFO_TEXT1 VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: info_text2
+        description: INFO_TEXT2 VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_nbr
+        description: CARD_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: pan
+        description: PAN VARCHAR2 ( 24 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: mtid
+        description: MTID NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: tran_code
+        description: TRAN_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: device_nbr
+        description: DEVICE_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: dev_type
+        description: DEV_TYPE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: tran_amt
+        description: TRAN_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: retrieval_nbr
+        description: RETRIEVAL_NBR VARCHAR2 ( 12 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sys_audit_nbr
+        description: SYS_AUDIT_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: tran_curr_cd
+        description: TRAN_CURR_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: auth_amt
+        description: AUTH_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: auth_code
+        description: AUTH_CODE VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auth_result_cd
+        description: AUTH_RESULT_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: from_acct
+        description: FROM_ACCT NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: card_type
+        description: CARD_TYPE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: mbr_nbr
+        description: MBR_NBR NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: card_cntry_code
+        description: CARD_CNTRY_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: acct_id1
+        description: ACCT_ID1 VARCHAR2 ( 28 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: acct_nbr
+        description: ACCT_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: ps2k_auth_ind
+        description: PS2K_AUTH_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_trans_id
+        description: PS2K_TRANS_ID VARCHAR2 ( 15 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_valid_cd
+        description: PS2K_VALID_CD VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_mkt_ind
+        description: PS2K_MKT_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_duration
+        description: PS2K_DURATION VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_prop_ind
+        description: PS2K_PROP_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: addl_resp
+        description: ADDL_RESP VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: acq_settle_dt
+        description: ACQ_SETTLE_DT DATE
+        type: DATE
+      - mode: NULLABLE
+        name: msec_tran
+        description: MSEC_TRAN NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: app_id
+        description: APP_ID NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: surchg
+        description: SURCHG NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: bal_updated
+        description: BAL_UPDATED NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: aut_curr_amt
+        description: AUT_CURR_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: aut_curr_rate
+        description: AUT_CURR_RATE NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: aut_curr_cd
+        description: AUT_CURR_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: from_curr_amt
+        description: FROM_CURR_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: from_curr_rate
+        description: FROM_CURR_RATE NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: from_curr_cd
+        description: FROM_CURR_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: to_curr_amt
+        description: TO_CURR_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: to_curr_rate
+        description: TO_CURR_RATE NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: to_curr_cd
+        description: TO_CURR_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: sws_curr_amt
+        description: SWS_CURR_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: sws_curr_rate
+        description: SWS_CURR_RATE NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: sws_curr_cd
+        description: SWS_CURR_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: cash_back_amt
+        description: CASH_BACK_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: ledbal1_amt
+        description: LEDBAL1_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: ledbal2_amt
+        description: LEDBAL2_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: merch_name
+        description: MERCH_NAME VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auth_life_cycle
+        description: AUTH_LIFE_CYCLE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: rsv_prv_data
+        description: RSV_PRV_DATA VARCHAR2 ( 50 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: acq_add_data
+        description: ACQ_ADD_DATA VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: stock_type
+        description: STOCK_TYPE VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: stock_nbr
+        description: STOCK_NBR VARCHAR2 ( 16 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: stock_exp_date
+        description: STOCK_EXP_DATE DATE
+        type: DATE
+      - mode: NULLABLE
+        name: swout_date_xmit
+        description: SWOUT_DATE_XMIT DATE
+        type: DATE
+      - mode: NULLABLE
+        name: cvv_result
+        description: CVV_RESULT VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sw_out_dev_nbr
+        description: SW_OUT_DEV_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: conv_ledger_amt
+        description: CONV_LEDGER_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: conv_avail_amt
+        description: CONV_AVAIL_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: sw_msg_rsn_code
+        description: SW_MSG_RSN_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: trml_input_mode
+        description: TRML_INPUT_MODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: trml_input_cap
+        description: TRML_INPUT_CAP NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: service_type
+        description: SERVICE_TYPE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: tran_cat_code
+        description: TRAN_CAT_CODE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: iss_inst_id
+        description: ISS_INST_ID VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tip_amt
+        description: TIP_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: orig_mtid
+        description: ORIG_MTID NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: orig_stan
+        description: ORIG_STAN NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: orig_transmit_dt
+        description: ORIG_TRANSMIT_DT DATE
+        type: DATE
+      - mode: NULLABLE
+        name: ic_script_rslt
+        description: IC_SCRIPT_RSLT VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ic_log_data
+        description: IC_LOG_DATA VARCHAR2 ( 512 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: data
+        description: DATA VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: moto_eci
+        description: MOTO_ECI NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: bta_id
+        description: BTA_ID VARCHAR2 ( 30 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_presence_ind
+        description: CARD_PRESENCE_IND NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: cat_security_ind
+        description: CAT_SECURITY_IND NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: addr_vresp
+        description: ADDR_VRESP VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_advice_code
+        description: MERCH_ADVICE_CODE VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_auth_vvalue
+        description: CARD_AUTH_VVALUE VARCHAR2 ( 40 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sect_tran_id
+        description: SECT_TRAN_ID VARCHAR2 ( 40 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: mcertif_serial_nbr
+        description: MCERTIF_SERIAL_NBR VARCHAR2 ( 34 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ccertif_serial_nbr
+        description: CCERTIF_SERIAL_NBR VARCHAR2 ( 34 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_acq_trace_data
+        description: EMS_ACQ_TRACE_DATA VARCHAR2 ( 100 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_iss_trace_data
+        description: EMS_ISS_TRACE_DATA VARCHAR2 ( 100 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_lpd1
+        description: EMS_LPD1 VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_lpd2
+        description: EMS_LPD2 VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_lpd3
+        description: EMS_LPD3 VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_lpd4
+        description: EMS_LPD4 VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_payee
+        description: EMS_PAYEE VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ems_tran_desc
+        description: EMS_TRAN_DESC VARCHAR2 ( 100 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: note_type
+        description: NOTE_TYPE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: check_nbr
+        description: CHECK_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: check_type
+        description: CHECK_TYPE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: hold_type
+        description: HOLD_TYPE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: aut_cashback_amt
+        description: AUT_CASHBACK_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: applied_from_amt
+        description: APPLIED_FROM_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: applied_to_amt
+        description: APPLIED_TO_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: applied_vel_amt
+        description: APPLIED_VEL_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: applied_id3_amt
+        description: APPLIED_ID3_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: acct_id3
+        description: ACCT_ID3 VARCHAR2 ( 28 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: id3_acct
+        description: ID3_ACCT NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: id3_curr_amt
+        description: ID3_CURR_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: id3_curr_rate
+        description: ID3_CURR_RATE NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: id3_curr_cd
+        description: ID3_CURR_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: preauth_amt
+        description: PREAUTH_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: banknet_ref_nbr
+        description: BANKNET_REF_NBR VARCHAR2 ( 9 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pos_crdhld_pr_ind
+        description: POS_CRDHLD_PR_IND NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: on_us
+        description: ON_US NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: emv_tag_4f
+        description: EMV_TAG_4F VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_71_1
+        description: EMV_TAG_71_1 VARCHAR2 ( 128 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_71_2
+        description: EMV_TAG_71_2 VARCHAR2 ( 128 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_72_1
+        description: EMV_TAG_72_1 VARCHAR2 ( 128 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_72_2
+        description: EMV_TAG_72_2 VARCHAR2 ( 128 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_82
+        description: EMV_TAG_82 VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_8a
+        description: EMV_TAG_8A VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_91
+        description: EMV_TAG_91 VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_95
+        description: EMV_TAG_95 VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9a
+        description: EMV_TAG_9A VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9c
+        description: EMV_TAG_9C VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_5f2a
+        description: EMV_TAG_5F2A VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f02
+        description: EMV_TAG_9F02 VARCHAR2 ( 12 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f03
+        description: EMV_TAG_9F03 VARCHAR2 ( 12 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f06
+        description: EMV_TAG_9F06 VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f08
+        description: EMV_TAG_9F08 VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f10
+        description: EMV_TAG_9F10 VARCHAR2 ( 64 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f1a
+        description: EMV_TAG_9F1A VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f1e
+        description: EMV_TAG_9F1E VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f27
+        description: EMV_TAG_9F27 VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f33
+        description: EMV_TAG_9F33 VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f36
+        description: EMV_TAG_9F36 VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f37
+        description: EMV_TAG_9F37 VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: access_method
+        description: ACCESS_METHOD VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: addl_amts
+        description: ADDL_AMTS VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: addl_consumer_id
+        description: ADDL_CONSUMER_ID VARCHAR2 ( 40 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: alt_dba_ind
+        description: ALT_DBA_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: appl_id
+        description: APPL_ID VARCHAR2 ( 15 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: audit_id
+        description: AUDIT_ID VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auto_adj_ind
+        description: AUTO_ADJ_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auto_rent_rate_ind
+        description: AUTO_RENT_RATE_IND VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: banknet_date
+        description: BANKNET_DATE DATE
+        type: DATE
+      - mode: NULLABLE
+        name: batch_item_nbr
+        description: BATCH_ITEM_NBR NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: card_acpt_ref
+        description: CARD_ACPT_REF VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_auth_vresult
+        description: CARD_AUTH_VRESULT VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_lvl_results
+        description: CARD_LVL_RESULTS VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_type_ind
+        description: CARD_TYPE_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: category_name
+        description: CATEGORY_NAME VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: check_in_date
+        description: CHECK_IN_DATE DATE
+        type: DATE
+      - mode: NULLABLE
+        name: check_out_date
+        description: CHECK_OUT_DATE DATE
+        type: DATE
+      - mode: NULLABLE
+        name: city
+        description: CITY VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: clerk_id
+        description: CLERK_ID VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: commrcl_card_ind
+        description: COMMRCL_CARD_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: commrcl_card_type
+        description: COMMRCL_CARD_TYPE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: consumer_bus_phone
+        description: CONSUMER_BUS_PHONE VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: consumer_hom_phone
+        description: CONSUMER_HOM_PHONE VARCHAR2 ( 30 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: consumer_name
+        description: CONSUMER_NAME VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: country
+        description: COUNTRY VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: crdhldr_id_method
+        description: CRDHLDR_ID_METHOD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: cust_code
+        description: CUST_CODE VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cust_def_data
+        description: CUST_DEF_DATA VARCHAR2 ( 200 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cust_nbr
+        description: CUST_NBR NUMBER ( 15 )
+        type: INT64
+      - mode: NULLABLE
+        name: cust_serv_phone
+        description: CUST_SERV_PHONE VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cvv2_presence
+        description: CVV2_PRESENCE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cvv2_resp_type
+        description: CVV2_RESP_TYPE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: data_input_cap
+        description: DATA_INPUT_CAP NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: department_codes
+        description: DEPARTMENT_CODES VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: dev_output_fmt
+        description: DEV_OUTPUT_FMT NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: do_not_remit
+        description: DO_NOT_REMIT NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: downgrade_ind
+        description: DOWNGRADE_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ebt_voucher
+        description: EBT_VOUCHER VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ecomm_goods_ind
+        description: ECOMM_GOODS_IND VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: enh_tran_match
+        description: ENH_TRAN_MATCH VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ext_merch_id
+        description: EXT_MERCH_ID VARCHAR2 ( 16 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ext_pos_entry_mode
+        description: EXT_POS_ENTRY_MODE VARCHAR2 ( 12 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ext_proc_code
+        description: EXT_PROC_CODE VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: extend_payment_ind
+        description: EXTEND_PAYMENT_IND VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: extra_charges_ind
+        description: EXTRA_CHARGES_IND VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: fire_safe_act_ind
+        description: FIRE_SAFE_ACT_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: format_version
+        description: FORMAT_VERSION VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: global_merchant_id
+        description: GLOBAL_MERCHANT_ID VARCHAR2 ( 16 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: global_proc_code
+        description: GLOBAL_PROC_CODE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: iata_id
+        description: IATA_ID VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: id_state_code
+        description: ID_STATE_CODE VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: identifying_date
+        description: IDENTIFYING_DATE DATE
+        type: DATE
+      - mode: NULLABLE
+        name: item_desc
+        description: ITEM_DESC VARCHAR2 ( 160 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: joint_coverage
+        description: JOINT_COVERAGE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: merch_address_1
+        description: MERCH_ADDRESS_1 VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_address_2
+        description: MERCH_ADDRESS_2 VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_chain_nbr
+        description: MERCH_CHAIN_NBR VARCHAR2 ( 16 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_currency_cd
+        description: MERCH_CURRENCY_CD VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_type
+        description: MERCH_TYPE VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: market_type_code
+        description: MARKET_TYPE_CODE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: mastercard_ica
+        description: MASTERCARD_ICA NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: mc_comply_stat_ind
+        description: MC_COMPLY_STAT_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: mc_reason_ind
+        description: MC_REASON_IND VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: message_spec_ind
+        description: MESSAGE_SPEC_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: net_sale_amt
+        description: NET_SALE_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: network_id
+        description: NETWORK_ID VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: no_bill_ind
+        description: NO_BILL_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: no_show_ind
+        description: NO_SHOW_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: order_nbr
+        description: ORDER_NBR VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: orig_auth_amt
+        description: ORIG_AUTH_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: orig_auth_date
+        description: ORIG_AUTH_DATE DATE
+        type: DATE
+      - mode: NULLABLE
+        name: orig_batch_itm_nbr
+        description: ORIG_BATCH_ITM_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: orig_reference_nbr
+        description: ORIG_REFERENCE_NBR VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: orig_tran_code
+        description: ORIG_TRAN_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: override_value
+        description: OVERRIDE_VALUE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pay_serv_provider
+        description: PAY_SERV_PROVIDER VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pcl3_data_ind
+        description: PCL3_DATA_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: phone
+        description: PHONE VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pos_entry_mode
+        description: POS_ENTRY_MODE VARCHAR2 ( 12 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pos_oper_env_ind
+        description: POS_OPER_ENV_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: postcode
+        description: POSTCODE VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prepaid_card_ind
+        description: PREPAID_CARD_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: product_code
+        description: PRODUCT_CODE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: program_ind
+        description: PROGRAM_IND VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: promotion_code
+        description: PROMOTION_CODE VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: promo_exten_period
+        description: PROMO_EXTEN_PERIOD VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: promo_free_months
+        description: PROMO_FREE_MONTHS NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: ps2k_ex_dbt_ind
+        description: PS2K_EX_DBT_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_iss_src_code
+        description: PS2K_ISS_SRC_CODE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: recon_control_data
+        description: RECON_CONTROL_DATA VARCHAR2 ( 28 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: referral_talk_time
+        description: REFERRAL_TALK_TIME NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: rental_class_id
+        description: RENTAL_CLASS_ID VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: rental_pick_city
+        description: RENTAL_PICK_CITY VARCHAR2 ( 18 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: rental_pick_state
+        description: RENTAL_PICK_STATE VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: rental_rate
+        description: RENTAL_RATE NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: rental_ret_city
+        description: RENTAL_RET_CITY VARCHAR2 ( 18 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: rental_ret_contry
+        description: RENTAL_RET_CONTRY VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: rental_ret_loc_id
+        description: RENTAL_RET_LOC_ID VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: rental_ret_state
+        description: RENTAL_RET_STATE VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: renter_name
+        description: RENTER_NAME VARCHAR2 ( 29 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: room_rate
+        description: ROOM_RATE NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: room_tax
+        description: ROOM_TAX NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: sale_amt
+        description: SALE_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: single_coverage
+        description: SINGLE_COVERAGE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: state
+        description: STATE VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: store_nbr
+        description: STORE_NBR VARCHAR2 ( 16 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sub_access_method
+        description: SUB_ACCESS_METHOD VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: supplier_order_nbr
+        description: SUPPLIER_ORDER_NBR VARCHAR2 ( 17 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sys_info
+        description: SYS_INFO VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_1_ind
+        description: TAX_1_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_2_ind
+        description: TAX_2_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_amt_1
+        description: TAX_AMT_1 NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: tax_amt_2
+        description: TAX_AMT_2 NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: tax_exempt_ind
+        description: TAX_EXEMPT_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_id
+        description: TAX_ID NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: term_attendance
+        description: TERM_ATTENDANCE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: tip_amt_2
+        description: TIP_AMT_2 NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: total_addenda
+        description: TOTAL_ADDENDA NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: total_auth_amt
+        description: TOTAL_AUTH_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: trans_description
+        description: TRANS_DESCRIPTION VARCHAR2 ( 48 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tran_record_type
+        description: TRAN_RECORD_TYPE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tran_reference_nbr
+        description: TRAN_REFERENCE_NBR VARCHAR2 ( 19 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ucaf_ind
+        description: UCAF_IND NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: vendor_id
+        description: VENDOR_ID VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: visa_bin
+        description: VISA_BIN NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: voice_operator_id
+        description: VOICE_OPERATOR_ID VARCHAR2 ( 5 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: market_data
+        description: MARKET_DATA VARCHAR2 ( 200 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: bonus_point_data
+        description: BONUS_POINT_DATA VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: chip_condition_cd
+        description: CHIP_CONDITION_CD NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: emv_tag_9f26
+        description: EMV_TAG_9F26 VARCHAR2 ( 16 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: installment_count
+        description: INSTALLMENT_COUNT NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: jcb_acq_id
+        description: JCB_ACQ_ID NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: nii
+        description: NII VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tran_type
+        description: TRAN_TYPE VARCHAR2 ( 5 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: trml_cond_code
+        description: TRML_COND_CODE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: mvv
+        description: MVV VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: term_indicator
+        description: TERM_INDICATOR NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: trans_qualifier
+        description: TRANS_QUALIFIER VARCHAR2 ( 46 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: term_type
+        description: TERM_TYPE NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: emv_tag_9f09
+        description: EMV_TAG_9F09 VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f34
+        description: EMV_TAG_9F34 VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: lob_ind
+        description: LOB_IND VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tds_seq_num
+        description: TDS_SEQ_NUM NUMBER
+        type: INT64
+      - mode: NULLABLE
+        name: trml_input_mode_exp
+        description: TRML_INPUT_MODE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tran_code_exp
+        description: TRAN_CODE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tran_cat_code_exp
+        description: TRAN_CAT_CODE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_prop_ind_exp
+        description: PS2K_PROP_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_mkt_ind_exp
+        description: PS2K_MKT_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ps2k_ex_dbt_ind_exp
+        description: PS2K_EX_DBT_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: moto_eci_exp
+        description: MOTO_ECI_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cvv_result_exp
+        description: CVV_RESULT_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: crdhldr_id_method_exp
+        description: CRDHLDR_ID_METHOD_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cat_security_ind_exp
+        description: CAT_SECURITY_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_type_exp
+        description: CARD_TYPE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: card_presence_ind_exp
+        description: CARD_PRESENCE_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auth_by_whom_exp
+        description: AUTH_BY_WHOM_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: deposit_ctl_nbr
+        description: DEPOSIT_CTL_NBR VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_curr_cd_al
+        description: MERCH_CURR_CD_AL VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: global_proc_code_exp
+        description: GLOBAL_PROC_CODE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: batch_seq_nbr
+        description: BATCH_SEQ_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: message_spec_ind_exp
+        description: MESSAGE_SPEC_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: exp_update_error_count
+        description: EXP_UPDATE_ERROR_COUNT NUMBER
+        type: INT64
+      - mode: NULLABLE
+        name: global_network_id
+        description: GLOBAL_NETWORK_ID VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: global_network_id_exp
+        description: GLOBAL_NETWORK_ID_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: global_rc
+        description: GLOBAL_RC VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: discover_acq_id
+        description: DISCOVER_ACQ_ID NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: global_term_type
+        description: GLOBAL_TERM_TYPE VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: g2region
+        description: G2REGION VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: merch_currency_cd_exp
+        description: MERCH_CURRENCY_CD_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: partial_appr_ind
+        description: PARTIAL_APPR_IND NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: address_change_notify
+        description: ADDRESS_CHANGE_NOTIFY VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: network_ref_id
+        description: NETWORK_REF_ID VARCHAR2 ( 29 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: issuer_proc_code
+        description: ISSUER_PROC_CODE VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: current_batch_nbr
+        description: CURRENT_BATCH_NBR NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: access_method_exp
+        description: ACCESS_METHOD_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sub_access_method_exp
+        description: SUB_ACCESS_METHOD_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: market_type_code_exp
+        description: MARKET_TYPE_CODE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: lob_ind_exp
+        description: LOB_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pmt_tran_type_ind
+        description: PMT_TRAN_TYPE_IND VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_add_proc_info
+        description: EMV_ADD_PROC_INFO VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tran_amt_display
+        description: TRAN_AMT_DISPLAY VARCHAR2 ( 35 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f35
+        description: EMV_TAG_9F35 VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pan_masked
+        description: PAN_MASKED VARCHAR2 ( 24 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: exp_date_masked
+        description: EXP_DATE_MASKED VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: batch_control_nbr
+        description: BATCH_CONTROL_NBR VARCHAR2 ( 12 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auto_adj_amt
+        description: AUTO_ADJ_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: extra_charges
+        description: EXTRA_CHARGES NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: triple_des_ind
+        description: TRIPLE_DES_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tran_curr_cd_exp
+        description: TRAN_CURR_CD_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: payer_id
+        description: PAYER_ID VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: payer_name
+        description: PAYER_NAME VARCHAR2 ( 120 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: invoice_nbr
+        description: INVOICE_NBR VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: invoice_amt
+        description: INVOICE_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: tran_record_type_exp
+        description: TRAN_RECORD_TYPE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: global_rc_exp
+        description: GLOBAL_RC_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: REQUIRED
+        name: edc_log_spillage
+        description: EDC_LOG_SPILLAGE VARCHAR2 ( 10 BYTE ) 'N' NOT NULL
+        type: STRING
+      - mode: REQUIRED
+        name: edc_match_spillage
+        description: EDC_MATCH_SPILLAGE VARCHAR2 ( 10 BYTE ) 'N' NOT NULL
+        type: STRING
+      - mode: REQUIRED
+        name: edc_emv_spillage
+        description: EDC_EMV_SPILLAGE VARCHAR2 ( 10 BYTE ) 'N' NOT NULL
+        type: STRING
+      - mode: NULLABLE
+        name: ucaf_sec_lvl
+        description: UCAF_SEC_LVL NUMBER
+        type: INT64
+      - mode: NULLABLE
+        name: mc_assigned_id
+        description: MC_ASSIGNED_ID VARCHAR2 ( 6 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: seller_vendor_cd
+        description: SELLER_VENDOR_CD VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: aggregator_seller_name
+        description: AGGREGATOR_SELLER_NAME VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: access_method_inv
+        description: ACCESS_METHOD_INV VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sub_access_method_inv
+        description: SUB_ACCESS_METHOD_INV VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_84
+        description: EMV_TAG_84 VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f41
+        description: EMV_TAG_9F41 VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auth_result_cd_exp
+        description: AUTH_RESULT_CD_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: check_type_exp
+        description: CHECK_TYPE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: data_input_cap_exp
+        description: DATA_INPUT_CAP_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: dev_type_exp
+        description: DEV_TYPE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: from_acct_exp
+        description: FROM_ACCT_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: function_code_exp
+        description: FUNCTION_CODE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: id3_acct_exp
+        description: ID3_ACCT_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: msg_rsn_code_exp
+        description: MSG_RSN_CODE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: mtid_exp
+        description: MTID_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: on_us_exp
+        description: ON_US_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: orig_mtid_exp
+        description: ORIG_MTID_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pos_crdhld_pr_ind_exp
+        description: POS_CRDHLD_PR_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: term_attendance_exp
+        description: TERM_ATTENDANCE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: term_location_exp
+        description: TERM_LOCATION_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: to_acct_exp
+        description: TO_ACCT_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: to_curr_rate_exp
+        description: TO_CURR_RATE_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: track_id_exp
+        description: TRACK_ID_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: trml_input_cap_exp
+        description: TRML_INPUT_CAP_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ucaf_ind_exp
+        description: UCAF_IND_EXP VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: aggregator_flag
+        description: AGGREGATOR_FLAG VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f53
+        description: EMV_TAG_9F53 VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f6e
+        description: EMV_TAG_9F6E VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f7c
+        description: EMV_TAG_9F7C VARCHAR2 ( 66 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: network_resv
+        description: NETWORK_RESV VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ninety_healthcare
+        description: NINETY_HEALTHCARE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: custom_id_detail
+        description: CUSTOM_ID_DETAIL VARCHAR2 ( 25 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: dest_zipcode
+        description: DEST_ZIPCODE VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: source_zipcode
+        description: SOURCE_ZIPCODE VARCHAR2 ( 15 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: debit_fee_prg_bill_ind
+        description: DEBIT_FEE_PRG_BILL_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: network_data
+        description: NETWORK_DATA VARCHAR2 ( 100 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cup_bin
+        description: CUP_BIN VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: visa_debit_bin
+        description: VISA_DEBIT_BIN VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: mc_debit_bin
+        description: MC_DEBIT_BIN VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: interlink_fee_prg_ind
+        description: INTERLINK_FEE_PRG_IND VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: trans_fee_amt
+        description: TRANS_FEE_AMT NUMBER ( 18 , 4 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: trans_fee_amt_ind
+        description: TRANS_FEE_AMT_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pin_service_code
+        description: PIN_SERVICE_CODE VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pin_capture_cap
+        description: PIN_CAPTURE_CAP NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: dev_type_ind
+        description: DEV_TYPE_IND VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: wallet_id
+        description: WALLET_ID VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: discover_retained
+        description: DISCOVER_RETAINED VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: ax_retained
+        description: AX_RETAINED VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: rupay_debit_bin
+        description: RUPAY_DEBIT_BIN VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: alt_term_id
+        description: ALT_TERM_ID VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: mpos
+        description: MPOS VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: spend_qual_ind
+        description: SPEND_QUAL_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: acct_status
+        description: ACCT_STATUS VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: token_assur_lvl
+        description: TOKEN_ASSUR_LVL VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: token_pan_acct_range
+        description: TOKEN_PAN_ACCT_RANGE VARCHAR2 ( 19 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pin_block_req
+        description: PIN_BLOCK_REQ VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: dev_type_accpt_cap
+        description: DEV_TYPE_ACCPT_CAP NUMBER ( 5 )
+        type: INT64
+      - mode: NULLABLE
+        name: token_requestor_id
+        description: TOKEN_REQUESTOR_ID VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tle_compliant
+        description: TLE_COMPLIANT VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: dukpt_compliant
+        description: DUKPT_COMPLIANT VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: orig_pos_cond_code
+        description: ORIG_POS_COND_CODE VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: payment_fac_id
+        description: PAYMENT_FAC_ID VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: iso_id
+        description: ISO_ID VARCHAR2 ( 11 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: common_aid_trans
+        description: COMMON_AID_TRANS VARCHAR2 ( 12 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: payment_forms_nbr
+        description: PAYMENT_FORMS_NBR VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_id_1
+        description: TAX_ID_1 VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_id_2
+        description: TAX_ID_2 VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_id_3
+        description: TAX_ID_3 VARCHAR2 ( 20 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: tax_3_ind
+        description: TAX_3_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: recipient_name
+        description: RECIPIENT_NAME VARCHAR2 ( 30 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: pst_tax_reg
+        description: PST_TAX_REG VARCHAR2 ( 15 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: local_tax_rate
+        description: LOCAL_TAX_RATE VARCHAR2 ( 5 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: local_tax
+        description: LOCAL_TAX VARCHAR2 ( 9 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: digital_entity_id
+        description: DIGITAL_ENTITY_ID VARCHAR2 ( 5 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: in_application_ind
+        description: IN_APPLICATION_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: trans_auth_status
+        description: TRANS_AUTH_STATUS VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: trans_integrity_class
+        description: TRANS_INTEGRITY_CLASS VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: payment_acct_ref
+        description: PAYMENT_ACCT_REF VARCHAR2 ( 35 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: trans_status_ind
+        description: TRANS_STATUS_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sip_plan
+        description: SIP_PLAN VARCHAR2 ( 3 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: sip_option
+        description: SIP_OPTION VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: monthly_installment_amt
+        description: MONTHLY_INSTALLMENT_AMT NUMBER ( 9 , 2 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: total_installment_amt
+        description: TOTAL_INSTALLMENT_AMT NUMBER ( 9 , 2 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: interest_rate
+        description: INTEREST_RATE NUMBER ( 7 , 5 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: last_payment_amt
+        description: LAST_PAYMENT_AMT NUMBER ( 9 , 2 )
+        type: NUMERIC
+      - mode: NULLABLE
+        name: emv_tag_9f07
+        description: EMV_TAG_9F07 VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: acct_funding_source
+        description: ACCT_FUNDING_SOURCE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: match_cur_batch
+        description: MATCH_CUR_BATCH NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: prev_tx_ref_nbr
+        description: PREV_TX_REF_NBR VARCHAR2 ( 19 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_dev_seq
+        description: PREV_DEV_SEQ NUMBER ( 10 )
+        type: INT64
+      - mode: NULLABLE
+        name: prev_pan
+        description: PREV_PAN VARCHAR2 ( 24 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_script_rslt
+        description: PREV_SCRIPT_RSLT VARCHAR2 ( 255 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_emv_t95
+        description: PREV_EMV_T95 VARCHAR2 ( 10 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_emv_t9b
+        description: PREV_EMV_T9B VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_emv_t9f10
+        description: PREV_EMV_T9F10 VARCHAR2 ( 64 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_emv_t9f26
+        description: PREV_EMV_T9F26 VARCHAR2 ( 16 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_emv_t9f27
+        description: PREV_EMV_T9F27 VARCHAR2 ( 2 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: prev_emv_t9f36
+        description: PREV_EMV_T9F36 VARCHAR2 ( 4 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: match_tran_cat_code
+        description: MATCH_TRAN_CAT_CODE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: match_market_type_code
+        description: MATCH_MARKET_TYPE_CODE VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: edc_log_ind
+        description: EDC_LOG_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: auth_match_ind
+        description: AUTH_MATCH_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_data_ind
+        description: EMV_DATA_IND VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: cil_bin
+        description: CIL_BIN VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: wallet_iin
+        description: WALLET_IIN VARCHAR2 ( 8 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: emv_tag_9f63
+        description: EMV_TAG_9F63 VARCHAR2 ( 32 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: visa_pos_environment
+        description: VISA_POS_ENVIRONMENT VARCHAR2 ( 1 BYTE )
+        type: STRING
+      - mode: NULLABLE
+        name: dw_create_dtm
+        description: DW_CREATE_DTM TIMESTAMP ( 6 ) ) TABLESPACE
+        type: TIMESTAMP
+      - mode: NULLABLE
+        name: added_replication_date
+        description: Replication date
+        type: DATETIME
+      - mode: NULLABLE
+        name: reserved1
+        description: Placeholder 1
+        type: STRING
+      - mode: NULLABLE
+        name: reserved2
+        description: Placeholder 2
+        type: STRING
+      - mode: NULLABLE
+        name: reserved3
+        description: Placeholder 3
+        type: STRING
+      - mode: NULLABLE
+        name: reserved4
+        description: Placeholder 4
+        type: STRING
+      - mode: NULLABLE
+        name: reserved5
+        description: Placeholder 5
+        type: STRING
+      - mode: NULLABLE
+        name: reserved6
+        description: Placeholder 6
+        type: STRING
+      - mode: NULLABLE
+        name: reserved7
+        description: Placeholder 7
+        type: STRING
+      - mode: NULLABLE
+        name: reserved8
+        description: Placeholder 8
+        type: STRING
+      - mode: NULLABLE
+        name: reserved9
+        description: Placeholder 9
+        type: STRING
+      - mode: NULLABLE
+        name: reserved10
+        description: Placeholder 10
+        type: STRING
+    description: gsap_gsapap_tran_log_gsap-exchange-open-batch
+    datasetReference:
+      datasetId: trusted_layer
+      projectId: prj-gousenaib-dlak-res01
+    friendlyName: gsap_gsapap_tran_log_gsap-exchange-open-batch
+    labels:
+      bus_contact: mark-kubik
+      country: us
+      tech_contact: jimmy-ruska
+      description: gsap_gsapap_tran_log_gsap-exchange-open-batch
+      project: analytics-and-presentation
+      cloudzone: google-us
+      productversion: '1_0'
+      dataclassification: dc2
+      lifecycle: development
+      support_contact: roberto_belardo
+      eol_date: not-applicable
+      tier: gcp-bigquery
+      company: globalpay
+      department: product-development
+      costcenter: finance
+      group: application-delivery
+      sla: gold
+      apigateway: not-applicable
+      build_date: '06262018'
+      prj_code: business-view
+      service: gcp-cloud-datalake
+      organization: bts
+      businessregion: us
+      resourcename: location-table
+      status: development

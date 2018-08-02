@@ -1,0 +1,291 @@
+resources:
+- name: north-ca-auth-eod-ft
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: north_ca_auth_eod_ft
+   labels:
+     apigateway: not-applicable
+     build_date:  2142018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: north_ca_auth_eod_ft_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: NORTH_CA_AUTH_EOD_FT_SK
+        type: integer
+        description: source column type => BIGINT
+      - mode: NULLABLE
+        name: SOURCE_FILE_KEY
+        type: integer
+        description: source column type => BIGINT
+      - mode: NULLABLE
+        name: MERCHANT_INFORMATION_SK
+        type: integer
+        description: source column type => BIGINT
+      - mode: NULLABLE
+        name: MERCHANT_NUMBER
+        type: float
+        description: source column type => NUMERIC(19,0)
+      - mode: NULLABLE
+        name: TERMINAL_SK
+        type: integer
+        description: source column type => BIGINT
+      - mode: NULLABLE
+        name: REC_TYPE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_STAT
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_TYP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: BAL_TERM_ID
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (16)
+      - mode: NULLABLE
+        name: BAL_BATCH_NUM
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: TRANSACTION_DATE
+        type: float
+        description: source column type => NUMERIC (8,0)
+      - mode: NULLABLE
+        name: TRANSACTION_TIME
+        type: float
+        description: source column type => NUMERIC (6,0)
+      - mode: NULLABLE
+        name: BAL_REC_TYP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_BATCH_FLAG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: BAL_GRP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: BAL_REGN
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CB_GROUP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: BAL_CB_MERCH_LNK_FLAG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: BAL_EST_DATE
+        type: float
+        description: source column type => NUMERIC (8,0)
+      - mode: NULLABLE
+        name: BAL_EST_TIME
+        type: float
+        description: source column type => NUMERIC (6,0)
+      - mode: NULLABLE
+        name: BAL_FLAG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: BAL_OB_FLAG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: BAL_CREATE_CB_RPT_FLAG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: BAL_CB_REF_NUM
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (12)
+      - mode: NULLABLE
+        name: BAL_CNT
+        type: float
+        description: source column type => NUMERIC (9,0)
+      - mode: NULLABLE
+        name: BAL_AMT
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_1
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_1
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_2
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_2
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_3
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_3
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_4
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_4
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_5
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_5
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_6
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_6
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_7
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_7
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_8
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_8
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_9
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_9
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_10
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_10
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_11
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_11
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_12
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_12
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_13
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_13
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_14
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_14
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_CARD_TYP_15
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CARD_TOT_15
+        type: float
+        description: source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: BAL_MASREG_ID
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BAL_CORP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: CREATED_BY
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (100)
+      - mode: NULLABLE
+        name: UPDATED_BY
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING (100)
+      - mode: NULLABLE
+        name: DW_CREATE_DTM
+        type: TIMESTAMP
+        description: source column type => TIMESTAMP
+      - mode: NULLABLE
+        name: DW_UPDATE_DTM
+        type: TIMESTAMP
+        description: source column type => TIMESTAMP
+      - mode: NULLABLE
+        name: CURRENT_IND
+        type: integer
+        description: source column type => BYTEINT

@@ -1,0 +1,765 @@
+resources:
+- name: north-ca-auth-fin-ft
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: north_ca_auth_fin_ft
+   labels:
+     apigateway: not-applicable
+     build_date:  2082018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: this_table_is_the_north_ca_auth_fin_ft
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: NORTH_CA_AUTH_SK
+        type: integer
+        description: Source column data type => BIGINT   
+      - mode: NULLABLE
+        name: SOURCE_FILE_KEY
+        type: integer
+        description: Source column data type => BIGINT   
+      - mode: NULLABLE
+        name: MERCHANT_INFORMATION_SK
+        type: integer
+        description: Source column data type => BIGINT   
+      - mode: NULLABLE
+        name: MERCHANT_NUMBER
+        type: float
+        description: Source column data type => NUMERIC(19,0)
+      - mode: NULLABLE
+        name: CARD_TYPE_SK
+        type: integer
+        description: Source column data type => BIGINT   
+      - mode: NULLABLE
+        name: AVS_RESPONSE_CODE_SK
+        type: integer
+        description: Source column data type => BIGINT   
+      - mode: NULLABLE
+        name: TERMINAL_SK
+        type: integer
+        description: Source column data type => BIGINT   
+      - mode: NULLABLE
+        name: CARD_SCHEME
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: REC_TYPE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: STAT
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: TYPE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: REC_TYPE_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: STAT_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: TYPE_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: TERMINAL_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (16)
+      - mode: NULLABLE
+        name: BATCH_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: BATCH_CHAR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: BATCH_L2DIG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: TRANSACTION_DATE
+        type: float
+        description: Source column data type => NUMERIC(8,0)
+      - mode: NULLABLE
+        name: TRANSACTION_TIME
+        type: float
+        description: Source column data type => NUMERIC(6,0)
+      - mode: NULLABLE
+        name: REC_TYP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BATCH_FLAG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: RECORD_TYPE_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BATCH_FLAG_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: GRP_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: REGION
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: GRP_ID_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: REGION_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: UCAF_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CB_GROUP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: POS_ENTRY_BYTE3
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CB_MERCH_LNK_FLAG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: EST_DATE
+        type: float
+        description: Source column data type => NUMERIC(8,0)
+      - mode: NULLABLE
+        name: EST_TIME
+        type: float
+        description: Source column data type => NUMERIC(6,0)
+      - mode: NULLABLE
+        name: EST_DATE_EMV
+        type: float
+        description: Source column data type => NUMERIC(8,0)
+      - mode: NULLABLE
+        name: EST_TIME_EMV
+        type: float
+        description: Source column data type => NUMERIC(6,0)
+      - mode: NULLABLE
+        name: PROD_RETAILER_FIID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: PROD_RETAILER_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (12)
+      - mode: NULLABLE
+        name: CARD_FIID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: RETAILER_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (12)
+      - mode: NULLABLE
+        name: CARD_TYPE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: ORIGINAL_CARD_TYPE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: TRANSACTION_ACTION
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: TRANSACTION_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (5)
+      - mode: NULLABLE
+        name: TRANSACTION_CARD_TYPE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: TRANSACTION_ACCT_TYPE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: RESERVED
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: RESP_CODE_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: TRANSACTION_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: RESP_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: TRANSACTION_AMOUNT
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (9)
+      - mode: NULLABLE
+        name: APPROVAL_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: DRAFT_CAPTURE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: DRAFT_CAPTURE_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: RETRIEVAL_REF_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: REVERSAL_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: SEQ_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (12)
+      - mode: NULLABLE
+        name: ORIG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: ORIG_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: INVOICE_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (10)
+      - mode: NULLABLE
+        name: INVOICE_NBR_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (10)
+      - mode: NULLABLE
+        name: ORIGINAL_INVOICE_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (10)
+      - mode: NULLABLE
+        name: OPER_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: OPER_NBR_EMV
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: TRACK2_MANUAL_FLAG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: LAST_EOD
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: POS_ENVIRONMENT
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: TRANSACTION_TYPE_QUALIFIER
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: VISA_TRACKING_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: CARD_ACCEPTOR_NAME
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (25)
+      - mode: NULLABLE
+        name: CARD_ACCEPTOR_CITY
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (13)
+      - mode: NULLABLE
+        name: CARD_ACCEPTOR_STATE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: INTERAC_FLAG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: RETL_STC_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: CAP_DATE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: AMT_2
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (9)
+      - mode: NULLABLE
+        name: POST_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: TERM_CNTRY_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ORIG_TRAN_DATE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: STREET_ADDRESS
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (25)
+      - mode: NULLABLE
+        name: RECON_SLOT
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ACQ_INST_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (11)
+      - mode: NULLABLE
+        name: FRWD_INST_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (11)
+      - mode: NULLABLE
+        name: RCV_INST_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (11)
+      - mode: NULLABLE
+        name: ISS_INST_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (11)
+      - mode: NULLABLE
+        name: ISO_COND_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (7)
+      - mode: NULLABLE
+        name: COND_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: ISO_RESP_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: RSP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ISO_REV_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: AVS_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: AUTH_PROTOCOL
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: V_MOTO_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CHIPIND_DEBIT
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CARD_LEVEL_RESULTS
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: CARD_INPUT_MODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: DE40_SC
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: EXPIRY_DATE
+        type: float
+        description: Source column data type => NUMERIC (4,0)
+      - mode: NULLABLE
+        name: OPTIONAL_DATA
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (80)
+      - mode: NULLABLE
+        name: TRANSACTION_STATUS
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: AUTH_ONLY_FLAG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: RESP_TIME
+        type: float
+        description: Source column data type => NUMERIC (5,0)
+      - mode: NULLABLE
+        name: DISC_SYS_TRC_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: DISC_TRAN_QUAL
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: GMT_TIMESTAMP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (10)
+      - mode: NULLABLE
+        name: AMEX_TERMINAL_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (15)
+      - mode: NULLABLE
+        name: MC_DEV_TYPE_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: RECORD_TYPE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: FORCE_SETTLE_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: ORIGINATOR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: RESPONDER
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: NETWORK_REF_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (15)
+      - mode: NULLABLE
+        name: BIF_TXN_FLAG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: BIF_REFERENCE_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (19)
+      - mode: NULLABLE
+        name: DEPOSIT_DATE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING(8)
+      - mode: NULLABLE
+        name: PIN_OFFSET
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: ECI_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: CAT_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: BANKNET_REF_N
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (9)
+      - mode: NULLABLE
+        name: BANKNET_DATE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: MC_MOTO_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CARD_ACTIVATED_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: QQ_MERCH_DES_INVOICE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: QQ_LOYALTY_FLAG
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: MASREG_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: NAT_ADJ_SEQ_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: NAT_AUTH_IND
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: DAY_SETTLE_IND_10
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CORP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: PRINCIPAL
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: ASSOCIATE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: CHAIN
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: VBV_RSP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: TIME_OFFSET
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: CVV2
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: TERM_ENTRY_CAP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: POS_ENTRY_MODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: CARD_DATA_INPUT
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CARDHOLDER_ID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: CARD_PRESENCE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: SUP_AMT
+        type: float
+        description: Source column data type => NUMERIC (12,0)
+      - mode: NULLABLE
+        name: TRAN_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: PAN_SEQ_NBR
+        type: string
+        description: Source column data type => CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ENV_TERM_PROF
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: TERM_CTRY_CODE
+        type: float
+        description: Source column data type => NUMERIC (3,0)
+      - mode: NULLABLE
+        name: SERIAL_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: UNPRED_NBR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: ATC
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: AIP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: CRYPTOGRAM
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (16)
+      - mode: NULLABLE
+        name: TVR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (10)
+      - mode: NULLABLE
+        name: CRYPTO_AMT
+        type: float
+        description: Source column data type => NUMERIC (12,0)
+      - mode: NULLABLE
+        name: EMV_DATE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (6)
+      - mode: NULLABLE
+        name: SCRIPT_RSLTS
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (10)
+      - mode: NULLABLE
+        name: ISS_LNGTH
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ISS_DKI
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ISS_VERS
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ISS_CVR
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: ISS_CVR_EXT
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ISS_CNTRS
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (16)
+      - mode: NULLABLE
+        name: ISS_BYTE17
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: ISS_BYTE18
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (30)
+      - mode: NULLABLE
+        name: CRYPTO_INFO_DATA
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (2)
+      - mode: NULLABLE
+        name: AUTH_METHOD
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: AUTH_ENTITY
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (1)
+      - mode: NULLABLE
+        name: VISA_FFI
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (8)
+      - mode: NULLABLE
+        name: AMEX_TID
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (15)
+      - mode: NULLABLE
+        name: CHIP_CORP
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (4)
+      - mode: NULLABLE
+        name: CARD_NUMBER_HK
+        type: integer
+        description: Source column data type => BIGINT
+      - mode: NULLABLE
+        name: TRACK2_DATA_HK
+        type: integer
+        description: Source column data type => BIGINT
+      - mode: NULLABLE
+        name: CARD_NUMBER_RK
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (200)
+      - mode: NULLABLE
+        name: TRACK2_DATA_RK
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (200)
+      - mode: NULLABLE
+        name: CURRENCY_CODE_SK
+        type: integer
+        description: Source column data type => BIGINT   
+      - mode: NULLABLE
+        name: ORIGINAL_CURRENCY_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: ALPHA_CURRENCY_CODE
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING (3)
+      - mode: NULLABLE
+        name: ISO_NUMERIC_CURRENCY_CODE
+        type: float
+        description: Source column data type => NUMERIC(3,0)
+      - mode: NULLABLE
+        name: CREATED_BY
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING(100) 
+      - mode: NULLABLE
+        name: UPDATED_BY
+        type: string
+        description: Source column data type => NATIONAL CHARACTER VARYING(100) 
+      - mode: NULLABLE
+        name: DW_CREATE_DTM
+        type: timestamp
+        description: Source column data type => TIMESTAMP
+      - mode: NULLABLE
+        name: DW_UPDATE_DTM
+        type: timestamp
+        description: Source column data type => TIMESTAMP
+      - mode: NULLABLE
+        name: CURRENT_IND
+        type: integer
+        description: Source column data type => BYTEINT
+
+

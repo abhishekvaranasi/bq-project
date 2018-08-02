@@ -1,0 +1,423 @@
+ resources:
+ - name: merchant_information_details
+   type: bigquery.v2.table
+   properties:
+    datasetId: consumption_layer
+    tableReference:
+      projectId: prj-gousenaib-dlak-res01
+      tableId: merchant_information_details
+    labels:
+      apigateway: not-applicable
+      bus_contact: mark-kubik
+      businessregion: us
+      cloudzone: google-us
+      company: globalpay
+      costcenter: finance
+      country: us
+      dataclassification: dc2
+      department: product-development
+      description: merchant_information_details
+      eol_date: not-applicable
+      group: application-delivery
+      lifecycle: development
+      organization: bts
+      prj_code: business-view
+      productversion: 10
+      project: prj-gousenaib-dlak-res01
+      resourcename: location-table
+      service: gcp-cloud-datalake
+      sla: gold
+      status: development
+      support_contact: roberto_belardo
+      tech_contact: venu-vidyashankar
+      tier: gcp-bigquery
+    schema:
+      fields:      
+       - mode: nullable
+         name: corporate
+         type: string
+         description: hierarchy - corporate
+       - mode: nullable
+         name: region
+         type: string
+         description: hierarchy - region
+       - mode: nullable
+         name: principal
+         type: string
+         description: hierarchy - principal
+       - mode: nullable
+         name: associate
+         type: string
+         description: hierarchy - association
+       - mode: nullable
+         name: chain
+         type: string
+         description: hierarchy - chain
+       - mode: nullable
+         name: merchant_number
+         type: string
+         description: unique merchant number assigned to every merchant
+       - mode: nullable
+         name: operator_id
+         type: string
+         description: no description available 
+       - mode: nullable
+         name: merchant_status
+         type: string
+         description: status of merchant as in open, reopen, closed
+       - mode: nullable
+         name: account_status
+         type: string
+         description: status of account a merchant is associated with
+       - mode: nullable
+         name: company_name
+         type: string
+         description: no description available 
+       - mode: nullable
+         name: first_deposit_date_time
+         type: timestamp
+         description: the date when first deposit was made
+       - mode: nullable
+         name: dba_name
+         type: string
+         description: merchants doing-business-as name
+       - mode: nullable
+         name: dba_attention
+         type: string
+         description: merchants doing-business-as attention
+       - mode: nullable
+         name: dba_address1
+         type: string
+         description: merchants doing-business-as address line1
+       - mode: nullable
+         name: dba_address2
+         type: string
+         description: merchants doing-business-as address line 2
+       - mode: nullable
+         name: dba_city
+         type: string
+         description: merchants doing-business-as address city
+       - mode: nullable
+         name: dba_state
+         type: string
+         description: merchants doing-business-as state/country
+       - mode: nullable
+         name: dba_country_ind
+         type: string
+         description: merchants doing-business-as indicator if its country or state. this flag is a y/n field and will be used to determine if the 2 digit value in the dba_state field is a us state abbreviation or a 2-digit country code.
+       - mode: nullable
+         name: dba_postal_code
+         type: string
+         description: merchants doing-business-as address postal code
+       - mode: nullable
+         name: dba_fax_number
+         type: string
+         description: merchants doing-business-as fax number
+       - mode: nullable
+         name: dba_phone_number
+         type: string
+         description: merchants doing-business-as phone number of contact
+       - mode: nullable
+         name: retrieval_name
+         type: string
+         description: merchants retrieval name
+       - mode: nullable
+         name: retrieval_attention
+         type: string
+         description: merchants retrieval attention
+       - mode: nullable
+         name: retrieval_address1
+         type: string
+         description: merchants retrieval address line1
+       - mode: nullable
+         name: retrieval_address2
+         type: string
+         description: merchants retrieval address line 2
+       - mode: nullable
+         name: retrieval_address3
+         type: string
+         description: merchants retrieval address city
+       - mode: nullable
+         name: retrieval_city
+         type: string
+         description: merchants retrieval state/country
+       - mode: nullable
+         name: retrieval_state
+         type: string
+         description: merchants retrieval indicator if its country or state. this flag is a y/n field and will be used to determine if the 2 digit value in the retrieval_state field is a us state abbreviation or a 2-digit country code.
+       - mode: nullable
+         name: retrieval_state_country_ind
+         type: string
+         description: merchants retrieval address postal code
+       - mode: nullable
+         name: retrieval_postal_code
+         type: string
+         description: merchants retrieval fax number
+       - mode: nullable
+         name: retrieval_fax_number
+         type: string
+         description: merchants retrieval phone number of contact
+       - mode: nullable
+         name: retrieval_optional_data
+         type: string
+         description: no description available 
+       - mode: nullable
+         name: chargeback_name
+         type: string
+         description: merchants chargeback associatedname
+       - mode: nullable
+         name: chargeback_attention
+         type: string
+         description: merchants chargeback associated attention
+       - mode: nullable
+         name: chargeback_address1
+         type: string
+         description: merchants chargeback associated address line1
+       - mode: nullable
+         name: chargeback_address2
+         type: string
+         description: merchants chargeback associated address line 2
+       - mode: nullable
+         name: chargeback_address3
+         type: string
+         description: merchants chargeback associated address city
+       - mode: nullable
+         name: chargeback_city
+         type: string
+         description: merchants chargeback associated state/country
+       - mode: nullable
+         name: chargeback_state
+         type: string
+         description: merchants chargeback associated indicator if its country or state. this flag is a y/n field and will be used to determine if the 2 digit value in the chargeback state field is a us state abbreviation or a 2-digit country code.
+       - mode: nullable
+         name: chargeback_state_country_ind
+         type: string
+         description: merchants chargeback associated address postal code
+       - mode: nullable
+         name: chargeback_postal_code
+         type: string
+         description: merchants chargeback associated fax number
+       - mode: nullable
+         name: chargeback_fax_number
+         type: string
+         description: merchants chargeback associated phone number of contact
+       - mode: nullable
+         name: chargeback_optional_data
+         type: string
+         description: no description available 
+       - mode: nullable
+         name: tax_information_name
+         type: string
+         description: merchants tax associated name
+       - mode: nullable
+         name: tax_information_attention
+         type: string
+         description: merchants tax associated attention
+       - mode: nullable
+         name: tax_information_address1
+         type: string
+         description: merchants tax associated address line1
+       - mode: nullable
+         name: tax_information_address2
+         type: string
+         description: merchants tax associated address line 2
+       - mode: nullable
+         name: tax_information_address3
+         type: string
+         description: merchants tax associated address city
+       - mode: nullable
+         name: tax_information_city
+         type: string
+         description: merchants tax associated state/country
+       - mode: nullable
+         name: tax_information_state
+         type: string
+         description: merchants tax associated indicator if its country or state. this flag is a y/n field and will be used to determine if the 2 digit value in the tax state field is a us state abbreviation or a 2-digit country code.
+       - mode: nullable
+         name: tax_information_state_country_ind
+         type: string
+         description: merchants tax associated address postal code
+       - mode: nullable
+         name: tax_information_postal_code
+         type: string
+         description: merchants tax associated fax number
+       - mode: nullable
+         name: tax_information_fax_number
+         type: string
+         description: merchants tax associated phone number of contact
+       - mode: nullable
+         name: tax_information_optional_data
+         type: string
+         description: no description available 
+       - mode: nullable
+         name: additional_name
+         type: string
+         description: merchants additional name
+       - mode: nullable
+         name: additional_attention
+         type: string
+         description: merchants additional attention
+       - mode: nullable
+         name: additional_address1
+         type: string
+         description: merchants additional address line1
+       - mode: nullable
+         name: additional_address2
+         type: string
+         description: merchants additional address line 2
+       - mode: nullable
+         name: additional_address3
+         type: string
+         description: merchants additional address city
+       - mode: nullable
+         name: additional_city
+         type: string
+         description: merchants additional state
+       - mode: nullable
+         name: additional_state
+         type: string
+         description: merchants additional indicator if its country or state. this flag is a y/n field and will be used to determine if the 2 digit value in the additional state field is a us state abbreviation or a 2-digit country code.
+       - mode: nullable
+         name: additional_state_country_ind
+         type: string
+         description: merchants additional address postal code
+       - mode: nullable
+         name: additional_postal_code
+         type: string
+         description: merchants additional fax number
+       - mode: nullable
+         name: additional_fax_number
+         type: string
+         description: merchants additional phone number of contact
+       - mode: nullable
+         name: additional_optional_data
+         type: string
+         description: no description available 
+       - mode: nullable
+         name: primary_email_address
+         type: string
+         description: merchants primary email address
+       - mode: nullable
+         name: secondary_email_address
+         type: string
+         description: merchants secondary email address
+       - mode: nullable
+         name: merchant_category_code
+         type: string
+         description: category code or standard industry code
+       - mode: nullable
+         name: tax_identification_number
+         type: string
+         description: tax identification number
+       - mode: nullable
+         name: merchant_category_code_desc
+         type: string
+         description: description of mcc
+       - mode: nullable
+         name: legal_name
+         type: string
+         description: merchants legal name
+       - mode: nullable
+         name: legal_attention
+         type: string
+         description: merchants legal attention
+       - mode: nullable
+         name: legal_address1
+         type: string
+         description: merchants legal address line1
+       - mode: nullable
+         name: legal_address2
+         type: string
+         description: merchants legal address line 2
+       - mode: nullable
+         name: legal_city
+         type: string
+         description: merchants legal address city
+       - mode: nullable
+         name: legal_state
+         type: string
+         description: merchants legal state/country
+       - mode: nullable
+         name: legal_country_ind
+         type: string
+         description: merchants legal indicator if its country or state. this flag is a y/n field and will be used to determine if the 2 digit value in the legal state field is a us state abbreviation or a 2-digit country code.
+       - mode: nullable
+         name: legal_postal_code
+         type: string
+         description: merchants legal address postal code
+       - mode: nullable
+         name: service_representative_code
+         type: string
+         description: service representative code
+       - mode: nullable
+         name: marketing_representative
+         type: string
+         description: marketing representative
+       - mode: nullable
+         name: merchant_contact
+         type: string
+         description: merchant contact
+       - mode: nullable
+         name: officer_phone_number
+         type: string
+         description: officer phone number
+       - mode: nullable
+         name: alternate_merchant_number
+         type: string
+         description: alternate merchant number
+       - mode: nullable
+         name: primary_id_num_mask
+         type: string
+         description: primary id num masked
+       - mode: nullable
+         name: primary_owner_name
+         type: string
+         description: primary owner name
+       - mode: nullable
+         name: secondary_primary_id_num_mask
+         type: string
+         description: secondary primary id num mask
+       - mode: nullable
+         name: secondary_owner_name
+         type: string
+         description: secondary owner name
+       - mode: nullable
+         name: hierarchy_level
+         type: string
+         description: hierarchy level
+       - mode: nullable
+         name: retail_cash_advance_name
+         type: string
+         description: retail cash advance name
+       - mode: nullable
+         name: retail_name
+         type: string
+         description: retail name
+       - mode: nullable
+         name: retail_city
+         type: string
+         description: retail city
+       - mode: nullable
+         name: ratail_state
+         type: string
+         description: ratail state
+       - mode: nullable
+         name: dda_1_last_4
+         type: string
+         description: dda 1 last 4
+       - mode: nullable
+         name: dda_2_last_4
+         type: string
+         description: dda 2 last 4
+       - mode: nullable
+         name: dda_3_last_4
+         type: string
+         description: dda 3 last 4
+       - mode: nullable
+         name: dda_4_last_4
+         type: string
+         description: dda 4 last 4
+       - mode: nullable
+         name: current_ind
+         type: string
+         description: 1, 0 values . 0 to indicate latest record only on basis of merchant number

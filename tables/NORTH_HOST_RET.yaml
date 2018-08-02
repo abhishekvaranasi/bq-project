@@ -1,0 +1,235 @@
+resources:
+- name: north-host-ret
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: north_host_ret
+   labels:
+     apigateway: not-applicable
+     build_date:  2132018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: north_host_ret_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer
+      - mode: NULLABLE
+        name: FIID
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(8) 
+      - mode: NULLABLE
+        name: GRP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(8)
+      - mode: NULLABLE
+        name: REGN
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(8)
+      - mode: NULLABLE
+        name: RETAILER_ID
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(38) 
+      - mode: NULLABLE
+        name: NAME
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(80)
+      - mode: NULLABLE
+        name: ADDR
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(50)
+      - mode: NULLABLE
+        name: ADDR_EXT
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(50)
+      - mode: NULLABLE
+        name: CITY
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(36)
+      - mode: NULLABLE
+        name: POSTAL_CDE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(20)
+      - mode: NULLABLE
+        name: ST
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: CNTRY
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: RTTN
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(11)
+      - mode: NULLABLE
+        name: ACCT
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(38)
+      - mode: NULLABLE
+        name: PHONE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(40)
+      - mode: NULLABLE
+        name: AFT_HRS_PHONE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(40)
+      - mode: NULLABLE
+        name: SRV_EST_NUM
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(10)
+      - mode: NULLABLE
+        name: SIC_CDE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: RFRL_PHONE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(40)
+      - mode: NULLABLE
+        name: ACH_COMPANY_ID
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(20)
+      - mode: NULLABLE
+        name: DEBIT_SUPPORT_FLG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: PRE_POST_DAT
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(8)
+      - mode: NULLABLE
+        name: CUR_POST_DAT
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(8)
+      - mode: NULLABLE
+        name: MC_ASGN_ID
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(12)
+      - mode: NULLABLE
+        name: FLLLER
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: RETAILER_BAL_CUTVR_STRT
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: RETAILER_BAL_CUTVR_END
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: RETAILER_PROG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: SETL
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: CHK_RTG_GRP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(22)
+      - mode: NULLABLE
+        name: CHK_MRCHNT_ID
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(30)
+      - mode: NULLABLE
+        name: RPT_CREATION_FLG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: PERIODIC_FILE_RET
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: ADMIN_TRANS_BYTE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(60)
+      - mode: NULLABLE
+        name: MAIL_PO_SIC_CDE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: VISA_CP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: VISA_CNP
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: MOBILE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: MCDEBIT
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: CB_BATCH_NUM
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: CB_TYPE
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: CB_TOT_INQ
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: CHK_PROVIDER
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: FILE_NAME
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(255)
+      - mode: NULLABLE
+        name: DW_CREATE_DTM
+        type: TIMESTAMP
+        description: source column type => TIMESTAMP
+      - mode: NULLABLE
+        name: CREATED_BY
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(100)
+      - mode: NULLABLE
+        name: DW_UPDATE_DTM
+        type: TIMESTAMP
+        description: source column type => TIMESTAMP
+      - mode: NULLABLE
+        name: UPDATE_BY
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(100)
+      - mode: NULLABLE
+        name: CURRENT_IND
+        type: integer
+        description: source column type => BYTEINT
+      - mode: NULLABLE
+        name: DELETE_FLAG
+        type: string
+        description: source column type => NATIONAL CHARACTER VARYING(1)

@@ -1,0 +1,287 @@
+resources:
+- name: trannin-settled
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: trannin_settled
+   labels:
+     apigateway: not-applicable
+     build_date:  2132018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: trannin_settled_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer      
+      - mode: NULLABLE
+        name: TT_RECORD_CODE
+        type: string
+        description: source column type => VARCHAR 1
+      - mode: NULLABLE
+        name: TT_ACQ_REFERENCE_NUMBER
+        type: string
+        description: source column type => Varchar 30
+      - mode: NULLABLE
+        name: TT_CARDHOLDER_ACCOUNT_HK
+        type: integer
+        description: source column type => BIGINT 
+      - mode: NULLABLE
+        name: TT_CARDHOLDER_ACCOUNT_RK
+        type: string
+        description: source column type => Varchar 200
+      - mode: NULLABLE
+        name: TT_MERCHANT_NUMBER
+        type: string
+        description: source column type => Varchar 16
+      - mode: NULLABLE
+        name: TT_ORIGINAL_REFERENCE
+        type: string
+        description: source column type => Varchar 30
+      - mode: NULLABLE
+        name: TT_TRANSACTION_AMOUNT
+        type: float
+        description: source column type => Number (18,2)
+      - mode: NULLABLE
+        name: TT_TRANSACTION_CODE
+        type: string
+        description: source column type => Varchar 4
+      - mode: NULLABLE
+        name: TT_TRANSACTION_DATE
+        type: date
+        description: source column type => Date 6
+      - mode: NULLABLE
+        name: TT_TRANSACTION_TIME
+        type: string
+        description: source column type => Varchar 6
+      - mode: NULLABLE
+        name: TT_INVOICE
+        type: string
+        description: source column type => Varchar 16
+      - mode: NULLABLE
+        name: TT_FOREIGN_DOMESTIC
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_AUTHORIZATION_SOURCE
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_CARDHOLDER_ID_METHOD
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_TERMINAL_ENTRY_MODE
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_TRANSACTION_IDENTIFIER
+        type: string
+        description: source column type => Varchar 15
+      - mode: NULLABLE
+        name: TT_CURRENCY_CODE
+        type: string
+        description: source column type => Varchar 3
+      - mode: NULLABLE
+        name: TT_MERCHANT_CATEGORY_CODE
+        type: string
+        description: source column type => Varchar 4
+      - mode: NULLABLE
+        name: TT_POS_ENTRY_MODE
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_CURRENCY_EXPONENT
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_BANK
+        type: string
+        description: source column type => Varchar 10
+      - mode: NULLABLE
+        name: TT_FOREIGN_AMOUNT
+        type: float
+        description: source column type => Number (22,4)
+      - mode: NULLABLE
+        name: TT_BATCH_DATE
+        type: date
+        description: source column type => Date 6
+      - mode: NULLABLE
+        name: TT_BATCH_NUMBER
+        type: string
+        description: source column type => Varchar 15
+      - mode: NULLABLE
+        name: TT_BATCH_AMOUNT
+        type: float
+        description: source column type => Number (17,2)
+      - mode: NULLABLE
+        name: TT_RECURRING_PAY
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_CAT_INDICATOR
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_SEC_PROT
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_CARD_AUTH
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_UCAF_INDICATOR
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_RPSV_INDICATOR
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_TERMINAL_ID
+        type: string
+        description: source column type => Varchar 8
+      - mode: NULLABLE
+        name: TT_MOTO_ECP_INDICATOR
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_TERMINAL_CAPACITY
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_LOAD_DATE
+        type: date
+        description: source column type => Date 6
+      - mode: NULLABLE
+        name: TT_AUTHORIZATION_RESPONSE
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_AUTHORIZATION_INDICATOR
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_TRANSACTION_TYPE
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_TERM_TRANSACTION_DATE
+        type: date
+        description: source column type => Date 6
+      - mode: NULLABLE
+        name: TT_TERM_CAPABILITY_PROFILE
+        type: string
+        description: source column type => Varchar 6
+      - mode: NULLABLE
+        name: TT_CRYPTOGRAM
+        type: string
+        description: source column type => Varchar 16
+      - mode: NULLABLE
+        name: TT_TERM_VERIFICATION_RESULTS
+        type: string
+        description: source column type => Varchar 10
+      - mode: NULLABLE
+        name: TT_TERMINAL_COUNTRY_CODE
+        type: string
+        description: source column type => Varchar 3
+      - mode: NULLABLE
+        name: TT_UNPREDICTABLE_NUMBER
+        type: string
+        description: source column type => Varchar 8
+      - mode: NULLABLE
+        name: TT_APPLICATION_TRANS_CNTR
+        type: string
+        description: source column type => Varchar 4
+      - mode: NULLABLE
+        name: TT_APPLICATION_INTRCH_PROFILE
+        type: string
+        description: source column type => Varchar 4
+      - mode: NULLABLE
+        name: TT_CRYPTOGRAM_INFORMATION
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_1
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_2
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_3
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_4_7
+        type: string
+        description: source column type => Varchar 8
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_8
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_9_16
+        type: string
+        description: source column type => Varchar 16
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_17
+        type: string
+        description: source column type => Varchar 2
+      - mode: NULLABLE
+        name: TT_ISS_APP_DATA_18_32
+        type: string
+        description: source column type => Varchar 30
+      - mode: NULLABLE
+        name: TT_AUTHORIZATION_AMOUNT
+        type: float
+        description: source column type => Number (11,4)
+      - mode: NULLABLE
+        name: TT_QPS_FLAG
+        type: string
+        description: source column type => Varchar 1
+      - mode: NULLABLE
+        name: TT_AUTHORIZATION_CODE
+        type: string
+        description: source column type => Varchar 6
+      - mode: NULLABLE
+        name: TT_DEPOSIT_CONTROL_NUMBER
+        type: string
+        description: source column type => Varchar 7
+      - mode: NULLABLE
+        name: TT_CASH_BACK_AMOUNT
+        type: float
+        description: source column type => Number (12,0)
+      - mode: NULLABLE
+        name: TT_AUDIT_ID
+        type: string
+        description: source column type => Varchar 11
+      - mode: NULLABLE
+        name: TT_REMARKS
+        type: string
+        description: source column type => Varchar 50

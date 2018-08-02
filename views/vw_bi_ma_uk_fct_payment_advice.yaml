@@ -1,0 +1,79 @@
+resources:
+ - name: vw_bi_ma_uk_fct_payment_advice
+   type: bigquery.v2.table
+   properties:
+     datasetId: consumption_layer
+     tableReference:
+       projectId: PROJECT_ID
+       tableId: vw_bi_ma_uk_fct_payment_advice
+     labels:
+       apigateway: not-applicable
+       bus_contact: mark-kubik
+       businessregion: us
+       cloudzone: google-us
+       company: globalpay
+       costcenter: finance
+       country: us
+       dataclassification: dc2
+       department: product-development
+       description: vw_bi_ma_uk_fct_payment_advice
+       eol_date: not-applicable
+       group: application-delivery
+       lifecycle: development
+       organization: bts
+       prj_code: business-view
+       productversion: 10
+       project: PROJECT_ID
+       resourcename: location-table
+       service: gcp-cloud-datalake
+       sla: gold
+       status: development
+       support_contact: roberto_belardo
+       tech_contact: venu-vidyashankar
+       tier: gcp-bigquery
+     view:
+       query: SELECT 
+              eod_pay_merchant_number
+              ,eod_pay_merchant_dba_name
+              ,concat(eod_corp,"-",eod_region,"-",eod_principal,"-",eod_associate,"-",eod_chain) as Association
+              ,eod_corp
+              ,eod_principal
+              ,eod_region
+              ,eod_associate
+              ,eod_chain
+              ,eod_pay_bank_routing_number
+              ,eod_pay_dda_account_number
+              ,eod_pay_debtor_ref_num as eod_pay_debtor_ref_number
+              ,eod_pay_payment_amount
+              ,eod_pay_processing_date
+              ,eod_pay_summary_ind
+              ,eod_pay_type_code
+              ,eod_ukcrdsum_reserve_warehouse_ind
+              ,eod_card_activity_type_ind
+              ,eod_card_exchange_rate
+              ,eod_card_sales_converted_amount
+              ,eod_card_total_amount
+              ,eod_dep_alpha_currency_code
+              ,eod_dep_dcn_adjustment_amount
+              ,eod_dep_deposit_date
+              ,eod_dep_original_currency_code
+              ,case when eod_deposit_control_number is not null then eod_deposit_control_number when eod_batch_key is not null then eod_batch_key END AS eod_deposit_control_number
+              ,merchant_name
+              ,merchant_status
+              ,merchant_address1
+              ,merchant_address2
+              ,city
+              ,state
+              ,zipcode
+              ,merchant_phone
+              ,merchant_fax_number
+              ,merchant_attention
+              ,eod_pay_original_currency_code
+              ,eod_pay_alpha_currency_code
+              ,eod_dep_original_currency_amount
+              ,eod_dep_cashback_discount_amount
+              ,eod_delay_day_count
+              FROM `PROJECT_ID.consumption_layer.wwmaster_super_table`
+              WHERE EOD_CORP = '052' 
+       useLegacySql: false
+  

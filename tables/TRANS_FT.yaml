@@ -1,0 +1,491 @@
+resources:
+- name: trans-ft
+  type: bigquery.v2.table
+  properties:
+   datasetId: trusted_layer
+   tableReference:
+     projectId: analytics-and-presentation
+     tableId: trans_ft
+   labels:
+     apigateway: not-applicable
+     build_date:  2132018
+     bus_contact: mark-kubik
+     businessregion: us
+     cloudzone: google-us
+     company: globalpay
+     costcenter: finance
+     country: us
+     dataclassification: dc2
+     department: product-development
+     description: trans_ft_table
+     eol_date: not-applicable
+     group: application-delivery
+     lifecycle: development
+     organization: bts
+     prj_code: business-view
+     productversion: 10
+     project: analytics-and-presentation
+     resourcename: location-table
+     service: gcp-cloud-datalake
+     sla: gold
+     status: development
+     support_contact: roberto_belardo
+     tech_contact: venu-vidyashankar
+     tier: gcp-bigquery
+   schema:
+     fields:
+      - mode: NULLABLE
+        name: etlbatchid
+        type: integer      
+      - mode: NULLABLE
+        name: TRANS_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: SOURCE_FILE_KEY
+        type: float
+        description: Source column type => NUMERIC(28,0)
+      - mode: NULLABLE
+        name: AVS_RESPONSE_CODE_SK
+        type: integer
+        description: Source column type => BIGINT          
+      - mode: NULLABLE
+        name: CARD_TYPE_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: MERCHANT_INFORMATION_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: CHARGE_TYPE_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: TRANSACTION_CURRENCY_CODE_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: CORP
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: CORP_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: REGION
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: REGION_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: PRINCIPAL
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: PRINCIPAL_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: ASSOCIATE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: ASSOCIATE_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: CHAIN
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: CHAIN_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: MERCHANT_CATEGORY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: MERCHANT_CATEGORY_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: MERCHANT_HASH
+        type: string
+        description: Source column type => CHARACTER VARYING(200)
+      - mode: NULLABLE
+        name: TRAN_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: SOURCE_HOME
+        type: string
+        description: Source column type => CHARACTER VARYING(50)
+      - mode: NULLABLE
+        name: TRANSACTION_CODE_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: CARD_SCHEME
+        type: string
+        description: Source column type => CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: CARD_SCHEME_SK
+        type: integer
+        description: Source column type => BIGINT        
+      - mode: NULLABLE
+        name: SOURCE_SK
+        type: integer
+        description: Source column type =>  BIGINT                         
+      - mode: NULLABLE
+        name: ACI
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: AVS_RESPONSE_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: CARD_TYPE
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: MERCHANT_NUMBER
+        type: float
+        description: Source column type => NUMERIC(16,0)
+      - mode: NULLABLE
+        name: CHARGE_TYPE
+        type: string
+        description: Source column type => CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: AUTHORIZATION_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: AUTHORIZATION_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: AUTHORIZATION_DATE
+        type: date
+        description: Source column type => DATE              
+      - mode: NULLABLE
+        name: AUTHORIZATION_RESPONSE
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: AUTHORIZATION_SOURCE_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: BATCH_CONTROL_NUMBER
+        type: string
+        description: Source column type => CHARACTER VARYING(11)
+      - mode: NULLABLE
+        name: CAR_RENTAL_CHECK_OUT_DATE
+        type: date
+        description: Source column type => DATE              
+      - mode: NULLABLE
+        name: CAR_RENTAL_EXTRA_CHARGES
+        type: string
+        description: Source column type => CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: CAR_RENTAL_NO_SHOW
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: CARD_ACCEPTOR_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(16)
+      - mode: NULLABLE
+        name: TRANSACTION_CURRENCY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: CARD_NUMBER_HK
+        type: integer
+        description: Source column type => BIGINT
+      - mode: NULLABLE
+        name: CARD_NUMBER_RK
+        type: string
+        description: Source column type => CHARACTER VARYING(64)
+      - mode: NULLABLE
+        name: CARDHOLDER_ACTIVATED_TERM
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: CARDHOLDER_ID_METHOD
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: CASH_LETTER_NUMBER
+        type: string
+        description: Source column type => CHARACTER VARYING(11)
+      - mode: NULLABLE
+        name: CENTRAL_TIME_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: CPS_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: CROSS_BORDER_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: DEPOSIT_DATE
+        type: date
+        description: Source column type => DATE              
+      - mode: NULLABLE
+        name: DEPOSIT_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(10)
+      - mode: NULLABLE
+        name: FILE_DATE
+        type: date
+        description: Source column type => DATE              
+      - mode: NULLABLE
+        name: FILE_TIME
+        type: string
+        description: Source column type => CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: LODGING_CHECK_IN_DATE
+        type: date
+        description: Source column type => DATE              
+      - mode: NULLABLE
+        name: LODGING_EXTRA_CHARGES
+        type: string
+        description: Source column type => CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: LODGING_NO_SHOW_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: MARKET_SPECIFIC_AUTH_DATA
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: MC_INTERCHANGE_LEVEL
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: MERCHANT_DBA_NAME
+        type: string
+        description: Source column type => NATIONAL CHARACTER VARYING(24)
+      - mode: NULLABLE
+        name: MOTO_EC_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: POS_ENTRY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: PREPAID_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: PURCHASE_IDENTIFIER
+        type: string
+        description: Source column type => CHARACTER VARYING(25)
+      - mode: NULLABLE
+        name: PURCHASE_IDENTIFIER_FORMAT
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: REFERENCE_NUMBER
+        type: string
+        description: Source column type => CHARACTER VARYING(12)
+      - mode: NULLABLE
+        name: REQ_PAYMENT_SERVICE_VALUE
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: RESPONSE_DOWNGRADE_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: SCAN_CHARGE
+        type: string
+        description: Source column type => CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: SERVICE_DEVELOPMENT_FIELD
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: SOURCE_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: TRANSACTION_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(15)
+      - mode: NULLABLE
+        name: SUP_AUTHORIZATION_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: TERM_CAPABILITY
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: ERROR_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: TRANSACTION_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: TRANSACTION_DATE
+        type: date
+        description: Source column type => DATE              
+      - mode: NULLABLE
+        name: TRANSACTION_TIME
+        type: string
+        description: Source column type => CHARACTER VARYING(6)
+      - mode: NULLABLE
+        name: VALIDATION_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(4)
+      - mode: NULLABLE
+        name: VISA_INTERCHANGE_LEVEL
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: VISA_PRODUCT_LEVEL_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: SRC_HASH
+        type: string
+        description: Source column type =>  CHARACTER VARYING(200)
+      - mode: NULLABLE
+        name: DW_CREATE_DTM
+        type: TIMESTAMP
+        description: Source column type => TIMESTAMP      
+      - mode: NULLABLE
+        name: DW_UPDATE_DTM
+        type: TIMESTAMP
+        description: Source column type => TIMESTAMP      
+      - mode: NULLABLE
+        name: MC_DEVICE_TYPE_CD
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: ORIGINAL_TRANSACTION_REFERENCE
+        type: string
+        description: Source column type => CHARACTER VARYING(20)
+      - mode: NULLABLE
+        name: CURRENT_IND
+        type: integer
+        description: Source column type => BYTEINT               
+      - mode: NULLABLE
+        name: ALPHA_CURRENCY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: ISO_NUMERIC_CURRENCY_CODE
+        type: float
+        description: Source column type => NUMERIC(3,0)
+      - mode: NULLABLE
+        name: SETTLED_AMOUNT
+        type: float
+        description: Source column type => NUMERIC(19,4)
+      - mode: NULLABLE
+        name: SETTLE_CURRENCY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: SETTLE_ALPHA_CURRENCY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: SETTLE_ISO_CURRENCY_CODE
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: SETTLE_CURRENCY_CODE_SK
+        type: integer
+        description: Source column type => BIGINT
+      - mode: NULLABLE
+        name: CREATED_BY
+        type: string
+        description: Source column type => CHARACTER VARYING(100)
+      - mode: NULLABLE
+        name: UPDATED_BY
+        type: string
+        description: Source column type => CHARACTER VARYING(100)
+      - mode: NULLABLE
+        name: FILE_DATE_ORIGINAL
+        type: date
+        description: Source column type => DATE              
+      - mode: NULLABLE
+        name: FILLER_1
+        type: string
+        description: Source column type => CHARACTER VARYING(20)
+      - mode: NULLABLE
+        name: PAYPAL_BUYER_EMAIL_ADDRESS
+        type: string
+        description: Source column type => CHARACTER VARYING(50)
+      - mode: NULLABLE
+        name: PAYPAL_PAYER_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(13)
+      - mode: NULLABLE
+        name: PAYPAL_TRANSACTION_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(17)
+      - mode: NULLABLE
+        name: DEBIT_CARD_GATEWAY
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: NETWORK_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(7)
+      - mode: NULLABLE
+        name: ORIGINAL_FEE_BILLING_INDICATOR
+        type: string
+        description: Source column type => CHARACTER VARYING(3)
+      - mode: NULLABLE
+        name: PINLESS_FLAG
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: FRONT_END_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: ACCESS_METHOD
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: SUB_ACCESS_METHOD
+        type: string
+        description: Source column type => CHARACTER VARYING(2)
+      - mode: NULLABLE
+        name: DISCOVER_NETWORK_REF
+        type: string
+        description: Source column type => CHARACTER VARYING(15)
+      - mode: NULLABLE
+        name: TERMINAL_ID
+        type: string
+        description: Source column type => CHARACTER VARYING(8)
+      - mode: NULLABLE
+        name: AMOUNT_CODE_2
+        type: string
+        description: Source column type => CHARACTER VARYING(1)
+      - mode: NULLABLE
+        name: AMOUNT_2
+        type: float
+        description: Source column type => NUMERIC(11,2)
+      - mode: NULLABLE
+        name: FILLER_2
+        type: string
+        description: Source column type => CHARACTER VARYING(98)
