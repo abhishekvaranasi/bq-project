@@ -9,6 +9,6 @@ pipeline {
         		  echo %PROJECT_ID%
         		  echo %BUCKET_ID%
 			}
-		}
+			}
 		}
 }
