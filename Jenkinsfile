@@ -6,7 +6,7 @@ pipeline {
 			steps {
 				bat "env.sh"
 				bat "echo %PROJECT_ID%"
-				bat "echo %BUCKET_ID%"
+				bat "%BUCKET_ID%"
 			}
 		}
         }
