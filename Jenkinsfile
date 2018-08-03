@@ -9,5 +9,12 @@ pipeline {
 				bat "echo %BUCKET_ID%"
 			}
 		}
+		stage("Executing scripts"){
+			agent { label "master" }
+			steps {
+				bat "python app.py table create --bulk"
+			}
+		}
+
         }
 }
