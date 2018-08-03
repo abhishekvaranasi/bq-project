@@ -5,8 +5,9 @@ pipeline {
 			agent { label "master" }
 			steps {
 				bat "env.sh"
-				bat "echo %PROJECT_ID%"
-				bat "%BUCKET_ID%"
+				sh "echo ${PROJECT_ID}"
+				sh "echo ${BUCKET_ID}"
+				sh "echo ${HOSTNAME}"
 			}
 		}
 		stage("Executing scripts"){
