@@ -6,10 +6,10 @@ from pprint import pprint
 class Parse_Yaml():
     resources = dict()
 
-    def __init__(self, file, layer=""):
-        self.layer = layer
+    def __init__(self, file, dir=""):
+        self.dir = dir
         self.file = file
-        with open(os.path.join(os.getcwd(), self.layer, self.file), 'r') as f:
+        with open(os.path.join(os.getcwd(), self.dir, self.file), 'r') as f:
             obj = yaml.safe_load(f)
             self.resources = obj["resources"][0]
 

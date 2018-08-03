@@ -7,6 +7,7 @@ from main import client, PROJECTID
 from google.cloud import bigquery
 from bq_table import BQTable
 from bq_view import BQView
+from bq_dataset import BQDataset
 
 class BQPack():
 
@@ -23,16 +24,8 @@ class BQPack():
             dataset_ref = client.dataset(dataset_id)
 
             if str(yml_type).endswith(".dataset"):
-                # Dataset reference
-                dataset = bigquery.Dataset(dataset_ref)
-
-                # assigning dataset labels
-                dataset.labels = parse_file.labels()
-                if is_exist(dataset_id) == False:
-                    dataset = client.create_dataset(dataset)
-                    print("dataset {} created".format(dataset.dataset_id))
-                else:
-                    print("dataset {} already exist.".format(dataset_id))
+                dataset = BQDataset(yml, self.dir)
+                dataset.create_dataset()
 
             elif str(yml_type).endswith(".table"):
                 if parse_file.schema():
@@ -41,5 +34,29 @@ class BQPack():
                 else:
                     view = BQView(yml)
                     view.create_view()
+
         print("Execution completed!")
+
+    def delete_pack(self):
+        yaml_files = get_files(self.dir)
+        for yml in yaml_files:
+            parse_file = Parse_Yaml(yml, dir=self.dir)
+            yml_type = parse_file.type()
+            dataset_id  = parse_file.dataset_id()
+            dataset_ref = client.dataset(dataset_id)
+
+            if str(yml_type).endswith(".dataset"):
+                dataset = BQDataset(yml, self.dir)
+                dataset.delete_dataset()
+
+            elif str(yml_type).endswith(".table"):
+                if parse_file.schema():
+                    table = BQTable(yml, self.dir)
+                    table.delete_table()
+                else:
+                    view = BQView(yml, self.dir)
+                    view.delete_view()
+
+        print("Execution completed!")
+        
     

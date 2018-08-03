@@ -23,27 +23,27 @@ def mktmpdir():
 
 # headers = {'X-Jfrog-Art-Api': os.environ['ARTIFACTORY_KEY']}
 
-with mktmpdir() as tmpdir:
-    # r = requests.get(
-    #     ARTIFACTORY_BASE_URL, headers=headers, verify=False, stream=True)
-    # local_path = os.path.join(tmpdir,"tar")
+# with mktmpdir() as tmpdir:
+#     # r = requests.get(
+#     #     ARTIFACTORY_BASE_URL, headers=headers, verify=False, stream=True)
+#     # local_path = os.path.join(tmpdir,"tar")
 
-    # # Writes artifactory results to temp directory
-    # with open(local_path, "wb") as f:
-    #     for chunk in r.iter_content(chunk_size=512):
-    #         if chunk:
-    #             f.write(chunk)
+#     # # Writes artifactory results to temp directory
+#     # with open(local_path, "wb") as f:
+#     #     for chunk in r.iter_content(chunk_size=512):
+#     #         if chunk:
+#     #             f.write(chunk)
 
-    service_path = os.path.join(tmpdir, "yaml")
-    # print(service_path)
-    local_path  = os.path.join(os.getcwd(), "BQTableYamlFile_94.tar")
-    # print(local_path)
-    tar = tarfile.open(local_path)
-    tar.extractall(service_path)
-    # print(os.listdir(service_path))
-# service_archive = zipfile.ZipFile(local_path, mode="r")
-# service_archive.extractall(path=service_path)
-# service_archive.close()
+#     service_path = os.path.join(tmpdir, "yaml")
+#     # print(service_path)
+#     local_path  = os.path.join(os.getcwd(), "BQTableYamlFile_94.tar")
+#     # print(local_path)
+#     tar = tarfile.open(local_path)
+#     tar.extractall(service_path)
+#     # print(os.listdir(service_path))
+# # service_archive = zipfile.ZipFile(local_path, mode="r")
+# # service_archive.extractall(path=service_path)
+# # service_archive.close()
 
 # takes dir_name returns only yaml files in directory
 def get_files(dir_name):

@@ -32,7 +32,7 @@ class BQTable():
 
     # Creating single table
     def create_table(self):
-        if self.type.endswith(".table") and self.parse_file.query() == False:
+        if self.type.endswith(".table"):
             new_schema = [bigquery.SchemaField(
                 field["name"], field["type"]) for field in self.parse_file.schema()]
 
@@ -58,7 +58,13 @@ class BQTable():
         else:
             print("Looks like it's not a table. Please check the yaml file.")
 
-    
+    def delete_table(self):
+        try:
+            client.delete_table(self.table_ref)
+            print("table {} deleted".format(self.table_id))
+        except Exception as e:
+            print(e.errors[0]['message'])
+
     # updating table with new schema
     def update_table(self):
         if is_exist(self.dataset_id, table_id=self.table_id) == True:
